@@ -5,66 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/index.css">
 </head>
 <body>
     <header></header>
     <main></main>
-    <footer>
+    <footer class="container">
         <!-- CAIXA FOTO DE PERFÍL --> <!-- CAIXA DA ESQUERDA --> 
-        <div>
-            <figure>
-                <img src="" alt="Logo da Pagina">
-                <figcaption>figura da pagina</figcaption>
-            </figure>
-            <p>Fullstack Node JS student mais nao sei por onde começar tomara que de certo porque ue nao tenho deia doque pode ser mais ou menos quanto mais melhor assim hoje sera sexta feita da proxima semana! </p>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="Linkedin">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="Github">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="twitter">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="" alt="Facebook">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="coluna coluna-esquerda">
+            <section>
+                <figure>
+                    <img src="" alt="Logo da Pagina">
+                    <figcaption class="hidden">figura da pagina</figcaption>
+                </figure>
+                <p>Fullstack Node JS student mais nao sei por onde começar tomara que de certo porque ue nao tenho deia doque pode ser mais ou menos quanto mais melhor assim hoje sera sexta feita da proxima semana! </p>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="" alt="Linkedin">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="" alt="Github">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="" alt="twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="" alt="Facebook">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
         </div>
           <!-- CAIXA DO CENTRO --> 
-          <div>
-              <h4>CONTACT US</h4>
-              <nav>
-                <ul>
-                    <li>
-                        <a href="mailto:grupo5@digitalhouse.com">grupo5@digitalhouse.com</a>
-                    </li>
-                    <li>
-                        <a href="tel:(00) 99999-9999"> (00) 99999-9999</a>
-                    </li>
-                    <li>
-                        <a href="#">330 Franklin Road, São Paulo 135A, Lugar Centro, CEP 055-65010</a>
-                    </li>
-                </ul>
-            </nav> 
+          <div class="coluna coluna-centro">
+              <section>
+                    <h4>CONTACT US</h4>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="mailto:grupo5@digitalhouse.com">grupo5@digitalhouse.com</a>
+                            </li>
+                            <li>
+                                <a href="tel:(00) 99999-9999"> (00) 99999-9999</a>
+                            </li>
+                            <li>
+                                <a href="#">330 Franklin Road, São Paulo 135A, Lugar Centro, CEP 055-65010</a>
+                            </li>
+                        </ul>
+                    </nav> 
+               </section>
           </div>
                    <!-- CAIXA DA DIREITA -->
-           <div>
+           <div class="coluna coluna-direita">
+            <section>   
                <h4>LINKS IMPORTANTES</h4>
-               <section>
-                    <nav>
-                            <ul>
+               
+                    <nav class="coluna">
+                            <ul class="linha">
                                 <li>
                                     <a href="#">link 1</a>
                                 </li>
@@ -81,8 +87,8 @@
                         </nav> 
             </section>
             <section>
-                   <nav>
-                       <ul>
+                   <nav class="coluna">
+                       <ul class="linha">
                            <li>
                                <a href="#"> AJUDA</a>
                            </li>
@@ -100,8 +106,10 @@
             </section>
            </div> 
                            <!-- CAIXA DE BAIXO -->
-            <div>
-               <h5>Copyright@2021.Todos os direitos reservados ao Grupo5 da DigitalHouse</h5>
+            <div class="caixa caixa-baixo">
+                <section>
+                        <h5>Copyright@2021.Todos os direitos reservados ao Grupo5 da DigitalHouse</h5>
+                </section>
             </div>                       
     </footer>
 </body>
