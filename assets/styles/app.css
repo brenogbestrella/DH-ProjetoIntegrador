@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #2B2E36;
+    opacity: 1;
+    box-shadow: 0px 3px 21px -5px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+header > img {
+    width: 64px;
+}
+
+header > button {
+    background: none;
+    cursor: pointer;
+}
+
+.navbar {
+    display: none;
+    font-size: 25px;
+}
+
+.link-navbar {
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 29px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar > a {
+    font-size: 1.5rem;
+    margin: 0 20px 0 0;  
+}
+
+.city-input {
+    width: 200px; 
+    border-radius: 24px; 
+    border: 1px solid #dfe1e5; 
+    padding: 5px 8px;
+    text-align: center;
+    position: absolute;
+    left: 300px;
+    top: 16px;
+}
+
+
+body {
+    background-color: #32363F;
+}
+
+h1 {
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    margin-top: 100px;
+    color: #fff
+}
+
+.filtro {
+    display: flex;
+    position: absolute;
+    left: 15px;
+    top: 80px;
+    width: 250px;
+    height: 600px;
+    background-color: #2B2E36;
+    opacity: 1;
+    box-shadow: 0px 3px 21px -5px rgba(0,0,0,0.75);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+#pesquisa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    position: absolute;
+    top: 150px;
+    left: 23px;
+}
+
+.styled-input {
+    width: 200px; 
+    border-radius: 24px; 
+    border: 1px solid #dfe1e5; 
+    padding: 5px 8px;
+    text-align: center;
+}
+
+#botoes-filtro {
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+    left: 35px;
+    top: 200px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    margin: 10px;
+    width: 65.7px;
+    height: 38px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000;
+    font-weight: bold;
+  }
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+
+.botoes-intencao {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+
+#pergunta-intencao {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 80px;
+    height: 20px;
+    border-radius: 11px;
+    background: #d3dbd3;
+    box-shadow: 0px 7px 0px #676867;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: normal;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: background 0.5s, color 1s;
+}
+
+.button:hover {
+    color: #fff;
+    background: #676867;
+}
+
+
+@media(min-width: 481px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    header > img {
+        width: 128px;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .hamburguer-menu {
+        display: none;
+    }
+}
+
+@media(min-width: 650px){
+    .navbar {
+        display: flex;
+    }
+
+    .hamburguer-menu {
+        display: none;
+    }
+}
+

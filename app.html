@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Usuário</title>
+    <link href="assets/styles/app.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+      <img src="assets/images/logo.svg" alt="Logo" />
+        <button type="button" class="hamburguer-menu">
+            <img src="assets/images/hamburguer.svg" alt="Hamburguer Menu" />
+        </button>
+        <nav class="navbar">
+            <input 
+              class="city-input" 
+              type=search 
+              results=5 
+              placeholder="Search for City/State/Country" 
+              name=s/>  
+        </nav>
+    </header>
+  <h1>Quem quer dinheiro?</h1>
+  <div class="filtro">
+    <div id="pesquisa">
+      <input class="styled-input" type=search results=5 placeholder="Search for currency" name=s/>
+    </div>
+    <div id="botoes-filtro">
+      <button class="btn active" onclick="filterSelection('all')"> ALL</button>
+      <button class="btn" onclick="filterSelection('usd')"> USD</button>
+      <button class="btn" onclick="filterSelection('CAD')"> CAD</button>
+      <button class="btn" onclick="filterSelection('eur')"> EUR</button>
+      <button class="btn" onclick="filterSelection('lbr')"> LBR</button>
+      <button class="btn" onclick="filterSelection('yen')"> YEN</button>
+    </div>
+    <div class="botoes-intencao">
+      <label id="pergunta-intencao">What is your intention?</label>
+      <a class="button" check>Buy</a>
+      <a class="button">Sell</a>
+    </div>
+  </div>
+  <footer>
+  </footer> 
+</body>
+</html>
