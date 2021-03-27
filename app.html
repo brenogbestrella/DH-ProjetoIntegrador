@@ -22,7 +22,7 @@
               name=s/>  
         </nav>
     </header>
-  <h1>Quem quer dinheiro?</h1>
+  <h1>Your profile</h1>
   <div class="filtro">
     <div id="pesquisa">
       <input class="styled-input" type=search results=5 placeholder="Search for currency" name=s/>
@@ -35,11 +35,54 @@
       <button class="btn" onclick="filterSelection('lbr')"> LBR</button>
       <button class="btn" onclick="filterSelection('yen')"> YEN</button>
     </div>
-    <div class="botoes-intencao">
-      <label id="pergunta-intencao">What is your intention?</label>
-      <a class="button" check>Buy</a>
-      <a class="button">Sell</a>
+    <form>
+      <label id="pergunta-intencao">Selection Filter</label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio" checked> Buy
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="optradio"> Sell
+      </label>
+    </form>
+  </div>
+  <div class="melhores-ofertas">
+    <h2>Best Oportunities</h2>
+    <div class="oferta">
+      <button class="botao-oferta" onclick="filterSelection('offer1')"> Offer #1</button>
+      <button class="botao-oferta" onclick="filterSelection('offer2')"> Offer #2</button>
+      <button class="botao-oferta" onclick="filterSelection('offer3')"> Offer #3</button>
+      <button class="botao-oferta" onclick="filterSelection('offer4')"> Offer #4</button>
+      <button class="botao-oferta" onclick="filterSelection('offer5')"> Offer #5</button>
+      <button class="botao-oferta" onclick="filterSelection('offer6')"> Offer #6</button>
     </div>
+  </div>
+  <div class="cambio">
+    <h2>Currency Exchange</h2>
+    <div class="casas-cambio">
+      <button class="botao-cambio" onclick="filterSelection('offer1')"> CuEx #1</button>
+      <button class="botao-cambio" onclick="filterSelection('offer2')"> CuEx #2</button>
+      <button class="botao-cambio" onclick="filterSelection('offer3')"> CuEx #3</button>
+      <button class="botao-cambio" onclick="filterSelection('offer4')"> CuEx #4</button>
+      <button class="botao-cambio" onclick="filterSelection('offer5')"> CuEx #5</button>
+      <button class="botao-cambio" onclick="filterSelection('offer6')"> CuEx #6</button>
+      <button class="botao-cambio" onclick="filterSelection('offer7')"> CuEx #7</button>
+      <button class="botao-cambio" onclick="filterSelection('offer8')"> CuEx #8</button>
+      <button class="botao-cambio" onclick="filterSelection('offer9')"> CuEx #9</button>
+      <button class="botao-cambio" onclick="filterSelection('offer10')"> CuEx #10</button>
+      <button class="botao-cambio" onclick="filterSelection('offer11')"> CuEx #11</button>
+      <button class="botao-cambio" onclick="filterSelection('offer12')"> CuEx #12</button>
+    </div>
+  </div>
+  <div class="historico">
+    <h2>Transaction History</h2>
+    <div class="historico-transacao">
+      <button class="botao-historico" onclick="filterSelection('transhist1')"> TransHist #1</button>
+      <button class="botao-historico" onclick="filterSelection('transhist2')"> TransHist #2</button>
+      <button class="botao-historico" onclick="filterSelection('transhist3')"> TransHist #3</button>
+      <button class="botao-historico" onclick="filterSelection('transhist4')"> TransHist #4</button>
+      <button class="botao-historico" onclick="filterSelection('transhist5')"> TransHist #5</button>
+      <button class="botao-historico" onclick="filterSelection('transhist6')"> TransHist #6</button>
+      </div>
   </div>
   <footer>
   </footer> 
