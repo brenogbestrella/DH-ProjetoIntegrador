@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    margin:0px;
+    color: rgb(163, 163, 159);
+    flex-wrap: wrap;
+    justify-content:center;
+    text-decoration: none;
+    background-color: rgb(62, 65, 62);
+}
+.linha li{
+    margin: 0px auto;
+}
+.item{
+    height: 250px;
+    text-align:start;
+    font-size: 1em;;
+    width: calc(25.333% - 2px);
+}
+.config img {
+    margin-top: 25px;
+}
+
+.esquerdo {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+.dividirmeio {
+    display: flex;
+    flex-wrap: wrap;
+}
+.config { 
+    flex-direction: column;
+    margin-top: 21px;
+    align-items: flex-start;
+}
+.caixa-baixo h5{
+    align-items: center;
+    margin-block: 28px;
+}
+.caixa-baixo{
+        display: inline-block;
+        height: 96px;
+        width: 1332px;
+        text-align: center;
+        font-size: 1em;
+        border-top: 1px solid rgb(163, 163, 159);
+
+}
+.titulo {
+    display: flex;
+    width: 447px;
+    padding-inline: 4px;
+    height: 46px;
+}
+.item h4 { 
+    padding-inline: 20px;
+    margin-top: 41px;
+}
+
+html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
+    text-decoration: none;
+    list-style: none;
+    text-decoration: underline; 
+	color: rgb(163, 163, 159)
+}
+.itemcentro nav ul li {
+    padding-inline-start:-1px
+}
+.redes img {
+    height: 20px;
+}
+.redes ul{
+    display: flex;
+    flex-direction: row;
+    
+}
+.redes li {
+    margin-inline: 5px;
+}
+.redes{
+    margin: -25px auto;
+}
+.itemcentro{
+    text-align: left;
+}
+.itemcentro nav { }
+.conteudo{
+    padding-top: 17px;
+}
+
+.conteudo li {
+   margin: 9px auto;
+
+}
