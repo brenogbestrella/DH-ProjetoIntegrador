@@ -215,6 +215,7 @@ header ul li a:hover {
 }
 
 
+
 @media (max-width:1800px){
 
     .linha_divisao > img{
@@ -571,7 +572,7 @@ list-style: none;
 }
 .config { 
     flex-direction: column;
-    margin-top: 21px;
+    margin-top: 7px;
     align-items: flex-start;
 }
 .caixa-baixo h5{
