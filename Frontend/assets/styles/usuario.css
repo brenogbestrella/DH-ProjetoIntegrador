@@ -331,3 +331,15 @@ h2 {
     display: none;
   }
 }
+@media (min-width: 1080px) {
+  .perfil {
+    position: absolute;
+    top: 7rem;
+    left: 40rem;
+  }
+  .nav-item {
+    position: relative;
+    right: -35rem;
+    top: 0rem;
+  }
+}

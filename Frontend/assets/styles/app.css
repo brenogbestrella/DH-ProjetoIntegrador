@@ -437,4 +437,12 @@ h1 {
   .hamburguer-menu {
     display: none;
   }
+
+  @media (min-width: 1080px) {
+    .nav-item {
+      position: relative;
+      right: -35rem;
+      top: 0rem;
+    }
+  }
 }
