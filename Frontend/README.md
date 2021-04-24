@@ -1,2 +1,0 @@
-# DH-ProjetoIntegrador
-Projeto Integrador
