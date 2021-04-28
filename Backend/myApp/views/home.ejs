@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TraDinDin - Plataforma</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link href="../assets/styles/home.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../assets/images/din.ico.png" />
+    <scrip src="jquery-3.5.1.min.js"></scrip>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <scrip src="app.js"></scrip>
+  </head>
+  <body>
+    <header>
+      <div class="navbar-container">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+          <a href="#" class="navbar-brand mb-0 h1">
+            <img
+              class="d-inline-block align-top"
+              id="logo-navbar"
+              src="../assets/images/logo_trad1.png"
+              width="150"
+              Navbar
+            />
+          </a>
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="div.collpase.navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Usuário
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a href="#" class="dropdown-item">Perfil</a></li>
+                  <li><a href="#" class="dropdown-item">Endereços</a></li>
+                  <li><a href="#" class="dropdown-item">Carteira</a></li>
+                  <li><a href="#" class="dropdown-item">Ajuda</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <input
+            class="city-input"
+            type="search"
+            results="5"
+            placeholder="Pesquise a Cidade/Estado/País"
+            name="s"
+          />
+        </nav>
+      </div>
+    </header>
+    <!--<img class="logo-menu" src="./assets/images/logo.png" alt="Logo" />
+      <div class="top">
+        <a href="#" class="menu_icon"><i class="material-icons">dehaze</i></a>
+        <nav class="navbar">
+            <input 
+              class="city-input" 
+              type=search 
+              results=5 
+              placeholder="Pesquise a Cidade/Estado/País" 
+              name=s/>  
+        </nav>
+    
+    <nav class="menu">
+      <a href="#" class="item_menu">Perfil</a>
+      <a href="#" class="item_menu">Endereços</a>
+      <a href="#" class="item_menu">Carteira</a>
+      <a href="#" class="item_menu">Pagamentos</a>
+      <a href="#" class="item_menu">Ajuda</a>
+    </nav>-->
+    <main>
+      <h1>Sua Pesquisa</h1>
+      <div class="filtro">
+        <div id="pesquisa">
+          <input
+            class="styled-input"
+            type="search"
+            results="5"
+            placeholder="Pesquise a moeda"
+            name="s"
+          />
+        </div>
+        <div id="botoes-filtro">
+          <button class="btn active" onclick="filterSelection('all')">
+            TODAS
+          </button>
+          <button class="btn" onclick="filterSelection('usd')">USD</button>
+          <button class="btn" onclick="filterSelection('CAD')">CAD</button>
+          <button class="btn" onclick="filterSelection('eur')">EUR</button>
+          <button class="btn" onclick="filterSelection('lbr')">LBR</button>
+          <button class="btn" onclick="filterSelection('yen')">YEN</button>
+        </div>
+        <form>
+          <label id="pergunta-intencao">Filtro de Seleção</label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" checked /> Compra
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" /> Venda
+          </label>
+        </form>
+      </div>
+      <div class="melhores-ofertas">
+        <h2>Melhores Ofertas</h2>
+        <div class="oferta">
+          <button class="botao-oferta" onclick="filterSelection('offer1')">
+            Oferta #1
+          </button>
+          <button class="botao-oferta" onclick="filterSelection('offer2')">
+            Oferta #2
+          </button>
+          <button class="botao-oferta" onclick="filterSelection('offer3')">
+            Oferta #3
+          </button>
+          <button class="botao-oferta" onclick="filterSelection('offer4')">
+            Oferta #4
+          </button>
+          <button class="botao-oferta" onclick="filterSelection('offer5')">
+            Oferta #5
+          </button>
+          <button class="botao-oferta" onclick="filterSelection('offer6')">
+            Oferta #6
+          </button>
+        </div>
+      </div>
+      <div class="cambio">
+        <h2>Casas de Câmbio</h2>
+        <div class="casas-cambio">
+          <button class="botao-cambio" onclick="filterSelection('offer1')">
+            Casa de Câmbio #1
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer2')">
+            Casa de Câmbio #2
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer3')">
+            Casa de Câmbio #3
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer4')">
+            Casa de Câmbio #4
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer5')">
+            Casa de Câmbio #5
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer6')">
+            Casa de Câmbio #6
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer7')">
+            Casa de Câmbio #7
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer8')">
+            Casa de Câmbio #8
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer9')">
+            Casa de Câmbio #9
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer10')">
+            Casa de Câmbio #10
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer11')">
+            Casa de Câmbio #11
+          </button>
+          <button class="botao-cambio" onclick="filterSelection('offer12')">
+            Casa de Câmbio #12
+          </button>
+        </div>
+      </div>
+      <div class="historico">
+        <h2>Histórico de Transações</h2>
+        <div class="historico-transacao">
+          <button
+            class="botao-historico"
+            onclick="filterSelection('transhist1')"
+          >
+            HistTrans #1
+          </button>
+          <button
+            class="botao-historico"
+            onclick="filterSelection('transhist2')"
+          >
+            HistTrans #2
+          </button>
+          <button
+            class="botao-historico"
+            onclick="filterSelection('transhist3')"
+          >
+            HistTrans #3
+          </button>
+          <button
+            class="botao-historico"
+            onclick="filterSelection('transhist4')"
+          >
+            HistTrans #4
+          </button>
+          <button
+            class="botao-historico"
+            onclick="filterSelection('transhist5')"
+          >
+            HistTrans #5
+          </button>
+          <button
+            class="botao-historico"
+            onclick="filterSelection('transhist6')"
+          >
+            HistTrans #6
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

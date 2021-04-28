@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    background: #32363F 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+p{
+    text-align: left;
+    color: #999A9B;
+
+}
+.sobre-nos{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 40px;
+    
+}
+.sobre-nos-texto{
+    text-align: left;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    
+}
+.sobre-nos-texto > *{
+    margin: 15px 5px;
+    letter-spacing: 0px;
+    opacity: 1;
+
+}
+.sobre-nos-texto > h3{
+    text-align: left;
+    letter-spacing: 1.68px;
+    color: #999BE2;
+
+}
+
+.sobre-nos-texto > p{
+    text-align: left;
+    color: #999A9B;
+
+}
+
+.botao{
+    width: 220px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 19px;   
+    display: flex;    
+    align-items: center;    
+    justify-content: center;
+    text-decoration: none;
+
+    background: transparent linear-gradient(270deg, #CE27A1 0%, #FF78CB 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 11px 48px #22286473;
+    border-radius: 6px;
+    opacity: 1;
+
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.solucoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.solucoes > h2{
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #EFE6FF;
+    opacity: 1;
+    margin: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #CE27A1;
+
+}
+
+.logo-empresas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 1200px;
+    margin: 15px;
+}
+
+.perguntas-frequentes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+    margin-top: 100px;
+    margin-bottom: 50px;
+    
+    opacity: 1;
+    text-align: center;
+}
+
+.perguntas-frequentes > h1{
+    font-size: 45px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #CE27A1;
+    margin-bottom: 10px;
+
+}
+.perguntas-frequentes > p{
+    text-align: center;
+    width: 1000px;
+}
+
+.perguntas-box{
+    display: flex;
+
+}
+
+.perguntas{
+
+    margin: 20px;
+
+}
+
+.perguntas > h2{
+    color: #A5A7F5;
+    margin: 10px 0px;
+}
+
