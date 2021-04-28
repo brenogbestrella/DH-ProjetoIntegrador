@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <title>TraDinDin - Cadastro</title>
+    <title>TraDinDin - Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta http-equiv="Content-Language" content="pt-br" />
-    <link href="../assets/styles/form.css" rel="stylesheet" />
+    <link href="stylesheets/form.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
@@ -15,21 +15,19 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="../assets/images/din.ico.png" />
+    <link rel="shortcut icon" href="images/din.ico.png" />
   </head>
+
   <body>
-    <main class="pagina-cadastro">
-      <div class="card-cadastro">
+    <main class="pagina-login">
+      <div class="card-login">
         <form class="form">
-          <img
-            class="logo-cadastro"
-            src="../assets/images/LogoAqui_2.png"
-            alt="TraDinDin"
-          />
+          <img class="logo_menu" src="images/LogoAqui_2.png" alt="TraDinDin" />
+
           <!-- USUÁRIO -->
           <p>
             <label for="usuario"
-              ><img src="../assets/images/user.svg" alt=""
+              ><img src="images/user.svg" alt="Usuário"
             /></label>
             <input
               type="text"
@@ -38,29 +36,25 @@
               placeholder="Usuário"
             />
           </p>
-          <!-- senha -->
+
+          <!-- SENHA -->
           <p>
             <label for="senha"
-              ><img src="../assets/images/cadeado.svg" alt=""
+              ><img src="images/cadeado.svg" alt="Usuário"
             /></label>
-            <input
-              type="password"
-              name="senha"
-              id="senha"
-              placeholder="Senha"
-            />
-          </p>
-          <!--Email-->
-          <p>
-            <label for="email"
-              ><img src="../assets/images/o-email.svg" alt=""
-            /></label>
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <input id="senha" placeholder="Senha" type="password" required />
           </p>
 
-          <input class="botao-submit" type="submit" value="Registrar" />
-
+          <input class="botao-submit" type="submit" value="Entrar agora" />
           <button class="voltar">Voltar a tela inicial</button>
+
+          <p class="esqueceu">Esqueceu sua senha?</p>
+          <div class="conta">
+            <span
+              >Não tem conta?
+              <a class="aa" href="#something">CRIAR CONTA</a></span
+            >
+          </div>
         </form>
       </div>
     </main>

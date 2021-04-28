@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <title>TraDinDin - Cadastro</title>
+    <title>TraDinDin - Recuperar senha</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta http-equiv="Content-Language" content="pt-br" />
@@ -18,41 +18,32 @@
     <link rel="shortcut icon" href="images/din.ico.png" />
   </head>
   <body>
-    <main class="pagina-cadastro">
-      <div class="card-cadastro">
+    <main class="pagina-recuperar-senha">
+      <div class="card-recuperar-senha">
         <form class="form">
           <img
-            class="logo-cadastro"
+            class="logo-recuperar-senha"
             src="images/LogoAqui_2.png"
             alt="TraDinDin"
           />
-          <!-- USUÁRIO -->
-          <p>
-            <label for="usuario"><img src="images/user.svg" alt="" /></label>
-            <input
-              type="text"
-              name="usuario"
-              id="usuario"
-              placeholder="Usuário"
-            />
-          </p>
-          <!-- senha -->
-          <p>
-            <label for="senha"><img src="images/cadeado.svg" alt="" /></label>
-            <input
-              type="password"
-              name="senha"
-              id="senha"
-              placeholder="Senha"
-            />
-          </p>
+
           <!--Email-->
           <p>
-            <label for="email"><img src="images/o-email.svg" alt="" /></label>
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <label for="email"
+              ><img
+                class="buttom-recuperar-senha"
+                src="images/o-email.svg"
+                alt=""
+            /></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Cadastrado"
+            />
           </p>
 
-          <input class="botao-submit" type="submit" value="Registrar" />
+          <input class="botao-submit" type="submit" value="Recuperar Senha" />
 
           <button class="voltar">Voltar a tela inicial</button>
         </form>
