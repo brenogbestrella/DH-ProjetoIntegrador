@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+#logo-navbar {
+  position: absolute;
+  left: 70px;
+  top: 10px;
+}
+
+.navbar {
+  background-color: #2b2e36;
+  opacity: 1;
+  box-shadow: 0px 3px 21px -5px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.nav-item {
+  position: relative;
+  right: -25rem;
+  top: 0rem;
+  color: #fff;
+}
+
+body {
+  background-color: #32363f;
+}
+
+.perfil {
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  top: 7rem;
+  left: 20rem;
+  opacity: 1;
+  box-shadow: 0px 3px 21px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  align-items: center;
+}
+
+.perfil > h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  opacity: 0.7;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 7px;
+  align-content: center;
+  margin-top: 100px;
+  width: 200px;
+  color: #fff;
+  position: absolute;
+  left: 50px;
+  top: -80px;
+}
+.perfil > h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  opacity: 0.7;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 7px;
+  align-content: center;
+  margin-top: 100px;
+  width: 200px;
+  color: #fff;
+  position: absolute;
+  left: 50px;
+  top: -50px;
+}
+
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  font-style: bold;
+  opacity: 0.7;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 7px;
+  align-content: center;
+  margin-top: 100px;
+  color: #fff;
+  position: absolute;
+  left: 10px;
+  top: -30px;
+}
+
+.perfil-nome {
+  width: 400px;
+  height: 75px;
+  position: absolute;
+  top: 90px;
+  left: 170px;
+  background-color: #474b57;
+  opacity: 1;
+  box-shadow: 0px 3px 21px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+.perfil-nome > h1 {
+  color: rgb(212, 211, 211);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.8rem;
+  position: relative;
+  left: 0.5rem;
+  top: 0.2rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.perfil-nome > h2 {
+  position: absolute;
+  top: -70px;
+  left: 20px;
+}
+.perfil-nome > .botao-editar {
+  position: absolute;
+  top: 27px;
+  right: 30px;
+}
+
+.perfil-email {
+  width: 400px;
+  height: 75px;
+  position: absolute;
+  top: 175px;
+  left: 170px;
+  background-color: #474b57;
+  opacity: 1;
+  box-shadow: 0px 3px 21px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+.perfil-email > h1 {
+  color: rgb(212, 211, 211);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.8rem;
+  position: relative;
+  left: 0.5rem;
+  top: 0.2rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.perfil-email > h2 {
+  position: absolute;
+  top: -70px;
+  left: 20px;
+}
+.perfil-email > .botao-editar {
+  position: absolute;
+  top: 27px;
+  right: 30px;
+}
+
+.perfil-documento {
+  width: 400px;
+  height: 75px;
+  position: absolute;
+  top: 260px;
+  left: 170px;
+  background-color: #474b57;
+  opacity: 1;
+  box-shadow: 0px 3px 21px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+.perfil-documento > h1 {
+  color: rgb(212, 211, 211);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.8rem;
+  position: relative;
+  left: 0.5rem;
+  top: 0.2rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.perfil-documento > h2 {
+  position: absolute;
+  top: -70px;
+  left: 20px;
+}
+.perfil-documento > .botao-editar {
+  position: absolute;
+  top: 27px;
+  right: 30px;
+}
+.perfil-senha {
+  width: 400px;
+  height: 75px;
+  position: absolute;
+  top: 345px;
+  left: 170px;
+  background-color: #474b57;
+  opacity: 1;
+  box-shadow: 0px 3px 21px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+.perfil-senha > h1 {
+  color: rgb(212, 211, 211);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.8rem;
+  position: relative;
+  left: 0.5rem;
+  top: 0.2rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.perfil-senha > h2 {
+  position: absolute;
+  top: -70px;
+  left: 20px;
+}
+.perfil-senha > .botao-editar {
+  position: absolute;
+  top: 27px;
+  right: 30px;
+}
+
+.botao-excluir {
+  position: absolute;
+  bottom: 30px;
+  left: 170px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 140px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.75);
+  background: #f15b5b;
+  font-size: 13px;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: background 0.5s, color 1s;
+}
+.botao-excluir:hover {
+  color: #000;
+  background: #fff;
+}
+.botao-atualizar {
+  position: absolute;
+  bottom: 30px;
+  right: 127px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 140px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.75);
+  background: rgb(25, 160, 25);
+  font-size: 13px;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: background 0.5s, color 1s;
+}
+.botao-atualizar:hover {
+  color: #000;
+  background: #fff;
+}
+
+.botao-editar {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 70px;
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.75);
+  background: #414652;
+  font-size: 13px;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s, color 1s;
+}
+
+.botao-editar:hover {
+  color: #fff;
+  background: #f15b5b;
+}
+
+.styled-input {
+  width: 200px;
+  border-radius: 24px;
+  border: 1px solid #ff78cb;
+  padding: 5px 8px;
+  text-align: center;
+}
+
+@media (min-width: 481px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  header > img {
+    width: 128px;
+  }
+
+  .navbar {
+    display: flex;
+  }
+
+  .hamburguer-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 650px) {
+  .navbar {
+    display: flex;
+  }
+
+  .hamburguer-menu {
+    display: none;
+  }
+}
+@media (min-width: 1080px) {
+  .perfil {
+    position: absolute;
+    top: 7rem;
+    left: 40rem;
+  }
+  .nav-item {
+    position: relative;
+    right: -35rem;
+    top: 0rem;
+  }
+}

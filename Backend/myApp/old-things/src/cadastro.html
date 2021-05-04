@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>TraDinDin - Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="pt-br" />
+    <link href="../assets/styles/form.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../assets/images/din.ico.png" />
+  </head>
+  <body>
+    <main class="pagina-cadastro">
+      <div class="card-cadastro">
+        <form class="form">
+          <img
+            class="logo-cadastro"
+            src="../assets/images/LogoAqui_2.png"
+            alt="TraDinDin"
+          />
+          <!-- USUÁRIO -->
+          <p>
+            <label for="usuario"
+              ><img src="../assets/images/user.svg" alt=""
+            /></label>
+            <input
+              type="text"
+              name="usuario"
+              id="usuario"
+              placeholder="Usuário"
+            />
+          </p>
+          <!-- senha -->
+          <p>
+            <label for="senha"
+              ><img src="../assets/images/cadeado.svg" alt=""
+            /></label>
+            <input
+              type="password"
+              name="senha"
+              id="senha"
+              placeholder="Senha"
+            />
+          </p>
+          <!--Email-->
+          <p>
+            <label for="email"
+              ><img src="../assets/images/o-email.svg" alt=""
+            /></label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+          </p>
+
+          <input class="botao-submit" type="submit" value="Registrar" />
+
+          <button class="voltar">Voltar a tela inicial</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
