@@ -1,4 +1,4 @@
-const UsuarioService = require("../myApp/services/UsuarioService");
+const UsuarioService = require("../services/UsuarioService");
 const { validationResult } = require("express-validator");
 
 const controller = {

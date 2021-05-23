@@ -1,4 +1,4 @@
-const database = require("../../database/models/Usuario");
+const database = require("../database/models/Usuario");
 
 const UsuarioService = {
   listUsuario: () => {
@@ -38,7 +38,13 @@ const UsuarioService = {
     return newUsuario;
   },
   getUsuarioList: async () => {
-    const resultados = await database.Usuario.findAll();
+    const resultados = await database.Usuario.findAll({
+      where: {
+        nome,
+      },
+      limit: 10,
+      offset: 5,
+    });
     return resultados;
   },
   updateUsuario: async (nome, sobrenome, endereco, documento) => {
