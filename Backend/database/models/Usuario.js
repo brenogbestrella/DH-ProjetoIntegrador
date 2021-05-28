@@ -37,12 +37,11 @@ module.exports = (sequelize, DataTypes) => {
       as: "oferta",
       //algo me diz q esses alias vao dar merda na hora da consulta no banco de dados
     });
-  };
 
-  Usuario.associate = (listaDeModelos) => {
     Usuario.hasMany(listaDeModelos.Ordem, {
       foreignKey: "fk_idOferta",
       as: "oferta",
     });
   };
+  return Usuario;
 };

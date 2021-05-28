@@ -28,12 +28,11 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "id_oferta",
       as: "oferta",
     });
-  
 
-  Ordem.belongsToMany(listaDeModelos.Usuario, {
-    foreignKey: "id_usuario",
-    as: "usuario",
-  });
-
+    Ordem.belongsToMany(listaDeModelos.Usuario, {
+      foreignKey: "id_usuario",
+      as: "usuario",
+    });
+  };
   return Ordem;
 };
