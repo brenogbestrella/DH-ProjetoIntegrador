@@ -8,20 +8,20 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
       },
       nome: {
+        type: DataTypes.STRING(100),
+      },
+      email: {
         type: DataTypes.STRING(50),
       },
-      sobrenome: {
-        type: DataTypes.STRING(100),
-      },
-      endereço: {
-        type: DataTypes.STRING(100),
+      senha: {
+        type: DataTypes.STRING(8),
       },
       documento: {
-        //cpf ou cnpj dependem do tipo de usuario logo abaixo
+        //cpf ou cnpj dependem do tipo de usuario logo abaixo (bem lembrado)
         type: DataTypes.STRING(50),
       },
       tipo: {
-        //tipo define se é pessoa fisica ou juridica
+        //tipo define se é pessoa fisica ou juridica - 0 = física; 1 = jurídica
         type: DataTypes.BOOLEAN,
       },
     },
@@ -33,16 +33,15 @@ module.exports = (sequelize, DataTypes) => {
 
   Usuario.associate = (listaDeModelos) => {
     Usuario.hasMany(listaDeModelos.Oferta, {
-      foreignKey: "id_oferta",
+      foreignKey: "id_usuario",
       as: "oferta",
-      //algo me diz q esses alias vao dar merda na hora da consulta no banco de dados
     });
   };
 
   Usuario.associate = (listaDeModelos) => {
     Usuario.hasMany(listaDeModelos.Ordem, {
-      foreignKey: "fk_idOferta",
-      as: "oferta",
+      foreignKey: "id_oferta",
+      as: "ordem_de_compra",
     });
   };
 };

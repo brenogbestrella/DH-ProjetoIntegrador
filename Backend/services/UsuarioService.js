@@ -1,26 +1,9 @@
 const database = require("../database/models/Usuario");
 
 const UsuarioService = {
-  listUsuario: () => {
-    const bento = new UsuarioModel(
-      1,
-      "Bento",
-      "José",
-      "Rua AXC",
-      "123.446.789-01"
-    );
-    const energumeno = new UsuarioModel(
-      2,
-      "Energúmeno",
-      "Zózimo",
-      "Rua ABD",
-      "123.436.789-02"
-    );
-    return [bento, energumeno];
-  },
   listUsuarioData: (usuarioName) => {
     const usuarioList = UsuarioService.listUsuario();
-    let usuario = pusuarioList.find((item) => item.name === usuarioName);
+    let usuario = usuarioList.find((item) => item.nome === usuarioNome);
 
     if (!usuario) {
       usuario = usuarioList[0];
@@ -28,12 +11,13 @@ const UsuarioService = {
 
     return usuario;
   },
-  createUsuario: async (nome, sobrenome, endereco, documento) => {
+  createUsuario: async (nome, email, senha, documento, tipo) => {
     const newUsuario = await database.Usuario.create({
       nome,
-      sobrenome,
-      endereco,
+      email,
+      senha,
       documento,
+      tipo,
     });
     return newUsuario;
   },
@@ -47,13 +31,14 @@ const UsuarioService = {
     });
     return resultados;
   },
-  updateUsuario: async (nome, sobrenome, endereco, documento) => {
+  updateUsuario: async (nome, email, senha, documento, tipo) => {
     const updatedUsuario = await database.Usuario.update(
       {
         nome,
-        sobrenome,
-        endereco,
+        email,
+        senha,
         documento,
+        tipo,
       },
       {
         where: {

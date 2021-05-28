@@ -14,27 +14,29 @@ const controller = {
     return res.json(list);
   },
   create: async (req, res) => {
-    const { nome, sobrenome, endereco, documento } = req.body;
+    const { nome, email, senha, documento, tipo } = req.body;
 
     const usuario = await UsuarioService.createUsuario(
       nome,
-      sobrenome,
-      endereco,
-      documento
+      email,
+      senha,
+      documento,
+      tipo
     );
 
     return res.json(usuario);
   },
   update: async (req, res) => {
     const { id } = req.params;
-    const { nome, sobrenome, endereco, documento } = req.body;
+    const { nome, email, senha, documento, tipo } = req.body;
 
     const updatedUsuario = await UsuarioService.updateUsuario(
       id,
       nome,
-      sobrenome,
-      endereco,
-      documento
+      email,
+      senha,
+      documento,
+      tipo
     );
 
     return res.json(updatedUsuario);
