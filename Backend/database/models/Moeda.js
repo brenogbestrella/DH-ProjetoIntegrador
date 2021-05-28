@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING(15),
       },
       simbolo: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(5),
       },
-    },
+    }, 
     {
       tableName: "MOEDA",
       timestamps: false,
