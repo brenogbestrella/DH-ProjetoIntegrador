@@ -41,6 +41,6 @@ module.exports = (sequelize, DataTypes) => {
       as: "ordem_de_compra",
     });
 
-    return Usuario;
+    return usuario;
   };
 };
