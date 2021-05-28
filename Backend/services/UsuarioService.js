@@ -1,7 +1,7 @@
 const database = require("../database/models/Usuario");
 
 const UsuarioService = {
-  listUsuarioData: (usuarioName) => {
+  listUsuarioData: (usuarioNome) => {
     const usuarioList = UsuarioService.listUsuario();
     let usuario = usuarioList.find((item) => item.nome === usuarioNome);
 
