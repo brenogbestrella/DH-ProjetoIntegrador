@@ -13,6 +13,12 @@ const controller = {
     const list = await UsuarioService.getUsuarioList();
     return res.json(list);
   },
+
+  indexPessoaFisica: async (req, res) => {
+    const pessoaFisica = await UsuarioService.getUsuarioPessoaFisica();
+    return res.json(list);
+  },
+
   create: async (req, res) => {
     const { nome, email, senha, documento, tipo } = req.body;
 

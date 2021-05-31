@@ -1,3 +1,4 @@
+const Usuario = require("../database/models/Usuario");
 const database = require("../database/models/Usuario");
 
 const UsuarioService = {
@@ -30,6 +31,19 @@ const UsuarioService = {
       offset: 5,
     });
     return resultados;
+  },
+  getUsuarioPessoaFisica: async () => {
+    const usuarioPessoaFisica = await database.usuario.findAll({
+      where: {
+        tipo: 1,
+      },
+      include: [
+        {
+          model: Usuario,
+        },
+      ],
+    });
+    return usuarioPessoaFisica;
   },
   updateUsuario: async (nome, email, senha, documento, tipo) => {
     const updatedUsuario = await database.usuario.update(
