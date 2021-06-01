@@ -1,5 +1,4 @@
 const UsuarioService = require("../services/UsuarioService");
-const { validationResult } = require("express-validator");
 
 const controller = {
   index: (req, res) => {
@@ -16,7 +15,7 @@ const controller = {
 
   indexPessoaFisica: async (req, res) => {
     const pessoaFisica = await UsuarioService.getUsuarioPessoaFisica();
-    return res.json(list);
+    return res.json(pessoaFisica);
   },
 
   create: async (req, res) => {

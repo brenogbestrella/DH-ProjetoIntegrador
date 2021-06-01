@@ -1,3 +1,5 @@
+const database = require("../database/models/index");
+
 const Usuario = require("../database/models/Usuario");
 const database = require("../database/models/Usuario");
 
