@@ -13,4 +13,6 @@ router.delete("/:id", controller.destroy);
 
 router.get("/all", controller.indexAll);
 
+router.get("/pessoafisica", controller.indexPessoaFisica);
+
 module.exports = router;

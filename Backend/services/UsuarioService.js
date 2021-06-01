@@ -25,6 +25,19 @@ const UsuarioService = {
     const resultados = await database.usuario.findAll();
     return resultados;
   },
+  getUsuarioPessoaFisica: async () => {
+    const usuarioPessoaFisica = await database.usuario.findAll({
+      where: {
+        tipo: 1,
+      },
+      include: [
+        {
+          model: Usuario,
+        },
+      ],
+    });
+    return usuarioPessoaFisica;
+  },
   updateUsuario: async (nome, email, senha, documento, tipo) => {
     const updatedUsuario = await database.usuario.update(
       {
