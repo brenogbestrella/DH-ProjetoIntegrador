@@ -1,8 +1,5 @@
 const database = require("../database/models/index");
 
-const Usuario = require("../database/models/Usuario");
-const database = require("../database/models/Usuario");
-
 const UsuarioService = {
   listUsuarioData: (usuarioNome) => {
     const usuarioList = UsuarioService.listUsuario();
@@ -25,13 +22,7 @@ const UsuarioService = {
     return newUsuario;
   },
   getUsuarioList: async () => {
-    const resultados = await database.usuario.findAll({
-      where: {
-        nome,
-      },
-      limit: 10,
-      offset: 5,
-    });
+    const resultados = await database.usuario.findAll();
     return resultados;
   },
   getUsuarioPessoaFisica: async () => {
@@ -76,3 +67,4 @@ const UsuarioService = {
 };
 
 module.exports = UsuarioService;
+//check

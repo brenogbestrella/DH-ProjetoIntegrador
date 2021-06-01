@@ -3,15 +3,15 @@ const UsuarioService = require("../services/UsuarioService");
 const controller = {
   index: (req, res) => {
     const { nome } = req.query;
-
     const usuario = UsuarioService.listUsuarioData(nome);
-
     return res.json(usuario);
   },
+
   indexAll: async (req, res) => {
     const list = await UsuarioService.getUsuarioList();
     return res.json(list);
   },
+
 
   indexPessoaFisica: async (req, res) => {
     const pessoaFisica = await UsuarioService.getUsuarioPessoaFisica();
@@ -56,3 +56,4 @@ const controller = {
 };
 
 module.exports = controller;
+//check

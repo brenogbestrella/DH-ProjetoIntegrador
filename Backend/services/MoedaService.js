@@ -1,4 +1,4 @@
-const database = require("../database/models/Moeda");
+const database = require("../database/models/index");
 
 const MoedaService = {
   listMoedaData: (MoedaName) => {
@@ -6,7 +6,7 @@ const MoedaService = {
     let Moeda = MoedaList.find((item) => item.nome === MoedaNome);
 
     if (!Moeda) {
-        Moeda = MoedaList[0];
+      Moeda = MoedaList[0];
     }
 
     return Moeda;
@@ -14,7 +14,7 @@ const MoedaService = {
   createMoeda: async (nome, simbolo) => {
     const newMoeda = await database.Moeda.create({
       nome,
-      simbolo
+      simbolo,
     });
     return newMoeda;
   },
@@ -23,7 +23,7 @@ const MoedaService = {
     const updatedMoeda = await database.Moeda.update(
       {
         nome,
-        simbolo
+        simbolo,
       },
       {
         where: {

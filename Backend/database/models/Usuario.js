@@ -40,7 +40,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "id_oferta",
       as: "ordem_de_compra",
     });
-
-    return usuario;
   };
+  return Usuario;
 };

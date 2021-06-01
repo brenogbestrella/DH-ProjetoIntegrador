@@ -1,13 +1,13 @@
 const express = require("express");
 
-const controller = require("../controllers/MoedaController");
-const validator = require("../middlewares/MoedaValidator");
+const controller = require("../controllers/UsuarioController");
+const validator = require("../middlewares/UsuarioValidator");
 
 const router = express.Router();
 
 // GET home page
 router.get("/", controller.index);
-router.post("/", validator, controller.create);
+router.post("/", controller.create);
 router.put("/:id", validator, controller.update);
 router.delete("/:id", controller.destroy);
 

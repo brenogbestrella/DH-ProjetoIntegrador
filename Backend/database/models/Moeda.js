@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       simbolo: {
         type: DataTypes.STRING(5),
       },
-    }, 
+    },
     {
       tableName: "MOEDA",
       timestamps: false,
