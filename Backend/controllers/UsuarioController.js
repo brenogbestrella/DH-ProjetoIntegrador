@@ -1,40 +1,41 @@
 const UsuarioService = require("../services/UsuarioService");
-const { validationResult } = require("express-validator");
 
 const controller = {
   index: (req, res) => {
     const { nome } = req.query;
-
     const usuario = UsuarioService.listUsuarioData(nome);
-
     return res.json(usuario);
   },
+
   indexAll: async (req, res) => {
     const list = await UsuarioService.getUsuarioList();
     return res.json(list);
   },
+
   create: async (req, res) => {
-    const { nome, sobrenome, endereco, documento } = req.body;
+    const { nome, email, senha, documento, tipo } = req.body;
 
     const usuario = await UsuarioService.createUsuario(
       nome,
-      sobrenome,
-      endereco,
-      documento
+      email,
+      senha,
+      documento,
+      tipo
     );
 
     return res.json(usuario);
   },
   update: async (req, res) => {
     const { id } = req.params;
-    const { nome, sobrenome, endereco, documento } = req.body;
+    const { nome, email, senha, documento, tipo } = req.body;
 
     const updatedUsuario = await UsuarioService.updateUsuario(
       id,
       nome,
-      sobrenome,
-      endereco,
-      documento
+      email,
+      senha,
+      documento,
+      tipo
     );
 
     return res.json(updatedUsuario);
@@ -49,3 +50,4 @@ const controller = {
 };
 
 module.exports = controller;
+//check

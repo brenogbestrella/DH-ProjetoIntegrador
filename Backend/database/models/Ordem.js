@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
       data: {
         type: DataTypes.DATE,
       },
+      endereco: {
+        type: DataTypes.STRING,
+      },
     },
     {
       tableName: "Ordem",
@@ -34,5 +37,6 @@ module.exports = (sequelize, DataTypes) => {
       as: "usuario",
     });
   };
+
   return Ordem;
 };

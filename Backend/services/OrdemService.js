@@ -1,57 +1,40 @@
-const database = require("../database/models/Ordem");
+const database = require("../database/models/index");
 
 const OrdemService = {
-  listOrdem: () => {
-    const bento = new OrdemModel(
-      1,
-      "Bento",
-      "José",
-      "Rua AXC",
-      "123.446.789-01"
-    );
-    const energumeno = new OrdemModel(
-      2,
-      "Energúmeno",
-      "Zózimo",
-      "Rua ABD",
-      "123.436.789-02"
-    );
-    return [bento, energumeno];
-  },
-  listOrdemData: (OrdemName) => {
-    const OrdemList = OrdemService.listOrdem();
-    let Ordem = OrdemList.find((item) => item.name === OrdemName);
+  listOrdemData: (ordemName) => {
+    const ordemList = OrdemService.listOrdem();
+    let ordem = ordemList.find((item) => item.name === ordemName);
 
-    if (!Ordem) {
-      Ordem = OrdemList[0];
+    if (!ordem) {
+      ordem = ordemList[0];
     }
 
-    return Ordem;
+    return ordem;
   },
-  createOrdem: async (quantidade, data, local) => {
+  createOrdem: async (quantidade, data, endereco) => {
     const newOrdem = await database.Ordem.create({
       quantidade,
       data,
-      local,
+      endereco,
     });
     return newOrdem;
   },
   getOrdemList: async () => {
     const resultados = await database.Ordem.findAll({
       where: {
-        nome,
+        data,
       },
       limit: 10,
       offset: 5,
     });
     return resultados;
   },
-  updateOrdem: async (quantidade, data, local) => {
+  updateOrdem: async (quantidade, data, endereco) => {
     const updatedOrdem = await database.Ordem.update(
       {
         quantidade,
         data,
-        local,
+        endereco,
       },
       {
         where: {

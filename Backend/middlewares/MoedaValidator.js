@@ -3,10 +3,8 @@ const yup = require("yup");
 function validator(req, res, next) {
   const schema = yup.object().shape({
     nome: yup.string().required(),
-    email: yup.string().required(),
-    senha: yup.string().required(),
-    documento: yup.string().required(),
-    tipo: yup.boolean().required(),
+    simbolo: yup.string().required()
+    
   });
 
   if (!schema.isValidSync(req.body)) {
