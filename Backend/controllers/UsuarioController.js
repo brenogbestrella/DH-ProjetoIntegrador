@@ -12,7 +12,6 @@ const controller = {
     return res.json(list);
   },
 
-
   indexPessoaFisica: async (req, res) => {
     const pessoaFisica = await UsuarioService.getUsuarioPessoaFisica();
     return res.json(pessoaFisica);

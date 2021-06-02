@@ -12,7 +12,7 @@ const UsuarioService = {
     return usuario;
   },
   createUsuario: async (nome, email, senha, documento, tipo) => {
-    const newUsuario = await database.usuario.create({
+    const newUsuario = await database.Usuario.create({
       nome,
       email,
       senha,
@@ -22,24 +22,25 @@ const UsuarioService = {
     return newUsuario;
   },
   getUsuarioList: async () => {
-    const resultados = await database.usuario.findAll();
+    const resultados = await database.Usuario.findAll();
     return resultados;
   },
   getUsuarioPessoaFisica: async () => {
-    const usuarioPessoaFisica = await database.usuario.findAll({
+    const usuarioPessoaFisica = await database.Usuario.findAll({
       where: {
         tipo: 1,
       },
       include: [
         {
-          model: Usuario,
+          model: database.Oferta,
+          as: "oferta",
         },
       ],
     });
     return usuarioPessoaFisica;
   },
-  updateUsuario: async (nome, email, senha, documento, tipo) => {
-    const updatedUsuario = await database.usuario.update(
+  updateUsuario: async (id, nome, email, senha, documento, tipo) => {
+    const updatedUsuario = await database.Usuario.update(
       {
         nome,
         email,
@@ -57,7 +58,7 @@ const UsuarioService = {
     return updatedUsuario;
   },
   destroyUsuario: async (id) => {
-    const destroyedUsuario = await database.usuario.destroy({
+    const destroyedUsuario = await database.Usuario.destroy({
       where: {
         id,
       },

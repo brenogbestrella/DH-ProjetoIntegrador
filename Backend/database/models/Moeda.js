@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  sequelize.define(
+  const Moeda = sequelize.define(
     "Moeda",
     {
       id_moeda: {
@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Moeda.associate = (listaDeModelos) => {
-    Moeda.belongsToMany(listaDeModelos.Oferta, {
+    Moeda.hasMany(listaDeModelos.Oferta, {
       foreignKey: "id_oferta",
       as: "oferta",
     });

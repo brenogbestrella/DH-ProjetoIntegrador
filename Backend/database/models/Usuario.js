@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  sequelize.define(
+  const Usuario = sequelize.define(
     "Usuario",
     {
       id: {
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
-      tableName: "CADASTRO",
+      tableName: "usuario",
       timestamps: false,
     }
   );
@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     Usuario.hasMany(listaDeModelos.Ordem, {
       foreignKey: "id_oferta",
-      as: "ordem_de_compra",
+      as: "ordem",
     });
   };
   return Usuario;

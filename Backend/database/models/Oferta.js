@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  sequelize.define(
+  const Oferta = sequelize.define(
     "Oferta",
     {
       id_oferta: {
@@ -32,17 +32,17 @@ module.exports = (sequelize, DataTypes) => {
   Oferta.associate = (listaDeModelos) => {
     Oferta.belongsTo(listaDeModelos.Usuario, {
       foreignKey: "id_usuario",
-      as: "usuarios",
+      as: "usuario",
     });
 
     Oferta.belongsTo(listaDeModelos.Moeda, {
       foreignKey: "id_moeda",
-      as: "ofertas",
+      as: "moeda",
     });
 
-    Oferta.belongsTo(listaDeModelos.Ordem, {
-      foreignKey: "id_ordem",
-      as: "ofertas",
+    Oferta.hasMany(listaDeModelos.Ordem, {
+      foreignKey: "id_oferta",
+      as: "ordem",
     });
   };
 
