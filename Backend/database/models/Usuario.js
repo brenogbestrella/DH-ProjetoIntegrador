@@ -14,14 +14,17 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING(50),
       },
       senha: {
-        type: DataTypes.STRING(8),
+        type: DataTypes.VIRTUAL,
+      },
+      senha_hash: {
+        type: DataTypes.STRING(12),
       },
       documento: {
         //cpf ou cnpj dependem do tipo de usuario logo abaixo (bem lembrado)
         type: DataTypes.STRING(50),
       },
       tipo: {
-        //tipo define se é pessoa fisica ou juridica - 0 = física; 1 = jurídica
+        //tipo define se é pessoa fisica ou juridica / 0 = física; 1 = jurídica
         type: DataTypes.BOOLEAN,
       },
     },
@@ -30,6 +33,12 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     }
   );
+
+  Usuario.addHook("beforeSave", async (usuario) => {
+    if (usuario.senha) {
+      usuario.senha_hash = await bcrypt.hash(usuario.senha, 12);
+    }
+  });
 
   Usuario.associate = (listaDeModelos) => {
     Usuario.hasMany(listaDeModelos.Oferta, {

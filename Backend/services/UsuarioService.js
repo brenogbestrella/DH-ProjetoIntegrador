@@ -1,16 +1,7 @@
+const { DatabaseError } = require("sequelize/types");
 const database = require("../database/models/index");
 
 const UsuarioService = {
-  listUsuarioData: (usuarioNome) => {
-    const usuarioList = UsuarioService.listUsuario();
-    let usuario = usuarioList.find((item) => item.nome === usuarioNome);
-
-    if (!usuario) {
-      usuario = usuarioList[0];
-    }
-
-    return usuario;
-  },
   createUsuario: async (nome, email, senha, documento, tipo) => {
     const newUsuario = await database.Usuario.create({
       nome,
@@ -28,7 +19,7 @@ const UsuarioService = {
   getUsuarioPessoaFisica: async () => {
     const usuarioPessoaFisica = await database.Usuario.findAll({
       where: {
-        tipo: 1,
+        tipo: 0,
       },
       include: [
         {
@@ -38,6 +29,20 @@ const UsuarioService = {
       ],
     });
     return usuarioPessoaFisica;
+  },
+  getUsuarioPessoaJuridica: async () => {
+    const usuarioPessoaJuridica = await database.Usuario.findAll({
+      where: {
+        tipo: 1,
+      },
+      include: [
+        {
+          model: database.Oferta,
+          as: "oferta",
+        },
+      ],
+    });
+    return usuarioPessoaJuridica;
   },
   updateUsuario: async (id, nome, email, senha, documento, tipo) => {
     const updatedUsuario = await database.Usuario.update(
@@ -64,6 +69,14 @@ const UsuarioService = {
       },
     });
     return destroyedUsuario;
+  },
+  getById: async (id) => {
+    return await database.Usuario.findByPk(id);
+  },
+  getAttributeById: async (id, attribute) => {
+    return await database.Usuario.findByPk(id, {
+      attributes: [attribute],
+    });
   },
 };
 

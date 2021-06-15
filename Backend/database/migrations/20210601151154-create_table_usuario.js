@@ -10,18 +10,24 @@ module.exports = {
       },
       nome: {
         type: Sequelize.STRING(100),
+        allowNull: false,
       },
       email: {
         type: Sequelize.STRING(50),
+        allowNull: false,
+        unique: true,
       },
       senha: {
         type: Sequelize.STRING(8),
+        allowNull: false,
       },
       documento: {
         type: Sequelize.STRING(50),
+        allowNull: false,
       },
       tipo: {
         type: Sequelize.BOOLEAN,
+        allowNull: false,
       },
       createdAt: {
         type: Sequelize.DATE,

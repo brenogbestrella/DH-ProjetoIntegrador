@@ -1,12 +1,26 @@
 const UsuarioService = require("../services/UsuarioService");
 
 const controller = {
-  index: (req, res) => {
-    const { nome } = req.query;
-    const usuario = UsuarioService.listUsuarioData(nome);
+  indexById: async (req, res) => {
+    const { id } = req.params;
+    const usuario = await UsuarioService.getById(id);
+
+    if (!usuario) {
+      return res.status(404).json({ error: `Usuário ${id} não encontrado` });
+    }
+
     return res.json(usuario);
   },
+  indexByIdAndAttribute: async (req, res) => {
+    const { id, attribute } = req.params;
+    const usuario = await UsuarioService.getAttributeById(id, attribute);
 
+    if (!usuario) {
+      return res.status(404).json({ error: `Usuário ${id} não encontrado` });
+    }
+
+    return res.json(usuario);
+  },
   indexAll: async (req, res) => {
     const list = await UsuarioService.getUsuarioList();
     return res.json(list);
@@ -15,6 +29,11 @@ const controller = {
   indexPessoaFisica: async (req, res) => {
     const pessoaFisica = await UsuarioService.getUsuarioPessoaFisica();
     return res.json(pessoaFisica);
+  },
+
+  indexPessoaJuridica: async (req, res) => {
+    const pessoaJuridica = await UsuarioService.getUsuarioPessoaJuridica();
+    return res.json(pessoaJuridica);
   },
 
   create: async (req, res) => {
