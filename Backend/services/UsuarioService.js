@@ -1,4 +1,3 @@
-const { DatabaseError } = require("sequelize/types");
 const database = require("../database/models/index");
 
 const UsuarioService = {
@@ -21,12 +20,6 @@ const UsuarioService = {
       where: {
         tipo: 0,
       },
-      include: [
-        {
-          model: database.Oferta,
-          as: "oferta",
-        },
-      ],
     });
     return usuarioPessoaFisica;
   },
@@ -35,12 +28,6 @@ const UsuarioService = {
       where: {
         tipo: 1,
       },
-      include: [
-        {
-          model: database.Oferta,
-          as: "oferta",
-        },
-      ],
     });
     return usuarioPessoaJuridica;
   },

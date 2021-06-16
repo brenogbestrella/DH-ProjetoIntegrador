@@ -1,3 +1,5 @@
+const bcrypt = require("bcryptjs");
+
 module.exports = (sequelize, DataTypes) => {
   const Usuario = sequelize.define(
     "Usuario",
@@ -17,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.VIRTUAL,
       },
       senha_hash: {
-        type: DataTypes.STRING(12),
+        type: DataTypes.STRING,
       },
       documento: {
         //cpf ou cnpj dependem do tipo de usuario logo abaixo (bem lembrado)
@@ -30,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       tableName: "usuario",
-      timestamps: false,
+      timestamps: true,
     }
   );
 

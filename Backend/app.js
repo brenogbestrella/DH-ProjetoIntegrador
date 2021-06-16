@@ -62,7 +62,7 @@ app.use("/login", loginRouter);
 //     if (usuario) {
 //       const senhaValida = await bcrypt.compare(senha, usuario.hash);
 //       if (senhaValida) {
-//         res.status(200).json("E-mail e senha corretos.");
+//         res.status(200).json({token});
 //       } else {
 //         res.json("Senha incorreta, tente novamente.");
 //       }

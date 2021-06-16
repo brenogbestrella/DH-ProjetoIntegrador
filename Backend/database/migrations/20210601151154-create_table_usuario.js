@@ -17,8 +17,8 @@ module.exports = {
         allowNull: false,
         unique: true,
       },
-      senha: {
-        type: Sequelize.STRING(8),
+      senha_hash: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
       documento: {
