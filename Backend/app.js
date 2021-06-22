@@ -2,8 +2,6 @@ const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
 
-const bcrypt = require("bcryptjs");
-
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
@@ -35,44 +33,6 @@ app.use("/cadastro", cadastroRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/recuperarSenha", recuperarSenhaRouter);
 app.use("/login", loginRouter);
-
-//bcrypt
-
-// app.post("/cadastro", async (req, res) => {
-//   try {
-//     const { nome, email, senha, documento, tipo } = req.body;
-//     const hash = await bcrypt.hash(senha, 10);
-//     await db("usuario").insert({
-//       email: email,
-//       hash: hash,
-//       nome: nome,
-//       documento: documento,
-//       tipo: tipo,
-//     });
-//     res.status(200).json("Tarefa realizada.");
-//   } catch (err) {
-//     res.status(500).send("Algo deu errado, tente novamente.");
-//   }
-// });
-
-// app.post("/login", async (req, res) => {
-//   try {
-//     const { email, senha } = req.body;
-//     const usuario = await db("usuario").first("*").where({ email: email });
-//     if (usuario) {
-//       const senhaValida = await bcrypt.compare(senha, usuario.hash);
-//       if (senhaValida) {
-//         res.status(200).json({token});
-//       } else {
-//         res.json("Senha incorreta, tente novamente.");
-//       }
-//     } else {
-//       res.status(404).json("Usuário não encontrado.");
-//     }
-//   } catch (err) {
-//     res.status(500).send("Algo deu errado, tente novamente.");
-//   }
-// });
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
