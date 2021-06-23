@@ -6,9 +6,9 @@ const controller = require("../controllers/CadastroController");
 
 
 router.get("/", function (req, res, next) {
-  res.render("cadastro");
+  res.render("cadastro"); // fazer arquivo geral (rotas/views)
 });
-router.post("/", controller.cadastro);
+router.post("/", controller.cadastro); //colocar na rota de usuário
 
 
 

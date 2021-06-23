@@ -16,6 +16,8 @@ const controller = {
   create: async (req, res) => {
     const { quantidade, data, endereco } = req.body;
 
+    const idUsuario = req.userId;
+
     const oferta = await OfertaService.createOferta(quantidade, data, endereco);
 
     return res.json(oferta);

@@ -10,7 +10,7 @@ const controller = {
         if (usuario) {
           const senhaValida = await bcrypt.compare(senha, usuario.hash);
           if (senhaValida) {
-            const token = jwt.sign({id}, secret, {expiresIn: 3000})
+            const token = jwt.sign({id: usuario.id}, secret, {expiresIn: "24h"})
             res.status(200).json({auth: true, token});
           } else {
             res.json("Senha incorreta, tente novamente.");

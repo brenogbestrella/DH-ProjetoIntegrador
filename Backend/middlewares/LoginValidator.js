@@ -1,14 +1,26 @@
 const jwt = require("jsonwebtoken");
 const secret = "ivensjunior"
 
-function verifyJWT(req, res, next) {
-  const token = req.headers["x-acess-token"]; //ou authorization
-  jwt.verify(token, secret, (err, decoded) => {
-    if(err) return res.status(401).end();
+const {promisify} = require("util")
 
-    req.id = decoded.id;
-    next();
-  })
+async function verifyJWT(req, res, next) {
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader) {
+    return res.status(401).json({ error: 'Token not provided' });
+  }
+
+  const [, token] = authHeader.split(' ');
+
+  try {
+    const decoded = await promisify(jwt.verify)(token, secret);
+
+    req.userId = decoded.id;
+
+    return next();
+  } catch (error) {
+    return res.status(401).json({ error: 'Invalid token.' });
+  }
 };
 
 module.exports = validator;
