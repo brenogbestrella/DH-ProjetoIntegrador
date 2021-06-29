@@ -2,13 +2,33 @@ const OfertaService = require("../services/OfertaService");
 const { validationResult } = require("express-validator");
 
 const controller = {
-  index: (req, res) => {
-    const { nome } = req.query;
+  indexById: async (req, res) => {
+    const { id } = req.params;
+    const oferta = await OfertaService.getById(id);
 
-    const oferta = OfertaService.listOfertaData(nome);
+    if (!oferta) {
+      return res.status(404).json({ error: `Oferta ${id} não encontrado` });
+    }
 
     return res.json(oferta);
   },
+  indexByIdAndAttribute: async (req, res) => {
+    const { id, attribute } = req.params;
+    const oferta = await OfertaService.getAttributeById(id, attribute);
+
+    if (!oferta) {
+      return res.status(404).json({ error: `Oferta ${id} não encontrado` });
+    }
+
+    return res.json(oferta);
+  },
+  //index: (req, res) => {
+    //const { nome } = req.query;
+
+    //const oferta = OfertaService.listOfertaData(nome);
+
+    //return res.json(oferta);
+  //},
   indexAll: async (req, res) => {
     const list = await OfertaService.getOfertaList();
     return res.json(list);

@@ -3,7 +3,7 @@ const secret = "ivensjunior"
 
 const {promisify} = require("util")
 
-async function verifyJWT(req, res, next) {
+async function validator(req, res, next) {
   const authHeader = req.headers.authorization;
 
   if (!authHeader) {

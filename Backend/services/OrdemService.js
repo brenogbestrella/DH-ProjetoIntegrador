@@ -53,6 +53,16 @@ const OrdemService = {
     });
     return destroyedOrdem;
   },
+
+  getById: async (id) => {
+    return await database.Ordem.findByPk(id);
+  },
+  getAttributeById: async (id, attribute) => {
+    return await database.Ordem.findByPk(id, {
+      attributes: [attribute],
+    });
+  },
 };
+
 
 module.exports = OrdemService;
