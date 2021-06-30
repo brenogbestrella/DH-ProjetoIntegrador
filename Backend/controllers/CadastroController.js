@@ -16,7 +16,7 @@ const controller = {
     } catch (err) {
       res.status(500).send("Algo deu errado, tente novamente.");
     }
-  };
+  },
 };
 
 module.exports = controller;

@@ -11,30 +11,30 @@ const OfertaService = {
 
     return oferta;
   },
-  createOferta: async (quantidade, data, endereco) => {
+  createOferta: async (quantidade, endereco, cotacao) => {
     const newOferta = await database.Oferta.create({
       quantidade,
-      data,
       endereco,
+      cotacao,
     });
     return newOferta;
   },
   getOfertaList: async () => {
     const resultados = await database.Oferta.findAll({
       where: {
-        data,
+        data, //mudar a data pro createAt
       },
       limit: 10,
       offset: 5,
     });
     return resultados;
   },
-  updateOferta: async (quantidade, data, endereco) => {
+  updateOferta: async (quantidade, endereco, cotacao) => {
     const updatedOferta = await database.Oferta.update(
       {
         quantidade,
-        data,
         endereco,
+        cotacao,
       },
       {
         where: {

@@ -14,23 +14,27 @@ const controller = {
     return res.json(list);
   },
   create: async (req, res) => {
-    const { quantidade, data, endereco } = req.body;
+    const { quantidade, endereco, cotacao } = req.body;
 
-    const idUsuario = req.userId;
+    // const idUsuario = req.userId;
 
-    const oferta = await OfertaService.createOferta(quantidade, data, endereco);
+    const oferta = await OfertaService.createOferta(
+      quantidade,
+      endereco,
+      cotacao
+    );
 
     return res.json(oferta);
   },
   update: async (req, res) => {
     const { id } = req.params;
-    const { quantidade, data, endereco } = req.body;
+    const { quantidade, endereco, cotacao } = req.body;
 
     const updatedOferta = await OfertaService.updateOferta(
       id,
       quantidade,
-      data,
-      endereco
+      endereco,
+      cotacao
     );
 
     return res.json(updatedOferta);
