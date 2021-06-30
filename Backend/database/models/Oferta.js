@@ -8,32 +8,33 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
       },
       fk_idMoeda: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(100),
       },
       fk_idUsuario: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING(100),
       },
       quantidade: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
       },
       endereco: {
         type: DataTypes.STRING(200),
       },
       cotacao: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
       },
     },
     {
-      tableName: "OFERTA",
+      tableName: "Ofertas",
       timestamps: false,
     }
   );
 
   Oferta.associate = (listaDeModelos) => {
-    Oferta.belongsTo(listaDeModelos.Usuario, {
+    Oferta.hasOne(listaDeModelos.Usuario, {
       foreignKey: "id_usuario",
       as: "usuario",
     });
+
 
     Oferta.belongsTo(listaDeModelos.Moeda, {
       foreignKey: "id_moeda",
@@ -43,8 +44,10 @@ module.exports = (sequelize, DataTypes) => {
     Oferta.hasMany(listaDeModelos.Ordem, {
       foreignKey: "id_oferta",
       as: "ordem",
+
     });
   };
 
   return Oferta;
 };
+ 
