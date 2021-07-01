@@ -1,11 +1,23 @@
 const UsuarioService = require("../services/UsuarioService");
-const { validationResult } = require("express-validator");
 
 const controller = {
-  index: (req, res) => {
-    const { nome } = req.query;
+  indexById: async (req, res) => {
+    const { id } = req.params;
+    const usuario = await UsuarioService.getById(id);
 
-    const usuario = UsuarioService.listUsuarioData(nome);
+    if (!usuario) {
+      return res.status(404).json({ error: `Usuário ${id} não encontrado` });
+    }
+
+    return res.json(usuario);
+  },
+  indexByIdAndAttribute: async (req, res) => {
+    const { id, attribute } = req.params;
+    const usuario = await UsuarioService.getAttributeById(id, attribute);
+
+    if (!usuario) {
+      return res.status(404).json({ error: `Usuário ${id} não encontrado` });
+    }
 
     return res.json(usuario);
   },
@@ -13,28 +25,41 @@ const controller = {
     const list = await UsuarioService.getUsuarioList();
     return res.json(list);
   },
+
+  indexPessoaFisica: async (req, res) => {
+    const pessoaFisica = await UsuarioService.getUsuarioPessoaFisica();
+    return res.json(pessoaFisica);
+  },
+
+  indexPessoaJuridica: async (req, res) => {
+    const pessoaJuridica = await UsuarioService.getUsuarioPessoaJuridica();
+    return res.json(pessoaJuridica);
+  },
+
   create: async (req, res) => {
-    const { nome, sobrenome, endereco, documento } = req.body;
+    const { nome, email, senha, documento, tipo } = req.body;
 
     const usuario = await UsuarioService.createUsuario(
       nome,
-      sobrenome,
-      endereco,
-      documento
+      email,
+      senha,
+      documento,
+      tipo
     );
 
     return res.json(usuario);
   },
   update: async (req, res) => {
     const { id } = req.params;
-    const { nome, sobrenome, endereco, documento } = req.body;
+    const { nome, email, senha, documento, tipo } = req.body;
 
     const updatedUsuario = await UsuarioService.updateUsuario(
       id,
       nome,
-      sobrenome,
-      endereco,
-      documento
+      email,
+      senha,
+      documento,
+      tipo
     );
 
     return res.json(updatedUsuario);
@@ -49,3 +74,4 @@ const controller = {
 };
 
 module.exports = controller;
+//check

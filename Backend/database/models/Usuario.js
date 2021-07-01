@@ -1,48 +1,56 @@
+const bcrypt = require("bcryptjs");
+
 module.exports = (sequelize, DataTypes) => {
-  sequelize.define(
+  const Usuario = sequelize.define(
     "Usuario",
     {
-      id_usuario: {
+      id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,
       },
       nome: {
+        type: DataTypes.STRING(100),
+      },
+      email: {
         type: DataTypes.STRING(50),
       },
-      sobrenome: {
-        type: DataTypes.STRING(100),
+      senha: {
+        type: DataTypes.VIRTUAL,
       },
-      endereço: {
-        type: DataTypes.STRING(100),
+      senha_hash: {
+        type: DataTypes.STRING,
       },
       documento: {
-        //cpf ou cnpj dependem do tipo de usuario logo abaixo
+        //cpf ou cnpj dependem do tipo de usuario logo abaixo (bem lembrado)
         type: DataTypes.STRING(50),
       },
       tipo: {
-        //tipo define se é pessoa fisica ou juridica
+        //tipo define se é pessoa fisica ou juridica / 0 = física; 1 = jurídica
         type: DataTypes.BOOLEAN,
       },
     },
     {
-      tableName: "CADASTRO",
-      timestamps: false,
+      tableName: "usuario",
+      timestamps: true,
     }
   );
 
-  Usuario.associate = (listaDeModelos) => {
-    Usuario.hasMany(listaDeModelos.Oferta, {
-      foreignKey: "id_oferta",
-      as: "oferta",
-      //algo me diz q esses alias vao dar merda na hora da consulta no banco de dados
-    });
-  };
+  Usuario.addHook("beforeSave", async (usuario) => {
+    if (usuario.senha) {
+      usuario.senha_hash = await bcrypt.hash(usuario.senha, 12);
+    }
+  });
 
   Usuario.associate = (listaDeModelos) => {
-    Usuario.hasMany(listaDeModelos.Ordem, {
-      foreignKey: "fk_idOferta",
+    Usuario.hasMany(listaDeModelos.Oferta, {
+      foreignKey: "id_usuario",
       as: "oferta",
     });
+    Usuario.hasMany(listaDeModelos.Ordem, {
+      foreignKey: "id_oferta",
+      as: "ordem",
+    });
   };
+  return Usuario;
 };

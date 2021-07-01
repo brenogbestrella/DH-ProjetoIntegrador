@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  sequelize.define(
+  const Oferta = sequelize.define(
     "Oferta",
     {
       id_oferta: {
@@ -32,17 +32,19 @@ module.exports = (sequelize, DataTypes) => {
   Oferta.associate = (listaDeModelos) => {
     Oferta.hasOne(listaDeModelos.Usuario, {
       foreignKey: "id_usuario",
-      as: "usuarios",
+      as: "usuario",
     });
 
-    Oferta.hasmany(listaDeModelos.Moeda, {
+
+    Oferta.belongsTo(listaDeModelos.Moeda, {
+      foreignKey: "id_moeda",
+      as: "moeda",
+    });
+
+    Oferta.hasMany(listaDeModelos.Ordem, {
       foreignKey: "id_oferta",
-      as: "ofertas",
-    });
+      as: "ordem",
 
-    Oferta.hasmany(listaDeModelos.Ordem, {
-      foreignKey: "id_ordem",
-      as: "ofertas",
     });
   };
 

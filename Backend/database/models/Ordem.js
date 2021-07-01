@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  sequelize.define(
+  const Ordem = sequelize.define(
     "Ordem",
     {
       id_ordem: {
@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
       data: {
         type: DataTypes.DATE,
       },
+      endereco: {
+        type: DataTypes.STRING,
+      },
     },
     {
       tableName: "Ordem",
@@ -24,16 +27,18 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Ordem.associate = (listaDeModelos) => {
-    Ordem.belongsToMany(listaDeModelos.Oferta, {
+    Ordem.belongsTo(listaDeModelos.Oferta, {
       foreignKey: "id_oferta",
       as: "oferta",
     });
-  
 
-  Ordem.belongsToMany(listaDeModelos.Usuario, {
-    foreignKey: "id_usuario",
-    as: "usuario",
-  });
+    // Ordem.belongsTo(listaDeModelos.Usuario, {
+    //   foreignKey: "id_usuario",
+    //   as: "usuario",
+    // });
+  };
+
+  //inserir id_usuario
 
   return Ordem;
 }

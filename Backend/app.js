@@ -1,6 +1,7 @@
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
+
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
@@ -11,6 +12,7 @@ const cadastroRouter = require("./routes/cadastro");
 const usuarioRouter = require("./routes/usuario");
 const recuperarSenhaRouter = require("./routes/recuperarSenha");
 const loginRouter = require("./routes/login");
+const db = require("./database/models");
 
 const app = express();
 
@@ -28,7 +30,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexGeralRouter);
 app.use("/home", homeRouter);
 app.use("/cadastro", cadastroRouter);
-app.use("/usuario", usuarioRouter);
+app.use("/usuarios", usuarioRouter);
 app.use("/recuperarSenha", recuperarSenhaRouter);
 app.use("/login", loginRouter);
 
