@@ -41,5 +41,4 @@ module.exports = (sequelize, DataTypes) => {
   //inserir id_usuario
 
   return Ordem;
-}
 };
