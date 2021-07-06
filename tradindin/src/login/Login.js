@@ -47,7 +47,7 @@ function Login() {
                     <div className="conta">
                         <span
                         >Não tem conta?
-                        <a className="aa" href="#something"> Clique aqui</a></span>
+                        <a className="aa" href=""> Clique aqui</a></span>
                     </div>
                     </form>
                 </div>

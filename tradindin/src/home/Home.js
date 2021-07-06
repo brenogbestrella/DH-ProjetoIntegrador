@@ -1,3 +1,6 @@
+import React from "react";
+import {Link} from 'react-router-dom';
+
 import "./Home.css";
 import logo_trad1 from "../images/logo_trad1.png"
 import logo from "../images/logo.png"
@@ -26,7 +29,7 @@ function Home() {
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Contato</a></li>
-                    <li><a href="">Login</a></li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
                 </nav>
             </div>
