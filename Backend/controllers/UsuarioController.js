@@ -47,7 +47,12 @@ const controller = {
       tipo
     );
 
-    return res.json(usuario);
+    return res.json({
+      nome: usuario.nome,
+      email: usuario.email,
+      documento: usuario.documento,
+      tipo: usuario.tipo,
+    });
   },
   update: async (req, res) => {
     const { id } = req.params;
