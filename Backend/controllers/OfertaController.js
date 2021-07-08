@@ -34,7 +34,7 @@ const controller = {
     return res.json(list);
   },
   create: async (req, res) => {
-    const { quantidade, data, endereco } = req.body;
+    const { quantidade, data, endereco } = req.body; //INSERIR MOEDA
 
     const idUsuario = req.userId;
 

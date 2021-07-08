@@ -4,8 +4,8 @@ import logo from "../images/logo_trad1.png";
 function App() {
   return (
     <div className="Home">
-      <header className="Home-header">
-        <img src={logo} className="Tradindin-logo" alt="logo" />
+      <header>
+        
       </header>
       <body>
         <h1>Sua Pesquisa</h1>
