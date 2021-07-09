@@ -6,8 +6,10 @@ import Cadastro from "./cadastro/Cadastro"
 import App from "./app/App"
 import Senha from "./senha/Senha"
 import User from "./user/User"
+import Oferta from "./oferta/Oferta"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
+
 
 const Routing = () => {
   return(
@@ -19,6 +21,8 @@ const Routing = () => {
         <Route path="/senha" component={Senha} />
         <Route path="/app" component={App} />
         <Route path="/user" component={User} />
+        <Route path="/oferta" component={Oferta} />
+        
       </Switch>
     </Router>
   )
