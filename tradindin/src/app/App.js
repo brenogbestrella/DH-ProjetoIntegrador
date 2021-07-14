@@ -1,14 +1,19 @@
 import "./App.css";
 import logo from "../images/logo_trad1.png";
+import Header from "../components/header/Header";
+import Pesquisa from "../components/pesquisa/Pesquisa";
+
 
 function App() {
   return (
     <div className="Home">
-      <header>
-        
-      </header>
+
+<Header />
+
+
       <body>
-        <h1>Sua Pesquisa</h1>
+     
+        <h1 className="appesquisa" >Sua Pesquisa</h1>
         <div className="filtro">
           <div id="pesquisa">
             <input
@@ -20,6 +25,7 @@ function App() {
             />
           </div>
           <div id="botoes-filtro">
+            
             <button className="btn active" onclick="filterSelection('all')">
               TODAS
             </button>
@@ -49,7 +55,9 @@ function App() {
             </label>
           </form>
         </div>
+        
         <div className="melhores-ofertas">
+          
           <h2>Melhores Ofertas</h2>
           <div className="oferta">
             <button className="botao-oferta" onclick="filterSelection('offer1')">
@@ -154,6 +162,7 @@ function App() {
             </button>
           </div>
         </div>
+        
       </body>
     </div>
   );

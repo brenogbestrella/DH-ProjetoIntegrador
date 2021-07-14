@@ -4,15 +4,13 @@ import user from "../images/user.svg";
 import cadeado from "../images/cadeado.svg";
 import o_email from "../images/o_email.svg";
 import identidade from "../images/identidade.png";
-
+import Header from "../components/header/Header"
 
 
 function Cadastro() {
   return (
     <div className="Cadastro">
-        <header>
-
-        </header>
+ <Header />
         <body>
             <main className="pagina-cadastro">
             <div className="card-cadastro">

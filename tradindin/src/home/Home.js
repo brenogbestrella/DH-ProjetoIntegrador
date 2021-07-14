@@ -17,23 +17,13 @@ import linkedin from "../images/linkedin.svg"
 import github_big_logo from "../images/github_big_logo.svg";
 import instagram from "../images/instagram.svg";
 import facebook_app_symbol from "../images/facebook_app_symbol.svg";
+import Header from "../components/header/Header";
+import Pesquisa from "../components/pesquisa/Pesquisa";
 
 function Home() {
   return (
     <div className="Home">
-        <header>
-            <div className="separa-menu">
-                <img className="logo_menu" src={logo_trad1} alt="TraDinDin" />
-
-                <nav id="menu-header">
-                <ul>
-                    <li><Link to= "/">Home</Link></li>
-                    <li><Link to= "/contato">Contato</Link></li>
-                    <li><Link to="/login">Login</Link></li>
-                </ul>
-                </nav>
-            </div>
-        </header>
+ <Header />
         <body>
 
         {/* BANNER */}
@@ -48,9 +38,9 @@ function Home() {
             <p><span className="rosa"> seu dinheiro</span> esta aqui</p>
         </h1>
         <h2>Plataforma ideal para quem quer comprar ou vender dinheiro.</h2>
-
+        <Pesquisa />
         {/* FORMULÁRIO DE PESQUISA */}
-        <div className="pesquisa">
+        {/* <div className="pesquisa">
             <div className="pesquisa_moldura">
             <div className="elementos0">
                 <div className="elementos1">
@@ -111,7 +101,7 @@ function Home() {
                 </div>
             </div>
             </div>
-        </div>
+        </div> */}
         </main>
         <div className="linha_divisao">
         <img src={graph} alt="Linha divisória" />

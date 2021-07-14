@@ -6,17 +6,6 @@
     margin: 0;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #2B2E36;
-    opacity: 1;
-    box-shadow: 0px 3px 21px -5px rgba(0,0,0,0.75);
-    z-index: 1;
-}
 
 .pagina-login{
     display: flex;

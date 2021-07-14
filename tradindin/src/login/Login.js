@@ -2,16 +2,16 @@ import "../login/Login.css";
 import LogoAqui_2 from "../images/LogoAqui_2.png";
 import user from "../images/user.svg";
 import cadeado from "../images/cadeado.svg";
-
+import Header from "../components/header/Header"
 
 
 
 function Login() {
   return (
     <div className="Login">
-        <header>
-
-        </header>
+       
+       <Header />
+      
         <body>
             <main className="pagina-login">
                 <div className="card-login">
