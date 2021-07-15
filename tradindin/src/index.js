@@ -4,6 +4,7 @@ import Home from "./home/Home.js";
 import Login from "./login/Login.js"
 import Cadastro from "./cadastro/Cadastro"
 import App from "./app/App"
+import App2 from "./app2/App2"
 import Senha from "./senha/Senha"
 import User from "./user/User"
 import Oferta from "./oferta/Oferta"
@@ -22,6 +23,7 @@ const Routing = () => {
         <Route path="/app" component={App} />
         <Route path="/user" component={User} />
         <Route path="/oferta" component={Oferta} />
+        <Route path="/app2" component={App2} />
         
       </Switch>
     </Router>
