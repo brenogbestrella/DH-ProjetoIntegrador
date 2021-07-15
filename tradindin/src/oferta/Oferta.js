@@ -8,7 +8,7 @@ function Oferta() {
     const [ quantidade, setQuantidade ] = useState("")
     const [ endereco, setEndereco ] = useState("")
     const [ data, setData ] = useState("")
-    const [ troca, setTroca] = useState("")
+    const [ troca, setTroca] = useState("") //criar um para cada moeda
 
   return (
     <div className="Oferta">
@@ -117,7 +117,6 @@ function Oferta() {
                                     <label for="peso"> Peso Argentino</label>
                                 </p>
                         </div>
-
 
                         <div>
                         <Link to ="/app" className="estilo_formulario_botao" type="submit">Cadastrar Oferta</Link> 
