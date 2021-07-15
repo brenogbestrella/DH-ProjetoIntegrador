@@ -1,5 +1,4 @@
 import "./App2.css";
-import logo from "../images/logo_trad1.png";
 import Header from "../components/header/Header";
 import Pesquisa from "../components/pesquisa/Pesquisa";
 import image_01 from "../images/image_01.png";

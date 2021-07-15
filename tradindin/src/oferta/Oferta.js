@@ -1,6 +1,15 @@
+import { useState } from "react"
+import {Link} from 'react-router-dom'
+
 import "../oferta/Oferta.css";
 
 function Oferta() {
+    const [ moeda, setMoeda ] = useState("")
+    const [ quantidade, setQuantidade ] = useState("")
+    const [ endereco, setEndereco ] = useState("")
+    const [ data, setData ] = useState("")
+    const [ troca, setTroca] = useState("")
+
   return (
     <div className="Oferta">
         <header>
@@ -27,7 +36,15 @@ function Oferta() {
                                 <div className="estilo_formulario_moeda">
                                     
                                     <label for="quantidade">Quantidade</label>
-                                    <input id="quantidade" name="quantidade" required="required" type="number" placeholder="     Mínimo 50 | Máximo 10.000"/> 
+                                    <input 
+                                        id="quantidade" 
+                                        name="quantidade" 
+                                        required="required" 
+                                        type="number" 
+                                        placeholder="Mínimo 50 | Máximo 10.000"
+                                        value={quantidade}
+                                        onChange={(e) => setQuantidade(e.target.value)} 
+                                    /> 
 
                                         
                                     
@@ -35,33 +52,78 @@ function Oferta() {
 
                         <div className="estilo_formulario_moeda"> 
                             <label for="endereco">Endereço</label>
-                            <input id="endereco" name="endereco" required="required" type="text" placeholder="Exemplo: Brasil – SP – Cotia"/> 
+                            <input 
+                                id="endereco" 
+                                name="endereco" 
+                                required="required" 
+                                type="text" 
+                                placeholder="Exemplo: Brasil – SP – Cotia"
+                                value={endereco}
+                                onChange={(e) => setEndereco(e.target.value)}
+                            /> 
                         </div>
                         
                         <div className="estilo_formulario_moeda"> 
                             <label for="data">Data</label>
-                            <input id="data" name="data" required="required" type="text" placeholder="Exemplo: 26/04/2025"/>
+                            <input 
+                                id="data" 
+                                name="data" 
+                                required="required" 
+                                type="text" 
+                                placeholder="Exemplo: 26/04/2025"
+                                value={data}
+                                onChange={(e) => setData(e.target.value)}
+                            />
                         </div>
                         
                         <div className="estilo_formulario_check" >
                                 <h7>Moedas que aceita trocar:</h7>
                                 <p>
-                                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
-                                    <label for="vehicle1"> Real</label>
-                                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"/>
-                                    <label for="vehicle2"> Euro</label>
-                                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
-                                    <label for="vehicle3"> Dólar Americano</label>
-                                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
-                                    <label for="vehicle3"> Peso Argentino</label>
+                                    <input 
+                                        type="checkbox" 
+                                        id="real" 
+                                        name="real" 
+                                        value="Real"
+                                        value={troca}
+                                        onChange={(e) => setTroca(e.target.value)}
+                                    />
+                                    <label for="real"> Real</label>
+                                    <input 
+                                        type="checkbox" 
+                                        id="euro" 
+                                        name="euro" 
+                                        value="Euro"
+                                        value={troca}
+                                        onChange={(e) => setTroca(e.target.value)}
+                                    />
+                                    <label for="euro"> Euro</label>
+                                    <input 
+                                        type="checkbox" 
+                                        id="dolar" 
+                                        name="dolar" 
+                                        value="Dólar"
+                                        value={troca}
+                                        onChange={(e) => setTroca(e.target.value)}
+                                    />
+                                    <label for="dolar"> Dólar Americano</label>
+                                    <input 
+                                        type="checkbox" 
+                                        id="peso" 
+                                        name="peso" 
+                                        value="Peso"
+                                        value={troca}
+                                        onChange={(e) => setTroca(e.target.value)}
+                                    />
+                                    <label for="peso"> Peso Argentino</label>
                                 </p>
                         </div>
 
 
-                        <div> 
-                        <button className="estilo_formulario_botao" onclick="filterSelection('transhist1')">
+                        <div>
+                        <Link to ="/app" className="estilo_formulario_botao" type="submit">Cadastrar Oferta</Link> 
+                        {/* <button className="estilo_formulario_botao" onclick="filterSelection('transhist1')">
                          CADASTRAR OFERTA
-                </button>
+                </button> */}
                         </div>
                         
         </form>

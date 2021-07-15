@@ -7,6 +7,26 @@
   }
 
   
+
+  #moeda {
+    color:rgba(0, 0, 0, 0.75)
+  }
+
+  #quantidade {
+    color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+  }
+
+  #endereco {
+    color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+  }
+
+  #data {
+    color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+  }
+
   body {
     background-color: #32363f;
   }
@@ -27,6 +47,7 @@
 
     height: 90%;
     margin: 4%;
+
   }
 
   .oferta_oferta > form {
@@ -57,6 +78,7 @@
   .estilo_formulario_moeda{
     display: flex;
     align-items: center;
+    text-align: center;
     background-color: #FFF;
     max-width: 70%;
     margin-top: 5%;
