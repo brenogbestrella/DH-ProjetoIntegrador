@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import "./App2.css";
 import Header from "../components/header/Header";
 import Pesquisa from "../components/pesquisa/Pesquisa";
@@ -30,7 +31,7 @@ function App2() {
                     <p className="app-oferta">Oferta: R$ 5.000,00</p>
                 </div>
                 <div className="app-div-03">
-                    <a href="#" className="app-botao-div2">FAZER OFERTA!</a>
+                    <Link className="app-botao-div2">FAZER OFERTA!</Link>
                 </div>
             </div>
 
@@ -47,7 +48,7 @@ function App2() {
                     <p className="app-oferta">Oferta: R$ 55.000,00</p>
                 </div>
                 <div className="app-div-03">
-                    <a href="#" className="app-botao-div2">FAZER OFERTA!</a>
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
                 </div>
             </div>
             
@@ -63,7 +64,7 @@ function App2() {
                     <p className="app-oferta">Oferta: $ 2.900,00</p>
                 </div>
                 <div className="app-div-03">
-                    <a href="#" className="app-botao-div2">FAZER OFERTA!</a>
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
                 </div>
             </div>
     </div>
@@ -82,7 +83,7 @@ function App2() {
                     <p className="app-oferta">Oferta: R$ 5.000,00</p>
                 </div>
                 <div className="app-div-03">
-                    <a href="#" className="app-botao-div2">FAZER OFERTA!</a>
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
                 </div>
             </div>
 
@@ -99,7 +100,7 @@ function App2() {
                     <p className="app-oferta">Oferta: R$ 55.000,00</p>
                 </div>
                 <div className="app-div-03">
-                    <a href="#" className="app-botao-div2">FAZER OFERTA!</a>
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
                 </div>
             </div>
             
@@ -115,7 +116,7 @@ function App2() {
                     <p className="app-oferta">Oferta: $ 2.900,00</p>
                 </div>
                 <div className="app-div-03">
-                    <a href="#" className="app-botao-div2">FAZER OFERTA!</a>
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
                 </div>
             </div>
     </div>

@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Oferta.associate = (listaDeModelos) => {
     Oferta.hasOne(listaDeModelos.Usuario, {
-      foreignKey: "id_usuario",
+      foreignKey: "id",
       as: "usuario",
     });
 

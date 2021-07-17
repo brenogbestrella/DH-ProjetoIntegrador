@@ -1,5 +1,6 @@
-import { useState } from "react"
-import {Link} from 'react-router-dom'
+import React, { useState } from "react"
+import axios from "axios";
+import {Link, useHistory} from 'react-router-dom'
 import "../cadastro/Cadastro.css";
 import LogoAqui_2 from "../images/LogoAqui_2.png";
 import user from "../images/user.svg";
@@ -14,8 +15,26 @@ function Cadastro() {
     const [ email, setEmail ] = useState("")
     const [ senha, setSenha ] = useState("")
     const [ documento, setDocumento ] = useState("")
-    const [ tipo, setTipo ] = useState("")
+    const [ radio, setRadio ] = useState("")
 
+    const history = useHistory();
+
+    async function handleOnClick (e) {
+        e.preventDefault();
+
+        await axios.post("http://localhost:3333/usuarios", {
+            nome: nome,    
+            email: email,
+            senha: senha,
+            documento: documento,
+            tipo: radio,
+            })
+        if(nome && email && senha && documento && radio) {
+            history.push("/login")
+        } else {
+            history.push("/cadastro")
+        }
+    }
 
   return (
     <div className="Cadastro">
@@ -84,20 +103,22 @@ function Cadastro() {
                 <div className="radio_elemento_3">
                     <input
                         type="radio"
-                        name="tipo"
-                        id="comprar"
-                        value="comprar"
-                        value={tipo}
-                        onChange={(e) => setTipo(e.target.value)}
-                        checked
+                        checked={radio === "1"}
+                        value="1"
+                        onChange={(e)=>{ setRadio(e.target.value)}}
+                        
                     />
-                    <label for="comprar">Pessoa Física</label>
-                    <input type="radio" name="acao" id="vender" value="vender" />
-                    <label for="vender">Pessoa Jurídica</label>
+                    <label>Pessoa Física</label>
+                    <input 
+                        type="radio" 
+                        checked={radio === "0"}
+                        value="0"
+                        onChange={(e)=>{ setRadio(e.target.value)}} 
+                    />
+                    <label>Pessoa Jurídica</label>
                 </div>
                 
-                <Link to ="/" className="botao-submit" type="submit">Registrar</Link>
-                {/* <input className="botao-submit" type="submit" value="Registrar" /> */}
+                <button type="submit" className="botao-submit" onClick={handleOnClick}>Cadastrar</button>
 
                 <Link to ="/" className="voltar">Voltar a tela inicial</Link>
                 {/* <button className="voltar">Voltar a tela inicial</button> */}

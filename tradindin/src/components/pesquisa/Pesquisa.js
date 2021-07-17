@@ -1,12 +1,12 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 import local from "../../images/local.svg"
 import calendario from "../../images/calendario.png";
-import graph from "../../images/graph.png";
-import icone_01 from "../../images/icone_01.png";
-import icone_02 from "../../images/icone_02.png";
-import icone_03 from "../../images/icone_03.png";
+// import graph from "../../images/graph.png";
+// import icone_01 from "../../images/icone_01.png";
+// import icone_02 from "../../images/icone_02.png";
+// import icone_03 from "../../images/icone_03.png";
 
 import "./Pesquisa.css";
 

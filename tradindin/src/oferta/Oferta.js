@@ -1,14 +1,12 @@
 import { useState } from "react"
-import {Link} from 'react-router-dom'
 
 import "../oferta/Oferta.css";
 
 function Oferta() {
-    const [ moeda, setMoeda ] = useState("")
+    // const [ moeda, setMoeda ] = useState("")
     const [ quantidade, setQuantidade ] = useState("")
     const [ endereco, setEndereco ] = useState("")
     const [ data, setData ] = useState("")
-    const [ troca, setTroca] = useState("") //criar um para cada moeda
 
   return (
     <div className="Oferta">
@@ -76,7 +74,7 @@ function Oferta() {
                             />
                         </div>
                         
-                        <div className="estilo_formulario_check" >
+                        {/* <div className="estilo_formulario_check" >
                                 <h7>Moedas que aceita trocar:</h7>
                                 <p>
                                     <input 
@@ -116,13 +114,13 @@ function Oferta() {
                                     />
                                     <label for="peso"> Peso Argentino</label>
                                 </p>
-                        </div>
+                        </div> */}
 
                         <div>
-                        <Link to ="/app" className="estilo_formulario_botao" type="submit">Cadastrar Oferta</Link> 
-                        {/* <button className="estilo_formulario_botao" onclick="filterSelection('transhist1')">
-                         CADASTRAR OFERTA
-                </button> */}
+                        {/* <Link to ="/app" className="estilo_formulario_botao" type="submit">Cadastrar Oferta</Link>  */}
+                        <button className="estilo_formulario_botao" onclick="filterSelection('transhist1')">
+                            CADASTRAR OFERTA
+                        </button>
                         </div>
                         
         </form>

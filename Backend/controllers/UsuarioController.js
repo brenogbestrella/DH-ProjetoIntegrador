@@ -1,4 +1,5 @@
 const UsuarioService = require("../services/UsuarioService");
+const bcrypt = require("bcryptjs");
 
 const controller = {
   indexById: async (req, res) => {
@@ -38,7 +39,6 @@ const controller = {
 
   create: async (req, res) => {
     const { nome, email, senha, documento, tipo } = req.body;
-
     const usuario = await UsuarioService.createUsuario(
       nome,
       email,

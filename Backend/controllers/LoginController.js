@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const secret = "ivensjunior"
+const secret = "ce0a74b56a865f557c204b99f76a94ab"
 
 const controller = {
   login: async (req, res) => {

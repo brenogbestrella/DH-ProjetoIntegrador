@@ -1,5 +1,6 @@
 import { useState } from "react"
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
+import axios from "axios"
 
 import "../login/Login.css";
 import LogoAqui_2 from "../images/LogoAqui_2.png";
@@ -10,14 +11,29 @@ import Header from "../components/header/Header"
 
 
 function Login() {
+
     const [ email, setEmail ] = useState("")
     const [ senha, setSenha ] = useState("")
 
-    async function handleOnClick() {
+    const history = useHistory();
+
+    async function handleOnClick(e) {
+        e.preventDefault();
+
+        await axios.post("http://localhost:3333/login", {  
+            email: email,
+            senha: senha,
+        })
+        if(email && senha ) {
+            history.push("/app")
+        } else {
+            history.push("/login")
+        }
+    }
+
         // 1- axios
         // 2- chamada para o backend(login)
         // 3- se deu tudo certo, redirecionar para /app usando o useHistory
-    }
 
   return (
     <div className="Login">
@@ -59,20 +75,16 @@ function Login() {
                             required />
                     </p>
 
-                    {/* <Link to ="/app" className="botao-submit" type="submit">Entrar agora</Link> */}
                     <button type="button" className="botao-submit" onClick={handleOnClick}>Entrar agora</button>
 
                     <Link to ="/" className="voltar">Voltar a tela inicial</Link>
-                    {/* <button className="voltar">Voltar a tela inicial</button> */}
 
                     <Link to ="/senha" className="esqueceu">Esqueceu sua senha?</Link>
-                    {/* <p className="esqueceu">Esqueceu sua senha?</p> */}
                     
                     <div className="conta">
                         <span>
                             Não tem conta?
                             <Link to ="/cadastro" className="aa">Clique aqui</Link>
-                            {/* <a className="aa" href=""> Clique aqui</a> */}
                         </span>
                     </div>
                     </form>

@@ -1,10 +1,11 @@
+import React from "react"
+
 import "./App.css";
-import logo from "../images/logo_trad1.png";
 import Header from "../components/header/Header";
-import Pesquisa from "../components/pesquisa/Pesquisa";
 
 
 function App() {
+
   return (
     <div className="Home">
 
