@@ -9,7 +9,7 @@ const controller = {
 
     return res.json(moeda);
   },
-  indexAll: async (req, res) => {
+  indexAll: async (req, res) => { //levar pro front com axios
     const list = await MoedaService.getMoedaList();
     return res.json(list);
   },

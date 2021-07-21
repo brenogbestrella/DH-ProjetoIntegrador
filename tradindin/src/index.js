@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Route from "./login/Route"
+
+
 import Home from "./home/Home.js";
 import Login from "./login/Login.js"
 import Cadastro from "./cadastro/Cadastro"
 import App from "./app/App"
-import App2 from "./app2/App2"
 import Senha from "./senha/Senha"
 import User from "./user/User"
 import Oferta from "./oferta/Oferta"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
 
@@ -20,11 +23,9 @@ const Routing = () => {
         <Route path="/login" component={Login} />
         <Route path="/cadastro" component={Cadastro} />
         <Route path="/senha" component={Senha} />
-        <Route path="/app" component={App} />
-        <Route path="/user" component={User} />
-        <Route path="/oferta" component={Oferta} />
-        <Route path="/app2" component={App2} />
-        
+        <Route path="/app" component={App} isPrivate/>
+        <Route path="/user" component={User} isPrivate/>
+        <Route path="/oferta" component={Oferta} isPrivate/>
       </Switch>
     </Router>
   )

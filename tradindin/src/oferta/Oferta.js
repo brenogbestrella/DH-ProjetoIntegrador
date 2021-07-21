@@ -1,12 +1,36 @@
 import { useState } from "react"
+import { useHistory } from 'react-router-dom'
+import api from "../Services/api";
 
 import "../oferta/Oferta.css";
 
 function Oferta() {
-    // const [ moeda, setMoeda ] = useState("")
-    const [ quantidade, setQuantidade ] = useState("")
-    const [ endereco, setEndereco ] = useState("")
-    const [ data, setData ] = useState("")
+    const [ quantidade, setQuantidade ] = useState("");
+    const [ endereco, setEndereco ] = useState("");
+    const [ data, setData ] = useState("");
+    const [ moeda, setMoeda ] = useState("");
+    const [listaMoedas, setListaMoedas] = useState([]);
+    const history = useHistory();
+
+
+    //usar axios para trazer método indexall de moedas para o frontend, com useEffect
+
+    async function handleOnClick (e) {
+        e.preventDefault();
+
+        if(!moeda || !quantidade || !data || !endereco) return;
+
+        await api.post("/ofertas", {
+            fk_idMoeda: moeda,
+            quantidade: quantidade,    
+            data: data,
+            endereco: endereco,
+        })
+
+        history.push("/app")
+       
+    }
+
 
   return (
     <div className="Oferta">
@@ -22,18 +46,26 @@ function Oferta() {
                     
                         <div className="estilo_formulario_moeda">
                                     <p>MOEDA</p>
-                                    <select name="moeda" id="moeda">
-                                    <option value="SELECIONAR">Escolher</option>
+                                    <select name="moeda" id="moeda" onChange={(e) => setMoeda(e.target.value)}>
+                                        {listaMoedas.map(({ label, idMoeda }) => (
+                                        <option
+                                            key={idMoeda}
+                                            value={idMoeda}
+                                        >
+                                            {label}
+                                        </option>
+                                        ))}
+                                    {/* <option value="SELECIONAR">Escolher</option>
                                     <option value="saab">Real</option>
                                     <option value="opel">Euro</option>
                                     <option value="audi">Dólar Americano</option>
-                                    <option value="audi">Peso Argentino</option>
+                                    <option value="audi">Peso Argentino</option> */}
                                     </select>
                         </div>
 
                                 <div className="estilo_formulario_moeda">
                                     
-                                    <label for="quantidade">Quantidade</label>
+                                    <label htmlFor="quantidade">Quantidade</label>
                                     <input 
                                         id="quantidade" 
                                         name="quantidade" 
@@ -49,7 +81,7 @@ function Oferta() {
                                 </div>
 
                         <div className="estilo_formulario_moeda"> 
-                            <label for="endereco">Endereço</label>
+                            <label htmlFor="endereco">Endereço</label>
                             <input 
                                 id="endereco" 
                                 name="endereco" 
@@ -62,7 +94,7 @@ function Oferta() {
                         </div>
                         
                         <div className="estilo_formulario_moeda"> 
-                            <label for="data">Data</label>
+                            <label htmlFor="data">Data</label>
                             <input 
                                 id="data" 
                                 name="data" 
@@ -117,8 +149,8 @@ function Oferta() {
                         </div> */}
 
                         <div>
-                        {/* <Link to ="/app" className="estilo_formulario_botao" type="submit">Cadastrar Oferta</Link>  */}
-                        <button className="estilo_formulario_botao" onclick="filterSelection('transhist1')">
+                        
+                        <button className="estilo_formulario_botao" onClick={handleOnClick}>
                             CADASTRAR OFERTA
                         </button>
                         </div>

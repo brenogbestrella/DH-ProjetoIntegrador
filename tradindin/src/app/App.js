@@ -1,172 +1,132 @@
-import React from "react"
-
+import {Link} from 'react-router-dom';
 import "./App.css";
 import Header from "../components/header/Header";
+import Pesquisa from "../components/pesquisa/Pesquisa";
+import image_01 from "../images/image_01.png";
+import image_02 from "../images/image_02.png";
+import image_03 from "../images/image_03.png";
 
-
-function App() {
-
+function App2() {
   return (
     <div className="Home">
 
 <Header />
 
+<body> 
+<div className="app-coluna"> 
 
-      <body>
-     
-        <h1 className="appesquisa" >Sua Pesquisa</h1>
-        <div className="filtro">
-          <div id="pesquisa">
-            <input
-              className="styled-input"
-              type="search"
-              results="5"
-              placeholder="Pesquise a moeda"
-              name="s"
-            />
-          </div>
-          <div id="botoes-filtro">
+    <div className="app-pesquisa"> < Pesquisa/></div>
+
+    <div className="app-diferenciais">
+        
+            <div className="app-dife_01">
+                <div className="app-div-01">
+                    <img className="app-icone" src={image_01} alt="Ícone" />
+                </div>
+                <div className="app-div-02">
+                    <p className="app-nome">Felipe Marcelino</p>
+                    <p className="app-lugar">Lugar: Brasil | São Paulo</p>
+                    <p className="app-data">Data Máxima de Retirada: 25/09/2021</p>
+                    <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                    <p className="app-oferta">Oferta: R$ 5.000,00</p>
+                </div>
+                <div className="app-div-03">
+                    <Link className="app-botao-div2">FAZER OFERTA!</Link>
+                </div>
+            </div>
+
+
+            <div className="app-dife_01">
+                <div className="app-div-01">
+                    <img className="app-icone" src={image_02} alt="Ícone" />
+                </div>
+                <div className="app-div-02">
+                    <p className="app-nome">Breno Estrella</p>
+                    <p className="app-lugar">Lugar: Brasil | Rio de Janeiro</p>
+                    <p className="app-data">Data Máxima de Retirada: 20/03/2022</p>
+                    <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                    <p className="app-oferta">Oferta: R$ 55.000,00</p>
+                </div>
+                <div className="app-div-03">
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
+                </div>
+            </div>
             
-            <button className="btn active" onclick="filterSelection('all')">
-              TODAS
-            </button>
-            <button className="btn" onclick="filterSelection('usd')">
-              USD
-            </button>
-            <button className="btn" onclick="filterSelection('CAD')">
-              CAD
-            </button>
-            <button className="btn" onclick="filterSelection('eur')">
-              EUR
-            </button>
-            <button className="btn" onclick="filterSelection('lbr')">
-              LBR
-            </button>
-            <button className="btn" onclick="filterSelection('yen')">
-              YEN
-            </button>
-          </div>
-          <form>
-            <label id="pergunta-intencao">Filtro de Seleção</label>
-            <label className="radio-inline">
-              <input type="radio" name="optradio" checked /> Compra
-            </label>
-            <label className="radio-inline">
-              <input type="radio" name="optradio" /> Venda
-            </label>
-          </form>
-        </div>
-        
-        <div className="melhores-ofertas">
-          
-          <h2>Melhores Ofertas</h2>
-          <div className="oferta">
-            <button className="botao-oferta" onclick="filterSelection('offer1')">
-              Oferta #1
-            </button>
-            <button className="botao-oferta" onclick="filterSelection('offer2')">
-              Oferta #2
-            </button>
-            <button className="botao-oferta" onclick="filterSelection('offer3')">
-              Oferta #3
-            </button>
-            <button className="botao-oferta" onclick="filterSelection('offer4')">
-              Oferta #4
-            </button>
-            <button className="botao-oferta" onclick="filterSelection('offer5')">
-              Oferta #5
-            </button>
-            <button className="botao-oferta" onclick="filterSelection('offer6')">
-              Oferta #6
-            </button>
-          </div>
-        </div>
-        <div className="cambio">
-          <h2>Casas de Câmbio</h2>
-          <div className="casas-cambio">
-            <button className="botao-cambio" onclick="filterSelection('offer1')">
-              Casa de Câmbio #1
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer2')">
-              Casa de Câmbio #2
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer3')">
-              Casa de Câmbio #3
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer4')">
-              Casa de Câmbio #4
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer5')">
-              Casa de Câmbio #5
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer6')">
-              Casa de Câmbio #6
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer7')">
-              Casa de Câmbio #7
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer8')">
-              Casa de Câmbio #8
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer9')">
-              Casa de Câmbio #9
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer10')">
-              Casa de Câmbio #10
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer11')">
-              Casa de Câmbio #11
-            </button>
-            <button className="botao-cambio" onclick="filterSelection('offer12')">
-              Casa de Câmbio #12
-            </button>
-          </div>
-        </div>
-        <div className="historico">
-          <h2>Histórico de Transações</h2>
-          <div className="historico-transacao">
-            <button
-              className="botao-historico"
-              onclick="filterSelection('transhist1')"
-            >
-              HistTrans #1
-            </button>
-            <button
-              className="botao-historico"
-              onclick="filterSelection('transhist2')"
-            >
-              HistTrans #2
-            </button>
-            <button
-              className="botao-historico"
-              onclick="filterSelection('transhist3')"
-            >
-              HistTrans #3
-            </button>
-            <button
-              className="botao-historico"
-              onclick="filterSelection('transhist4')"
-            >
-              HistTrans #4
-            </button>
-            <button
-              className="botao-historico"
-              onclick="filterSelection('transhist5')"
-            >
-              HistTrans #5
-            </button>
-            <button
-              className="botao-historico"
-              onclick="filterSelection('transhist6')"
-            >
-              HistTrans #6
-            </button>
-          </div>
-        </div>
-        
-      </body>
+            <div className="app-dife_01">
+                <div className="app-div-01">
+                    <img className="app-icone" src={image_03} alt="Ícone" />
+                </div>
+                <div className="app-div-02">
+                    <p className="app-nome">Ivens Diego Müller</p>
+                    <p className="app-lugar">Lugar: Estados Unidos | Nova Iorque</p>
+                    <p className="app-data">Data Máxima de Retirada: 15/12/2021</p>
+                    <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                    <p className="app-oferta">Oferta: $ 2.900,00</p>
+                </div>
+                <div className="app-div-03">
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
+                </div>
+            </div>
     </div>
+
+    <div className="app-diferenciais2">
+        
+            <div className="app-dife_01">
+                <div className="app-div-01">
+                    <img className="app-icone" src={image_01} alt="Ícone" />
+                </div>
+                <div className="app-div-02">
+                    <p className="app-nome">Felipe Marcelino</p>
+                    <p className="app-lugar">Lugar: Brasil | São Paulo</p>
+                    <p className="app-data">Data Máxima de Retirada: 25/09/2021</p>
+                    <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                    <p className="app-oferta">Oferta: R$ 5.000,00</p>
+                </div>
+                <div className="app-div-03">
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
+                </div>
+            </div>
+
+
+            <div className="app-dife_01">
+                <div className="app-div-01">
+                    <img className="app-icone" src={image_02} alt="Ícone" />
+                </div>
+                <div className="app-div-02">
+                    <p className="app-nome">Breno Estrella</p>
+                    <p className="app-lugar">Lugar: Brasil | Rio de Janeiro</p>
+                    <p className="app-data">Data Máxima de Retirada: 20/03/2022</p>
+                    <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                    <p className="app-oferta">Oferta: R$ 55.000,00</p>
+                </div>
+                <div className="app-div-03">
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
+                </div>
+            </div>
+            
+            <div className="app-dife_01">
+                <div className="app-div-01">
+                    <img className="app-icone" src={image_03} alt="Ícone" />
+                </div>
+                <div className="app-div-02">
+                    <p className="app-nome">Ivens Diego Müller</p>
+                    <p className="app-lugar">Lugar: Estados Unidos | Nova Iorque</p>
+                    <p className="app-data">Data Máxima de Retirada: 15/12/2021</p>
+                    <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                    <p className="app-oferta">Oferta: $ 2.900,00</p>
+                </div>
+                <div className="app-div-03">
+                    <Link  className="app-botao-div2">FAZER OFERTA!</Link>
+                </div>
+            </div>
+    </div>
+
+</div>
+    
+</body>
+</div>
+
   );
 }
 
-export default App;
+export default App2;

@@ -1,6 +1,6 @@
 import { useState } from "react"
-import {Link, useHistory} from 'react-router-dom'
-import axios from "axios"
+import {Link, useHistory } from 'react-router-dom'
+import api from "../Services/api"
 
 import "../login/Login.css";
 import LogoAqui_2 from "../images/LogoAqui_2.png";
@@ -20,20 +20,25 @@ function Login() {
     async function handleOnClick(e) {
         e.preventDefault();
 
-        await axios.post("http://localhost:3333/login", {  
+        if(!email || !senha) return ;
+
+        const { data } = await api.post("/login", {  
             email: email,
             senha: senha,
-        })
-        if(email && senha ) {
-            history.push("/app")
-        } else {
-            history.push("/login")
-        }
-    }
+        }, 
+        // {
+        //     headers: {
+        //         authorization: `bearer ${localStorage.getItem("token")}`
+        //     }
+        // }
+        )
 
-        // 1- axios
-        // 2- chamada para o backend(login)
-        // 3- se deu tudo certo, redirecionar para /app usando o useHistory
+        localStorage.setItem("token", data.token);
+
+        api.defaults.headers.Authorization = `bearer ${data.token}`
+
+        history.push("/app")
+    }
 
   return (
     <div className="Login">
@@ -48,7 +53,7 @@ function Login() {
 
                     {/* USUÁRIO */}
                     <p>
-                        <label for="usuario">
+                        <label htmlFor="usuario">
                             <img src={user} alt="Email"/>
                         </label>
                         <input

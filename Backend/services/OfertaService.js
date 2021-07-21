@@ -11,8 +11,9 @@ const OfertaService = {
 
     return oferta;
   },
-  createOferta: async (quantidade, data, endereco) => {
+  createOferta: async (idMoeda, quantidade, data, endereco) => {
     const newOferta = await database.Oferta.create({
+      idMoeda,
       quantidade,
       data,
       endereco,
@@ -20,18 +21,13 @@ const OfertaService = {
     return newOferta;
   },
   getOfertaList: async () => {
-    const resultados = await database.Oferta.findAll({
-      where: {
-        data,
-      },
-      limit: 10,
-      offset: 5,
-    });
+    const resultados = await database.Oferta.findAll();
     return resultados;
   },
-  updateOferta: async (quantidade, data, endereco) => {
+  updateOferta: async (idMoeda, quantidade, data, endereco) => {
     const updatedOferta = await database.Oferta.update(
       {
+        idMoeda,
         quantidade,
         data,
         endereco,

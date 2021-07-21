@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import axios from "axios";
+import api from "../Services/api";
 import {Link, useHistory} from 'react-router-dom'
 import "../cadastro/Cadastro.css";
 import LogoAqui_2 from "../images/LogoAqui_2.png";
@@ -22,7 +22,7 @@ function Cadastro() {
     async function handleOnClick (e) {
         e.preventDefault();
 
-        await axios.post("http://localhost:3333/usuarios", {
+        await api.post("/usuarios", {
             nome: nome,    
             email: email,
             senha: senha,
@@ -50,7 +50,7 @@ function Cadastro() {
                 />
                 {/* NOME */}
                 <p>
-                    <label for="nome"><img src={user} alt="" /></label>
+                    <label htmlFor="nome"><img src={user} alt="" /></label>
                     <input
                     type="text"
                     name="nome"
@@ -63,7 +63,7 @@ function Cadastro() {
                
                 {/* Email */}
                 <p>
-                    <label for="email"><img src={o_email} alt="" /></label>
+                    <label htmlFor="email"><img src={o_email} alt="" /></label>
                     <input 
                         type="email" 
                         name="email" 
@@ -76,7 +76,7 @@ function Cadastro() {
 
                  {/* senha */}
                  <p>
-                    <label for="senha"><img src={cadeado} alt="" /></label>
+                    <label htmlFor="senha"><img src={cadeado} alt="" /></label>
                     <input
                         type="password"
                         name="senha"
@@ -89,7 +89,7 @@ function Cadastro() {
 
                 {/* CPF */}
                 <p>
-                    <label for="documento"><img src={identidade} alt="" /></label>
+                    <label htmlFor="documento"><img src={identidade} alt="" /></label>
                     <input
                         type="text"
                         name="documento"
@@ -102,20 +102,22 @@ function Cadastro() {
 
                 <div className="radio_elemento_3">
                     <input
+                        id="pf"
                         type="radio"
                         checked={radio === "1"}
                         value="1"
-                        onChange={(e)=>{ setRadio(e.target.value)}}
+                        onChange={(e)=>{ setRadio(e.target.value); console.log(e.target.value)}}
                         
                     />
-                    <label>Pessoa Física</label>
-                    <input 
+                    <label htmlFor="pf">Pessoa Física</label>
+                    <input
+                        id="pj"
                         type="radio" 
                         checked={radio === "0"}
                         value="0"
                         onChange={(e)=>{ setRadio(e.target.value)}} 
                     />
-                    <label>Pessoa Jurídica</label>
+                    <label htmlFor="pj">Pessoa Jurídica</label>
                 </div>
                 
                 <button type="submit" className="botao-submit" onClick={handleOnClick}>Cadastrar</button>

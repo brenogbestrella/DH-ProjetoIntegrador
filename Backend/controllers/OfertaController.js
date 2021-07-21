@@ -34,11 +34,11 @@ const controller = {
     return res.json(list);
   },
   create: async (req, res) => {
-    const { quantidade, data, endereco } = req.body; //INSERIR MOEDA
+    const { idMoeda, quantidade, data, endereco } = req.body; //INSERIR MOEDA
 
     const idUsuario = req.userId;
 
-    const oferta = await OfertaService.createOferta(quantidade, data, endereco);
+    const oferta = await OfertaService.createOferta(idMoeda, quantidade, data, endereco);
 
     return res.json(oferta);
   },

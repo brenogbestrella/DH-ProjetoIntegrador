@@ -4,6 +4,7 @@ const path = require("path");
 
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+var cors = require("cors");
 
 // novas rotas
 const indexGeralRouter = require("./routes/indexGeral");
@@ -12,6 +13,7 @@ const cadastroRouter = require("./routes/cadastro");
 const usuarioRouter = require("./routes/usuario");
 const recuperarSenhaRouter = require("./routes/recuperarSenha");
 const loginRouter = require("./routes/login");
+const ofertaRouter = require("./routes/oferta")
 const db = require("./database/models");
 
 const app = express();
@@ -24,6 +26,7 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors())
 app.use(express.static(path.join(__dirname, "public")));
 
 // rotas aqui
@@ -33,6 +36,7 @@ app.use("/cadastro", cadastroRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/recuperarSenha", recuperarSenhaRouter);
 app.use("/login", loginRouter);
+app.use("/ofertas", ofertaRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
