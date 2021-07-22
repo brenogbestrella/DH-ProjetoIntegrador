@@ -8,10 +8,10 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
       },
       fk_idMoeda: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.INTEGER,
       },
       fk_idUsuario: {
-        type: DataTypes.STRING(100),
+        type: DataTypes.INTEGER,
       },
       quantidade: {
         type: DataTypes.DECIMAL,
@@ -19,25 +19,22 @@ module.exports = (sequelize, DataTypes) => {
       endereco: {
         type: DataTypes.STRING(200),
       },
-      cotacao: {
-        type: DataTypes.DECIMAL,
-      },
     },
     {
       tableName: "Oferta",
-      timestamps: false,
+      timestamps: true,
     }
   );
 
   Oferta.associate = (listaDeModelos) => {
-    Oferta.hasOne(listaDeModelos.Usuario, {
-      foreignKey: "id",
+    Oferta.belongsTo(listaDeModelos.Usuario, {
+      foreignKey: "fk_idUsuario",
       as: "usuario",
     });
 
 
     Oferta.belongsTo(listaDeModelos.Moeda, {
-      foreignKey: "id_moeda",
+      foreignKey: "fk_idMoeda",
       as: "moeda",
     });
 

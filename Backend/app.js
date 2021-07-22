@@ -14,6 +14,7 @@ const usuarioRouter = require("./routes/usuario");
 const recuperarSenhaRouter = require("./routes/recuperarSenha");
 const loginRouter = require("./routes/login");
 const ofertaRouter = require("./routes/oferta")
+const moedaRouter = require("./routes/moeda")
 const db = require("./database/models");
 
 const app = express();
@@ -37,6 +38,7 @@ app.use("/usuarios", usuarioRouter);
 app.use("/recuperarSenha", recuperarSenhaRouter);
 app.use("/login", loginRouter);
 app.use("/ofertas", ofertaRouter);
+app.use("/moedas", moedaRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

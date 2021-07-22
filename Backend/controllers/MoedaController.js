@@ -1,15 +1,18 @@
 const MoedaService = require("../services/MoedaService");
-const { validationResult } = require("express-validator");
 
 const controller = {
-  index: (req, res) => {
-    const { nome } = req.query;
+  indexById: async (req, res) => {
+    const { id_moeda } = req.query;
 
-    const moeda = MoedaService.listMoedaData(nome);
+    const moeda = await MoedaService.getById(id_moeda);
+
+    if (!moeda) {
+      return res.status(404).json({ error: `Moeda ${id} não encontrada` });
+    }
 
     return res.json(moeda);
   },
-  indexAll: async (req, res) => { //levar pro front com axios
+  indexAll: async (req, res) => {
     const list = await MoedaService.getMoedaList();
     return res.json(list);
   },
@@ -24,11 +27,11 @@ const controller = {
     return res.json(moeda);
   },
   update: async (req, res) => {
-    const { id } = req.params;
+    const { id_moeda } = req.params;
     const { nome, simbolo } = req.body;
 
     const updatedMoeda = await MoedaService.updateMoeda(
-      id,
+      id_moeda,
       nome,
       simbolo
     );
@@ -36,9 +39,9 @@ const controller = {
     return res.json(updatedMoeda);
   },
   destroy: async (req, res) => {
-    const { id } = req.params;
+    const { id_moeda } = req.params;
 
-    const destroyedMoeda = await MoedaService.destroyMoeda(id);
+    const destroyedMoeda = await MoedaService.destroyMoeda(id_moeda);
 
     return res.json(destroyedMoeda);
   },

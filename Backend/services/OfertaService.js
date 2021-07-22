@@ -11,9 +11,10 @@ const OfertaService = {
 
     return oferta;
   },
-  createOferta: async (idMoeda, quantidade, data, endereco) => {
+  createOferta: async (fk_idUsuario, fk_idMoeda, quantidade, data, endereco) => {
     const newOferta = await database.Oferta.create({
-      idMoeda,
+      fk_idUsuario,
+      fk_idMoeda,
       quantidade,
       data,
       endereco,
@@ -24,17 +25,17 @@ const OfertaService = {
     const resultados = await database.Oferta.findAll();
     return resultados;
   },
-  updateOferta: async (idMoeda, quantidade, data, endereco) => {
+  updateOferta: async (fk_idMoeda, quantidade, data, endereco) => {
     const updatedOferta = await database.Oferta.update(
       {
-        idMoeda,
+        fk_idMoeda,
         quantidade,
         data,
         endereco,
       },
       {
         where: {
-          id,
+          id_oferta,
         },
       }
     );
@@ -44,7 +45,7 @@ const OfertaService = {
   destroyOferta: async (id) => {
     const destroyedOferta = await database.Oferta.destroy({
       where: {
-        id,
+        id_oferta,
       },
     });
     return destroyedOferta;

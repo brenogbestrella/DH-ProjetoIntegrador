@@ -1,17 +1,13 @@
 const database = require("../database/models/index");
 
 const MoedaService = {
-  listMoedaData: (MoedaName) => {
-    const MoedaList = MoedaService.listMoeda();
-    let Moeda = MoedaList.find((item) => item.nome === MoedaNome);
+  getMoedaList: async () => {
+    const resultados = await database.Moeda.findAll();
+    
+    return resultados;
 
-    if (!Moeda) {
-      Moeda = MoedaList[0];
-    }
-
-    return Moeda;
   },
-  createMoeda: async (nome, simbolo) => {
+  createMoeda: async () => {
     const newMoeda = await database.Moeda.create({
       nome,
       simbolo,
@@ -19,7 +15,7 @@ const MoedaService = {
     return newMoeda;
   },
 
-  updateMoeda: async (nome, moeda) => {
+  updateMoeda: async (nome, simbolo) => {
     const updatedMoeda = await database.Moeda.update(
       {
         nome,
@@ -27,17 +23,17 @@ const MoedaService = {
       },
       {
         where: {
-          id,
+          id_moeda,
         },
       }
     );
 
     return updatedMoeda;
   },
-  destroyMoeda: async (id) => {
+  destroyMoeda: async (id_moeda) => {
     const destroyedMoeda = await database.Moeda.destroy({
       where: {
-        id,
+        id_moeda,
       },
     });
     return destroyedMoeda;

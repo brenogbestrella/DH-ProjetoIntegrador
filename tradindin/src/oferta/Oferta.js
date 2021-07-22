@@ -1,6 +1,7 @@
-import { useState } from "react"
-import { useHistory } from 'react-router-dom'
+import { useState, useEffect } from "react"
+import { useHistory  } from 'react-router-dom'
 import api from "../Services/api";
+import { getMoedas } from "./apiMoeda"
 
 import "../oferta/Oferta.css";
 
@@ -13,7 +14,14 @@ function Oferta() {
     const history = useHistory();
 
 
-    //usar axios para trazer método indexall de moedas para o frontend, com useEffect
+    useEffect(() => {
+        async function loadMoedasList() {
+          const moedasBackend = await getMoedas();
+          setListaMoedas(moedasBackend);
+        }
+    
+        loadMoedasList()
+      },[]);
 
     async function handleOnClick (e) {
         e.preventDefault();
@@ -47,12 +55,12 @@ function Oferta() {
                         <div className="estilo_formulario_moeda">
                                     <p>MOEDA</p>
                                     <select name="moeda" id="moeda" onChange={(e) => setMoeda(e.target.value)}>
-                                        {listaMoedas.map(({ label, idMoeda }) => (
+                                        {listaMoedas.map(({ nome, id_moeda }) => (
                                         <option
-                                            key={idMoeda}
-                                            value={idMoeda}
+                                            key={id_moeda}
+                                            value={id_moeda}
                                         >
-                                            {label}
+                                            {nome}
                                         </option>
                                         ))}
                                     {/* <option value="SELECIONAR">Escolher</option>
