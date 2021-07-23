@@ -1,10 +1,24 @@
-  .app-coluna{  
+.onda{
+    position: absolute;
+    width: 100%;
+    background-color:#4c5c64;
+    margin-top: 50%;
+    height: 80%;
+}
+
+.onda-imagem{
+    width: 100%;
+}
+
+.app-coluna{  
     position: absolute;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     height: 100%;
     margin-top: 5%;
+    background-color: #32363f;
+    z-index: -0;
   }
   
   .app-pesquisa{
@@ -24,6 +38,7 @@
         justify-content: center;
         margin-top: 48%;
         height: 20%;
+        z-index: 10;
     }
     
     .app-diferenciais2{
@@ -35,21 +50,19 @@
         margin-top: 2%;
         height: 20%;
     }
-    
-    .app-dife_01{
+
+    .app-diferenciais3{
+        position: absolute;
         display: flex;
-        display: -webkit-flex; /* Garante compatibilidade com navegador Safari. */
         flex-direction: row;
+        flex-flow: wrap;
         justify-content: center;
-        align-items: center;
-        width: 28%;
-        margin: 0% 1%;
-        background-color: #2b2e36;
-        border-radius: 15px;
-        -webkit-box-shadow: 5px 3px 16px -7px #20232A; 
-        box-shadow: 5px 3px 16px -7px #20232A;
-    
+        margin-top: 5%;
+        height: 20%;
+        margin-top: 44%;
     }
+    
+
 
     @media (max-width:1800px){
 
@@ -89,28 +102,6 @@
         }
     }
     
-    .app-dife_01 > p{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;   
-        font-size: 26px;
-        color:#fff;
-        text-align: center;
-        padding: 5% 0% 0%;
-    }
-    
-    .app-dife_01 > span{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        font-family: 'Roboto', sans-serif;
-        font-weight: lighter;   
-        font-size: 18px;
-        color:#999a9b;
-        text-align: center;
-        width: 80%;
-        margin: 3% 0% 15%;
-        line-height: 22px;
-    }
     
     @media (max-width:1130px){
     
@@ -134,10 +125,6 @@
            }
     }
 
-.app-div-01{
-    width: 24%;
-    margin-left: 5%;
-}
 
 .app-div-02{
     width: 50%;
@@ -222,4 +209,27 @@
     font-weight: 500;
 	font-size:15px;
     margin-bottom: 2%;
+}
+
+
+.texto1{
+	color:#619b55;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 18%;
+    /* display: flex;
+    flex-direction: row; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    color: #b4bdff;
+    --color: rgba(255,120,203,1);
+    --position: center bottom;
+    --width: 180px;
+    --height: 2px;
+    background: linear-gradient(
+266deg
+, rgba(206,39,161,1), var(--color)) var(--position) / var(--width) var(--height) no-repeat;
+    padding-bottom: 10px;
 }
