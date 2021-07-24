@@ -8,6 +8,7 @@ import cadeado from "../images/cadeado.svg";
 import o_email from "../images/o_email.svg";
 import identidade from "../images/identidade.png";
 import Header from "../components/header/Header"
+import Footer2 from "../components/footer2/Footer2"
 
 
 function Cadastro() {
@@ -49,9 +50,9 @@ function Cadastro() {
                     alt="TraDinDin"
                 />
                 {/* NOME */}
-                <p>
-                    <label htmlFor="nome"><img src={user} alt="" /></label>
-                    <input
+                <p className="p-cadastro">
+                    <label htmlFor="nome"><img className="p-img-cadastro" src={user} alt="" /></label>
+                    <input className="input-cadastro"
                     type="text"
                     name="nome"
                     id="nome"
@@ -62,9 +63,9 @@ function Cadastro() {
                 </p>
                
                 {/* Email */}
-                <p>
-                    <label htmlFor="email"><img src={o_email} alt="" /></label>
-                    <input 
+                <p className="p-cadastro">
+                    <label htmlFor="email"><img className="p-img-cadastro" src={o_email} alt="" /></label>
+                    <input className="input-cadastro"
                         type="email" 
                         name="email" 
                         id="email" 
@@ -75,9 +76,9 @@ function Cadastro() {
                 </p>
 
                  {/* senha */}
-                 <p>
-                    <label htmlFor="senha"><img src={cadeado} alt="" /></label>
-                    <input
+                 <p className="p-cadastro">
+                    <label htmlFor="senha"><img className="p-img-cadastro" src={cadeado} alt="" /></label>
+                    <input className="input-cadastro"
                         type="password"
                         name="senha"
                         id="senha"
@@ -88,9 +89,9 @@ function Cadastro() {
                 </p>
 
                 {/* CPF */}
-                <p>
-                    <label htmlFor="documento"><img src={identidade} alt="" /></label>
-                    <input
+                <p className="p-cadastro">
+                    <label htmlFor="documento"><img className="p-img-cadastro" src={identidade} alt="" /></label>
+                    <input className="input-cadastro"
                         type="text"
                         name="documento"
                         id="documento"
@@ -100,8 +101,8 @@ function Cadastro() {
                     />
                 </p>
 
-                <div className="radio_elemento_3">
-                    <input
+                <div className="cadastro-radio_elemento_3">
+                    <input className="input-cadastro"
                         id="pf"
                         type="radio"
                         checked={radio === "1"}
@@ -109,23 +110,24 @@ function Cadastro() {
                         onChange={(e)=>{ setRadio(e.target.value); console.log(e.target.value)}}
                         
                     />
-                    <label htmlFor="pf">Pessoa Física</label>
-                    <input
+                    <label htmlFor="pf" className="input-cadastro-text">Pessoa Física</label>
+                    <input className="input-cadastro"
                         id="pj"
                         type="radio" 
                         checked={radio === "0"}
                         value="0"
                         onChange={(e)=>{ setRadio(e.target.value)}} 
                     />
-                    <label htmlFor="pj">Pessoa Jurídica</label>
+                    <label htmlFor="pj" className="input-cadastro-text">Pessoa Jurídica</label>
                 </div>
                 
-                <button type="submit" className="botao-submit" onClick={handleOnClick}>Cadastrar</button>
+                <button type="submit" className="cadastro-botao-submit" onClick={handleOnClick}>Cadastrar</button>
 
-                <Link to ="/" className="voltar">Voltar a tela inicial</Link>
+                <Link to ="/" className="voltar-cadastro">Voltar a tela inicial</Link>
                 {/* <button className="voltar">Voltar a tela inicial</button> */}
                 </form>
             </div>
+            <Footer2 />
             </main>
         </body>
   </div>

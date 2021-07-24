@@ -84,6 +84,7 @@ color: rgb(255, 255, 255);
 
 .elementos1 > div> label{
     font-size: 80%;
+    align-content: center;
     margin: 0% 6% 0% 2%
 }
 
@@ -98,9 +99,8 @@ color: rgb(255, 255, 255);
 [type="radio"]:not(:checked) + label
 {
     position: relative;
-    padding-left: 28px;
+    padding-left: 31px;
     cursor: pointer;
-    line-height: 20px;
     display: inline-block;
     color: #FFF;
 }

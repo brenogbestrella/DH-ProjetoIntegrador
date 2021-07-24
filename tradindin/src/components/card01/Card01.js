@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import image_01 from "../../images/image_01.png";
 
 import "./Card01.css";
-import logo_trad1 from "../../images/logo_trad1.png"
 
 function Card01() {
     return (

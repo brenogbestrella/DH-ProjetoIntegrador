@@ -7,6 +7,7 @@ import LogoAqui_2 from "../images/LogoAqui_2.png";
 import user from "../images/user.svg";
 import cadeado from "../images/cadeado.svg";
 import Header from "../components/header/Header"
+import Footer2 from "../components/footer2/Footer2"
 
 
 
@@ -49,14 +50,14 @@ function Login() {
             <main className="pagina-login">
                 <div className="card-login">
                     <form className="form">
-                    <img className="logo_menu" src={LogoAqui_2} alt="TraDinDin" />
+                    <img className="logo_menu_login" src={LogoAqui_2} alt="TraDinDin" />
 
                     {/* USUÁRIO */}
-                    <p>
+                    <p className="p-login">
                         <label htmlFor="usuario">
-                            <img src={user} alt="Email"/>
+                            <img className="p-img-login" src={user} alt="Email"/>
                         </label>
-                        <input
+                        <input className="input-login"
                         type="text"
                         name="email"
                         id="email"
@@ -67,11 +68,11 @@ function Login() {
                     </p>
 
                     {/* SENHA */}
-                    <p>
+                    <p className="p-login">
                         <label for="senha">
-                            <img src={cadeado} alt="Usuário"/>
+                            <img className="p-img-login" src={cadeado} alt="Usuário"/>
                         </label>
-                        <input 
+                        <input className="input-login"
                             id="senha" 
                             placeholder="Senha" 
                             type="password"
@@ -80,20 +81,21 @@ function Login() {
                             required />
                     </p>
 
-                    <button type="button" className="botao-submit" onClick={handleOnClick}>Entrar agora</button>
+                    <button type="button" className="botao-submit-login" onClick={handleOnClick}>Entrar agora</button>
 
-                    <Link to ="/" className="voltar">Voltar a tela inicial</Link>
+                    <Link to ="/" className="voltar-login">Voltar a tela inicial</Link>
 
-                    <Link to ="/senha" className="esqueceu">Esqueceu sua senha?</Link>
+                    <Link to ="/senha" className="esqueceu-login">Esqueceu sua senha?</Link>
                     
-                    <div className="conta">
+                    <div className="conta-login">
                         <span>
                             Não tem conta?
-                            <Link to ="/cadastro" className="aa">Clique aqui</Link>
+                            <Link to ="/cadastro" className="esqueceu-login-clique"> CLIQUE AQUI!</Link>
                         </span>
                     </div>
                     </form>
                 </div>
+                <Footer2 />
             </main>
         </body>
   </div>

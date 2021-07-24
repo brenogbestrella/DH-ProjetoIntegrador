@@ -1,15 +1,15 @@
 import "../senha/Senha.css";
 import o_email from "../images/o_email.svg"
 import LogoAqui_2 from "../images/LogoAqui_2.png";
-
+import Header from "../components/header/Header"
+import Footer2 from "../components/footer2/Footer2"
 
 function Senha() {
   return (
     <div className="Senha">
-        <header>
 
-        </header>
         <body>
+        <Header />
             <main className="pagina-recuperar-senha">
                 <div className="card-recuperar-senha">
                     <form className="form">
@@ -20,7 +20,7 @@ function Senha() {
                     />
 
                     {/* Email */}
-                    <p>
+                    <p className="p-recuperar-senha">
                         <label for="email">
                             <img
                             className="buttom-recuperar-senha"
@@ -28,7 +28,7 @@ function Senha() {
                             alt="" 
                             />
                         </label>
-                        <input
+                        <input className="input-senha"
                         type="email"
                         name="email"
                         id="email"
@@ -36,11 +36,12 @@ function Senha() {
                         />
                     </p>
 
-                    <input className="botao-submit" type="submit" value="Recuperar Senha" />
+                    <input className="botao-submit-senha" type="submit" value="Recuperar Senha" />
 
-                    <button className="voltar">Voltar a tela inicial</button>
+                    <button className="voltar-senha">Voltar a tela inicial</button>
                     </form>
                 </div>
+                <Footer2 />
             </main>
         </body>
   </div>
