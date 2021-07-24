@@ -36,9 +36,6 @@ function App() {
             < Card01/>
             < Card01/>
             < Card01/>
-            < Card01/>            
-            < Card01/>
-            < Card01/>
               
         </div>
 

@@ -16,6 +16,7 @@ function Header2() {
                       <li><Link to= "/">Home</Link></li>
                       <li><Link to= "/">Cadastrar Oferta</Link></li>
                       <li><Link to= "/">Ordens de Compra</Link></li>
+                      <li><Link to= "/contato">Ajuda</Link></li>
                       <li><Link to= "/contato">Contato</Link></li>
                       <li><Link to="/login">Sair</Link></li>
                   </ul>

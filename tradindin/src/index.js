@@ -10,6 +10,7 @@ import App from "./app/App"
 import Senha from "./senha/Senha"
 import User from "./user/User"
 import Oferta from "./oferta/Oferta"
+import Reserva from "./reserva/Reserva"
 
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -26,6 +27,7 @@ const Routing = () => {
         <Route path="/app" component={App} isPrivate/>
         <Route path="/user" component={User} isPrivate/>
         <Route path="/oferta" component={Oferta} isPrivate/>
+        <Route path="/reserva" component={Reserva} isPrivate/>
       </Switch>
     </Router>
   )
