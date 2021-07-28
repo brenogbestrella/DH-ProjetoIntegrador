@@ -1,59 +1,28 @@
-* {
-    box-sizing: border-box;
-    border: 0;
-    outline: 0;
-    padding: 0;
-    margin: 0 auto;
-  }
 
-  
 
-  #moeda {
-    color:rgba(0, 0, 0, 0.75)
-  }
-
-  #quantidade {
-    color: rgba(0, 0, 0, 0.75);
-    text-align: center;
-  }
-
-  #endereco {
-    color: rgba(0, 0, 0, 0.75);
-    text-align: center;
-  }
-
-  #data {
-    color: rgba(0, 0, 0, 0.75);
-    text-align: center;
-  }
-
-  body {
-    background-color: #32363f;
-  }
-  
   .oferta_oferta {
+
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
     width: 33%;
     height: 70%;
-    position: absolute;
-    top: 20%;
-    left: 33%;
+
     opacity: 1;
     box-shadow: 0px 3px 21px -5px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
-    align-items: center;
   }
 
   .estilo_formulario{
+margin-top: 20%;
 
-    height: 90%;
-    margin: 4%;
 
   }
 
   .oferta_oferta > form {
     display: flex;
     flex-direction:column;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     opacity: 0.7;
     color: #ff78cb;
@@ -67,7 +36,7 @@
     width: 30%;
     margin-right: 60%;
     border-bottom: 1px solid #ff78cb;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     opacity: 0.7;
     padding-bottom: 7px;
@@ -106,7 +75,7 @@
 
       position: relative;
 
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-family: 'Roboto', sans-serif;
       width: 200px;
       height: 50px;
       border-radius: 20px;
@@ -119,3 +88,4 @@
       color: #fff;
       transition: background 0.5s, color 1s;
   }
+

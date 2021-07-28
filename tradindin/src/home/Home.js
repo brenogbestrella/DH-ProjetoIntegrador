@@ -10,7 +10,7 @@ import icone_03 from "../images/icone_03.png";
 import celular from "../images/celular.png"
 import Header from "../components/header/Header";
 import Pesquisa from "../components/pesquisa/Pesquisa";
-import Footer from "../components/footer/Footer";
+import Footer2 from "../components/footer2/Footer2";
 
 function Home() {
   return (
@@ -153,13 +153,13 @@ function Home() {
                 Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo
                 pose. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis,
                 aguis e fermentis. Sapien in monti palavris qui num significa nadis
-                i pareci latim. Diuretics paradis num copo é motivis de denguis.
+                i pareci latim. Diuretics paradis num copo é motivis de denguiss.
             </p>
             </div>
         </div>
         </main>
 
-        <Footer />
+        <Footer2 />
         </body>
   </div>
   );

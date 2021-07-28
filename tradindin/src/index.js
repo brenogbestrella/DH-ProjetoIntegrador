@@ -10,6 +10,11 @@ import Senha from "./senha/Senha"
 import User from "./user/User"
 import Oferta from "./oferta/Oferta"
 import Reserva from "./reserva/Reserva"
+import Termos from "./termos/Termos"
+import Ajuda from "./ajuda/Ajuda"
+import Perfil from "./perfil/Perfil"
+import Oferta2 from "./oferta2/Oferta2"
+import Privacidade from "./privacidade/Privacidade"
 
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -26,7 +31,14 @@ const Routing = () => {
         <Route path="/app" component={App} isPrivate/>
         <Route path="/user" component={User} isPrivate/>
         <Route path="/oferta" component={Oferta} isPrivate/>
+        <Route path="/reserva" component={Reserva} isPrivate/>
+        <Route path="/termos" component={Termos}/>
+        <Route path="/ajuda" component={Ajuda}/>
+        <Route path="/perfil" component={Perfil}/>
+        <Route path="/oferta2" component={Oferta2}/>
+        <Route path="/privacidade" component={Privacidade}/>
         <Route path="/ordem" component={Reserva} isPrivate/>
+
       </Switch>
     </Router>
   )

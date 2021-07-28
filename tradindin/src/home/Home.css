@@ -6,15 +6,11 @@
     margin: 0;
 }
 
-/*Header-Felipe*/
+html, body {
+    height: 100%;
+    }
 
-header{
-    padding:0px;
-    margin:0px;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-}
+/*Header-Felipe*/
 
 .separa-menu{
     display: flex;

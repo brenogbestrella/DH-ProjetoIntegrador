@@ -90,7 +90,7 @@ function Oferta() {
                                 name="endereco" 
                                 required="required" 
                                 type="text" 
-                                placeholder="Exemplo: Brasil – SP – Cotia"
+                                placeholder="Exemplo: Brasil – SP"
                                 value={endereco}
                                 onChange={(e) => setEndereco(e.target.value)}
                             /> 

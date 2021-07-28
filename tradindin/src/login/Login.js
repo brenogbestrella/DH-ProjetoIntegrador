@@ -42,11 +42,13 @@ function Login() {
     }
 
   return (
+
+    <body>
+          <Header />
     <div className="Login">
        
-       <Header />
+     
       
-        <body>
             <main className="pagina-login">
                 <div className="card-login">
                     <form className="form">
@@ -97,8 +99,9 @@ function Login() {
                 </div>
                 <Footer2 />
             </main>
-        </body>
+    
   </div>
+  </body>
   );
 }
 

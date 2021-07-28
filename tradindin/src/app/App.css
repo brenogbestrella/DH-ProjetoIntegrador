@@ -1,26 +1,33 @@
 .onda{
     position: absolute;
     width: 100%;
-    background-color:#4c5c64;
-    margin-top: 50%;
-    height: 80%;
+    padding-top: 45%;
+    z-index: 1;
 }
 
 .onda-imagem{
+    display: flex;
     width: 100%;
+    height: 100vh;
+    background-image: url("../../src/images//wave.png");
+    background-repeat: no-repeat;
+    z-index: 10;
+    background-color: #212130;
 }
 
 .app-coluna{  
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     height: 100%;
-    margin-top: 5%;
-    background-color: #32363f;
-    z-index: -0;
+    padding-top: 5%;
+    z-index: 1;
   }
-  
+
+  .app-coluna2{  
+ 
+        background-color: #32363f;
+        z-index: -3;
+      }
+
   .app-pesquisa{
         position: relative;
         margin-top: -26%;
@@ -28,6 +35,7 @@
         flex-direction:row;
         z-index: 10;
         width: 100%;
+        
     }
 
     .app-diferenciais{
@@ -36,9 +44,10 @@
         flex-direction: column;
         flex-flow: wrap;
         justify-content: center;
-        margin-top: 48%;
+        margin-top: 44%;
         height: 20%;
-        z-index: 10;
+        z-index: 200!important;
+        
     }
     
     .app-diferenciais2{

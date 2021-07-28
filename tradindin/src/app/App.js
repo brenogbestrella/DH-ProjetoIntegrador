@@ -6,7 +6,7 @@ import "./App.css";
 import Header2 from "../components/header2/Header2";
 import Pesquisa from "../components/pesquisa/Pesquisa";
 import Card01 from "../components/card01/Card01";
-import wave from "../images/wave.png";
+import Footer2 from "../components/footer2/Footer2";
 
 function App() {
 
@@ -39,15 +39,17 @@ function App() {
 
 
   return (
+<body> 
+
     <div className="Home">
 
 <Header2 />
 
-<body> 
 
-    <div className="onda"><img className="onda-imagem" src={wave} alt="Ícone" /></div>
+    <div className="onda"><spam className="onda-imagem" src="null" alt="Ícone"></spam> </div>
 
-    <div className="app-coluna"> 
+    <div className="app-coluna">    
+     <div className="app-coluna2"> 
 
         <div className="app-pesquisa"> < Pesquisa/></div>
         <div className="texto1"><p>Confira as ofertas mais recentes!</p></div>
@@ -65,14 +67,23 @@ function App() {
             < Card01/>
             < Card01/>
             < Card01/>
-              
+            < Card01/>
+            < Card01/>
+            < Card01/>
+            < Card01/>
+            < Card01/>
+            < Card01/>
+            < Card01/>
+      
         </div>
 
     </div>
-        
-</body>
+    
+</div>
 </div>
 
+<Footer2 />
+</body>
   );
 }
 
