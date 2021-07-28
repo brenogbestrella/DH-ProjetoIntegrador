@@ -63,11 +63,6 @@ function Oferta() {
                                             {nome}
                                         </option>
                                         ))}
-                                    {/* <option value="SELECIONAR">Escolher</option>
-                                    <option value="saab">Real</option>
-                                    <option value="opel">Euro</option>
-                                    <option value="audi">Dólar Americano</option>
-                                    <option value="audi">Peso Argentino</option> */}
                                     </select>
                         </div>
 
@@ -113,54 +108,11 @@ function Oferta() {
                                 onChange={(e) => setData(e.target.value)}
                             />
                         </div>
-                        
-                        {/* <div className="estilo_formulario_check" >
-                                <h7>Moedas que aceita trocar:</h7>
-                                <p>
-                                    <input 
-                                        type="checkbox" 
-                                        id="real" 
-                                        name="real" 
-                                        value="Real"
-                                        value={troca}
-                                        onChange={(e) => setTroca(e.target.value)}
-                                    />
-                                    <label for="real"> Real</label>
-                                    <input 
-                                        type="checkbox" 
-                                        id="euro" 
-                                        name="euro" 
-                                        value="Euro"
-                                        value={troca}
-                                        onChange={(e) => setTroca(e.target.value)}
-                                    />
-                                    <label for="euro"> Euro</label>
-                                    <input 
-                                        type="checkbox" 
-                                        id="dolar" 
-                                        name="dolar" 
-                                        value="Dólar"
-                                        value={troca}
-                                        onChange={(e) => setTroca(e.target.value)}
-                                    />
-                                    <label for="dolar"> Dólar Americano</label>
-                                    <input 
-                                        type="checkbox" 
-                                        id="peso" 
-                                        name="peso" 
-                                        value="Peso"
-                                        value={troca}
-                                        onChange={(e) => setTroca(e.target.value)}
-                                    />
-                                    <label for="peso"> Peso Argentino</label>
-                                </p>
-                        </div> */}
 
                         <div>
-                        
-                        <button className="estilo_formulario_botao" onClick={handleOnClick}>
-                            CADASTRAR OFERTA
-                        </button>
+                            <button className="estilo_formulario_botao" onClick={handleOnClick}>
+                                CADASTRAR OFERTA
+                            </button>
                         </div>
                         
         </form>

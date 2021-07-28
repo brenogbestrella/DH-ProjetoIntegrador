@@ -33,11 +33,12 @@ const controller = {
     return res.json(oferta);
   },
   update: async (req, res) => {
-    const { id } = req.params;
-    const { quantidade, data, endereco } = req.body;
+    const { id_oferta } = req.params;
+    const { fk_idMoeda, quantidade, data, endereco } = req.body;
 
     const updatedOferta = await OfertaService.updateOferta(
-      id,
+      id_oferta,
+      fk_idMoeda,
       quantidade,
       data,
       endereco
@@ -46,7 +47,7 @@ const controller = {
     return res.json(updatedOferta);
   },
   destroy: async (req, res) => {
-    const { id } = req.params;
+    const { id_oferta } = req.params;
 
     const destroyedOferta = await OfertaService.destroyOferta(id);
 

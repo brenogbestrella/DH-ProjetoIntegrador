@@ -19,6 +19,9 @@ module.exports = (sequelize, DataTypes) => {
       endereco: {
         type: DataTypes.STRING(200),
       },
+      data: {
+        type: DataTypes.DATE,
+      }
     },
     {
       tableName: "Oferta",

@@ -1,10 +1,18 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 
 import "./Header2.css";
 import logo_trad1 from "../../images/logo_trad1.png"
 
 function Header2() {
+
+    const history = useHistory();
+
+    function handleLogout() {
+        localStorage.clear();
+        history.push("/")
+    }
+
     return (
       <div className="Header-base">
           <header>
@@ -14,11 +22,18 @@ function Header2() {
                   <nav id="menu-header-base">
                   <ul>
                       <li><Link to= "/">Home</Link></li>
-                      <li><Link to= "/">Cadastrar Oferta</Link></li>
-                      <li><Link to= "/">Ordens de Compra</Link></li>
-                      <li><Link to= "/contato">Ajuda</Link></li>
+                      <li><Link to= "/oferta">Cadastrar Oferta</Link></li>
+                      <li><Link to= "/ordem">Ordens de Compra</Link></li>
+                      <li><Link to= "/ajuda">Ajuda</Link></li>
                       <li><Link to= "/contato">Contato</Link></li>
-                      <li><Link to="/login">Sair</Link></li>
+                      <li><button 
+                            type="button" 
+                            className="botao-logout" 
+                            onClick={handleLogout}>
+                            Sair
+                            </button>
+                        </li>
+                      {/* <li><Link to="/">Sair</Link></li> */}
                   </ul>
                   </nav>
               </div>

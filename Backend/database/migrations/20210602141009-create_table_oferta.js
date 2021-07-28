@@ -20,6 +20,9 @@ module.exports = {
       endereco: {
         type: Sequelize.STRING(200),
       },
+      data: {
+        type: Sequelize.DATE,
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false,

@@ -26,7 +26,7 @@ const Routing = () => {
         <Route path="/app" component={App} isPrivate/>
         <Route path="/user" component={User} isPrivate/>
         <Route path="/oferta" component={Oferta} isPrivate/>
-        <Route path="/reserva" component={Reserva} isPrivate/>
+        <Route path="/ordem" component={Reserva} isPrivate/>
       </Switch>
     </Router>
   )

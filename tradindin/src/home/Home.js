@@ -27,73 +27,10 @@ function Home() {
         />
         <h1>
             A melhor forma de trocar
-            <p><span className="rosa"> seu dinheiro</span> esta aqui</p>
+            <p><span className="rosa"> seu dinheiro</span> está aqui</p>
         </h1>
         <h2>Plataforma ideal para quem quer comprar ou vender dinheiro.</h2>
         <Pesquisa />
-        {/* FORMULÁRIO DE PESQUISA */}
-        {/* <div className="pesquisa">
-            <div className="pesquisa_moldura">
-            <div className="elementos0">
-                <div className="elementos1">
-                <div>
-                    <span>FAÇA UMA BUSCA AGORA MESMO!</span>
-                </div>
-                <div className="radio_elemento_1">
-                    <input
-                    type="radio"
-                    name="acao"
-                    id="comprar"
-                    value="comprar"
-                    checked
-                    />
-                    <label for="comprar">COMPRAR</label>
-                    <input type="radio" name="acao" id="vender" value="vender" />
-                    <label for="vender">VENDER</label>
-                </div>
-                </div>
-
-                <div className="elementos2">
-                <div className="local_partida">
-                    <img src={local} alt="Local" />
-                    <p>
-                    <span>LOCAL DE RETIRADA</span>
-                    <textarea>
-                        Insira o local que pretende retirar o dinheiro.
-                    </textarea>
-                    </p>
-                </div>
-
-                <div className="local_data">
-                    <img src={calendario} alt="Calendário" />
-                    <p>
-                    <span>DATA</span>
-                    <textarea>
-                        Insira a data que pretende retirar o dinheiro.
-                    </textarea>
-                    </p>
-                </div>
-
-                <div className="local_moeda">
-                    <p>MOEDA</p>
-                    <select name="moeda" id="moeda">
-                    <option value="SELECIONAR">SELECIONAR</option>
-                    <option value="saab">Real</option>
-                    <option value="opel">Euro</option>
-                    <option value="audi">Dólar Americano</option>
-                    <option value="audi">Peso Argentino</option>
-                    </select>
-                </div>
-
-                <div className="local_buscar">
-                    <button type="submit" onclick="window.location.href='/page2'">
-                    BUSCAR
-                    </button>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div> */}
         </main>
         <div className="linha_divisao">
         <img src={graph} alt="Linha divisória" />
