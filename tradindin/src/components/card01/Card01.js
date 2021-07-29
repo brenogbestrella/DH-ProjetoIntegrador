@@ -4,7 +4,7 @@ import image_01 from "../../images/image_01.png";
 
 import "./Card01.css";
 
-function Card01() {
+function Card01(props) {
     return (
         <div className="app-dife_01">
             <div className="app-div-01">
@@ -12,7 +12,7 @@ function Card01() {
             </div>
         <div className="app-div-02">
             <p className="app-nome">Felipe Marcelino</p>
-            <p className="app-lugar">Lugar: Brasil | São Paulo</p>
+            <p className="app-lugar">{props.oferta.endereco}</p>
             <p className="app-data">Data Máxima de Retirada: 25/09/2021</p>
             <p className="app-moeda">Moedas de Troca: R$ | $</p>
             <p className="app-oferta">Oferta: R$ 5.000,00</p>

@@ -18,6 +18,9 @@ import calendario from "../../images/calendario.png";
 import "./Pesquisa.css";
 
 function Pesquisa() {
+
+    registerLocale("ptBR", pt_br);
+
     const [endereco, setEndereco] = useState("");
     const [startDate, setStartDate ] = useState(new Date());
     const [moeda, setMoeda] = useState("");
@@ -26,7 +29,7 @@ function Pesquisa() {
     const history = useHistory();
 
     
-    registerLocale("ptBR", pt_br);
+    
 
     useEffect(() => {
         async function loadMoedasList() {
@@ -100,6 +103,7 @@ function Pesquisa() {
                                 selected={startDate} 
                                 onChange={(date) => 
                                 setStartDate(date)} 
+                                dateFormat="dd/MM/yyyy"
                             />
                             {/* <textarea>
                                 Insira a data que pretende retirar o dinheiro.

@@ -23,7 +23,7 @@ function App() {
     setMoeda(history.location.state?.moeda);         
 
     async function loadOfertas() {
-      const { data } = await api.get('/getofertas', {
+      const { data } = await api.get('/ofertas', {
         params: {
           cidade: history.location.state?.data,
           data: history.location.state?.cidade,
@@ -56,24 +56,10 @@ function App() {
 
         <div className="app-diferenciais">
         
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
-            < Card01/>
+          {listaOfertas.map(oferta =>
+          (
+            < Card01 oferta={oferta} />
+          ))}
       
         </div>
 
