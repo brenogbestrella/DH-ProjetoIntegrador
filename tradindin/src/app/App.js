@@ -8,6 +8,9 @@ import Pesquisa from "../components/pesquisa/Pesquisa";
 import Card01 from "../components/card01/Card01";
 import Footer2 from "../components/footer2/Footer2";
 
+import {Link} from 'react-router-dom';
+import image_01 from "../images/image_01.png";
+
 function App() {
 
   const [endereco, setEndereco] = useState("");
@@ -60,7 +63,91 @@ function App() {
           (
             < Card01 oferta={oferta} />
           ))}
-      
+      <div className="app-dife_01">
+            <div className="app-div-01">
+                <img className="app-icone" src={image_01} alt="Ícone" />
+            </div>
+                                                              <div className="app-div-02">
+                                                                  <p className="app-nome">Felipe Marcelino</p>
+                                                                  <p className="app-lugar">teste</p>
+                                                                  <p className="app-data">Data Máxima de Retirada: 25/09/2021</p>
+                                                                  <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                                                                  <p className="app-oferta">Oferta: R$ 5.000,00</p>
+                                                              </div>
+                                                              <div className="app-div-03">
+                                                            
+                                                                  <Link to={{ pathname: "https://api.whatsapp.com/send?phone=5547996988383%E2%80%9D" }} target="_blank" className="app-botao-div2">FAZER OFERTA</Link>
+
+                                                              </div>
+                                                          </div>
+
+                                                          <div className="app-dife_01">
+                                                                  <div className="app-div-01">
+                                                                      <img className="app-icone" src={image_01} alt="Ícone" />
+                                                                  </div>
+                                                              <div className="app-div-02">
+                                                                  <p className="app-nome">Felipe Marcelino</p>
+                                                                  <p className="app-lugar">teste</p>
+                                                                  <p className="app-data">Data Máxima de Retirada: 25/09/2021</p>
+                                                                  <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                                                                  <p className="app-oferta">Oferta: R$ 5.000,00</p>
+                                                              </div>
+                                                              <div className="app-div-03">
+                                                                  <Link className="app-botao-div2">FAZER OFERTA!</Link>
+                                                              </div>
+                                                          </div>
+
+                                                          <div className="app-dife_01">
+                                                                  <div className="app-div-01">
+                                                                      <img className="app-icone" src={image_01} alt="Ícone" />
+                                                                  </div>
+                                                              <div className="app-div-02">
+                                                                  <p className="app-nome">Felipe Marcelino</p>
+                                                                  <p className="app-lugar">teste</p>
+                                                                  <p className="app-data">Data Máxima de Retirada: 25/09/2021</p>
+                                                                  <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                                                                  <p className="app-oferta">Oferta: R$ 5.000,00</p>
+                                                              </div>
+                                                              <div className="app-div-03">
+                                                                  <Link className="app-botao-div2">FAZER OFERTA!</Link>
+                                                              </div>
+                                                          </div>
+
+                                                          <div className="app-dife_01">
+                                                                  <div className="app-div-01">
+                                                                      <img className="app-icone" src={image_01} alt="Ícone" />
+                                                                  </div>
+                                                              <div className="app-div-02">
+                                                                  <p className="app-nome">Felipe Marcelino</p>
+                                                                  <p className="app-lugar">teste</p>
+                                                                  <p className="app-data">Data Máxima de Retirada: 25/09/2021</p>
+                                                                  <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                                                                  <p className="app-oferta">Oferta: R$ 5.000,00</p>
+                                                              </div>
+                                                              <div className="app-div-03">
+                                                                  <Link className="app-botao-div2">FAZER OFERTA!</Link>
+                                                              </div>
+                                                          </div>
+
+                                                          <div className="app-dife_01">
+                                                                  <div className="app-div-01">
+                                                                      <img className="app-icone" src={image_01} alt="Ícone" />
+                                                                  </div>
+                                                              <div className="app-div-02">
+                                                                  <p className="app-nome">Felipe Marcelino</p>
+                                                                  <p className="app-lugar">teste</p>
+                                                                  <p className="app-data">Data Máxima de Retirada: 25/09/2021</p>
+                                                                  <p className="app-moeda">Moedas de Troca: R$ | $</p>
+                                                                  <p className="app-oferta">Oferta: R$ 5.000,00</p>
+                                                              </div>
+                                                              <div className="app-div-03">
+                                                                  <Link className="app-botao-div2">FAZER OFERTA!</Link>
+                                                              </div>
+                                                          </div>
+
+
+
+
         </div>
 
     </div>

@@ -17,7 +17,7 @@ function Card02() {
 
         </div>
         <div className="app-div-03">
-            <Link className="app-botao-div2">ENTRAR EM CONTATO!</Link>
+        <Link to={{ pathname: "https://api.whatsapp.com/send?phone=5547996988383" }} target="_blank" className="app-botao-div2">ENTRAR EM CONTATO!</Link>
         </div>
     </div>
     )}

@@ -18,7 +18,7 @@ function Card01(props) {
             <p className="app-oferta">Oferta: R$ 5.000,00</p>
         </div>
         <div className="app-div-03">
-            <Link className="app-botao-div2">FAZER OFERTA!</Link>
+        <Link to={{ pathname: "https://api.whatsapp.com/send?phone=5547996988383" }} target="_blank" className="app-botao-div2">FAZER OFERTA!</Link>
         </div>
     </div>
     )}

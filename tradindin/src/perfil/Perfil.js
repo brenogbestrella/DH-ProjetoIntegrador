@@ -52,6 +52,15 @@ function Perfil() {
                         </div>
 
                         <div className="perfil-nome-user">
+                           <div className="user-titulo"> <h1>Telefone</h1> </div>
+                            
+                            <div className="user-sub-titulo-b">
+                            <div className="user-sub-titulo">+55 11 97566 8558</div>
+                            <div className="user-botao"><button className="botao-editar" onclick="filterSelection('transhist1')"> EDITAR </button></div>
+                            </div>
+                        </div>
+
+                        <div className="perfil-nome-user">
                            <div className="user-titulo"> <h1>Senha</h1> </div>
                             
                             <div className="user-sub-titulo-b">

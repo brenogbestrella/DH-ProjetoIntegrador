@@ -7,6 +7,7 @@ import user from "../images/user.svg";
 import cadeado from "../images/cadeado.svg";
 import o_email from "../images/o_email.svg";
 import identidade from "../images/identidade.png";
+import phone from "../images/telefone.png";
 import Header from "../components/header/Header"
 import Footer2 from "../components/footer2/Footer2"
 
@@ -16,6 +17,7 @@ function Cadastro() {
     const [ email, setEmail ] = useState("")
     const [ senha, setSenha ] = useState("")
     const [ documento, setDocumento ] = useState("")
+    const [ telefone, setTelefone ] = useState("")
     const [ radio, setRadio ] = useState("")
 
     const history = useHistory();
@@ -28,9 +30,10 @@ function Cadastro() {
             email: email,
             senha: senha,
             documento: documento,
+            telefone: telefone,
             tipo: radio,
             })
-        if(nome && email && senha && documento && radio) {
+        if(nome && email && senha && documento && telefone && radio) {
             history.push("/login")
         } else {
             history.push("/cadastro")
@@ -88,7 +91,7 @@ function Cadastro() {
                     />
                 </p>
 
-                {/* CPF */}
+                {/* DOCUMENTO */}
                 <p className="p-cadastro">
                     <label htmlFor="documento"><img className="p-img-cadastro" src={identidade} alt="" /></label>
                     <input className="input-cadastro"
@@ -97,6 +100,19 @@ function Cadastro() {
                         id="documento"
                         placeholder="Documento"
                         value={documento}
+                        onChange={(e) => setDocumento(e.target.value)}
+                    />
+                </p>
+
+                {/* TELEFONE */}
+                                <p className="p-cadastro">
+                    <label htmlFor="documento"><img className="p-img-cadastro" src={phone} alt="" /></label>
+                    <input className="input-cadastro"
+                        type="text"
+                        name="telefone"
+                        id="telefone"
+                        placeholder="Telefone"
+                        value={telefone}
                         onChange={(e) => setDocumento(e.target.value)}
                     />
                 </p>
