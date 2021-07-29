@@ -18,29 +18,29 @@ export default function RouteWrapper({
   }
 
 
-  // const Layout = login ? DefaultLayout : AuthLayout;
-
-  // return (
-  //   <Route
-  //     {...rest}
-  //     render={props => (
-  //       <Layout>
-  //         <Component {...props} /> 
-  //       </Layout> 
-        
-  //     )}
-     
-  //   />
-  // );
-
-
+  const Layout = login ? DefaultLayout : AuthLayout;
 
   return (
     <Route
       {...rest}
       render={props => (
+        <Layout>
           <Component {...props} />
+        </Layout> 
+        
       )}
+     
     />
   );
+
+
+
+  // return (
+  //   <Route
+  //     {...rest}
+  //     render={props => (
+  //         <Component {...props} />
+  //     )}
+  //   />
+  // );
 }
