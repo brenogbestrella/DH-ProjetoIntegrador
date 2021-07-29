@@ -25,6 +25,10 @@ module.exports = {
         type: Sequelize.STRING(50),
         allowNull: false,
       },
+      telefone: {
+        type: Sequelize.STRING(15),
+        allowNull: false,
+      },
       tipo: {
         type: Sequelize.BOOLEAN,
         allowNull: false,

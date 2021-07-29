@@ -22,8 +22,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
       },
       documento: {
-        //cpf ou cnpj dependem do tipo de usuario logo abaixo (bem lembrado)
         type: DataTypes.STRING(50),
+      },
+      telefone: {
+        type: DataTypes.STRING(15),
       },
       tipo: {
         //tipo define se é pessoa fisica ou juridica / 0 = física; 1 = jurídica

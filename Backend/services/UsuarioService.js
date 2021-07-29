@@ -1,12 +1,13 @@
 const database = require("../database/models/index");
 
 const UsuarioService = {
-  createUsuario: async (nome, email, senha, documento, tipo) => {
+  createUsuario: async (nome, email, senha, documento, telefone, tipo) => {
     const newUsuario = await database.Usuario.create({
       nome,
       email,
       senha,
       documento,
+      telefone,
       tipo,
     });
     return newUsuario;
@@ -31,13 +32,14 @@ const UsuarioService = {
     });
     return usuarioPessoaJuridica;
   },
-  updateUsuario: async (id, nome, email, senha, documento, tipo) => {
+  updateUsuario: async (id, nome, email, senha, documento, telefone, tipo) => {
     const updatedUsuario = await database.Usuario.update(
       {
         nome,
         email,
         senha,
         documento,
+        telefone,
         tipo,
       },
       {

@@ -6,6 +6,7 @@ function validator(req, res, next) {
     email: yup.string().required(),
     senha: yup.string().required(),
     documento: yup.string().required(),
+    telefone: yup.integer().required(),
     tipo: yup.boolean().required(),
   });
 

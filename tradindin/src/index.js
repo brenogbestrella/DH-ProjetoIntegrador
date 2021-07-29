@@ -1,59 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Route from "./login/Route"
-
-import Home from "./home/Home.js";
-import Login from "./login/Login.js"
-import Cadastro from "./cadastro/Cadastro"
-import App from "./app/App"
-import Senha from "./senha/Senha"
-import User from "./user/User"
-import Oferta from "./oferta/Oferta"
-import Reserva from "./reserva/Reserva"
-import Termos from "./termos/Termos"
-import Ajuda from "./ajuda/Ajuda"
-import Perfil from "./perfil/Perfil"
-import Oferta2 from "./oferta2/Oferta2"
-import Privacidade from "./privacidade/Privacidade"
-
-import { BrowserRouter as Router, Switch } from "react-router-dom";
-import reportWebVitals from "./reportWebVitals";
-
-
-const Routing = () => {
-  return(
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/cadastro" component={Cadastro} />
-        <Route path="/senha" component={Senha} />
-        <Route path="/app" component={App} isPrivate/>
-        <Route path="/user" component={User} isPrivate/>
-        <Route path="/oferta" component={Oferta} isPrivate/>
-        <Route path="/reserva" component={Reserva} isPrivate/>
-        <Route path="/termos" component={Termos}/>
-        <Route path="/ajuda" component={Ajuda}/>
-        <Route path="/perfil" component={Perfil}/>
-        <Route path="/oferta2" component={Oferta2}/>
-        <Route path="/privacidade" component={Privacidade}/>
-        <Route path="/ordem" component={Reserva} isPrivate/>
-
-      </Switch>
-    </Router>
-  )
-}
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Paginas from './App';
+import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Routing />
+    <Paginas />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
-
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

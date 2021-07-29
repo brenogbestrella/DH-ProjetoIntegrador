@@ -38,20 +38,21 @@ const controller = {
   },
 
   create: async (req, res) => {
-    const { nome, email, senha, documento, tipo } = req.body;
+    const { nome, email, senha, documento, telefone, tipo } = req.body;
     const usuario = await UsuarioService.createUsuario(
       nome,
       email,
       senha,
       documento,
+      telefone,
       tipo
     );
 
-    return res.json({nome: usuario.nome, email: usuario.email, documento: usuario.email, tipo: usuario.tipo});
+    return res.json({nome: usuario.nome, email: usuario.email, documento: usuario.email, telefone: usuario.telefone, tipo: usuario.tipo});
   },
   update: async (req, res) => {
     const { id } = req.params;
-    const { nome, email, senha, documento, tipo } = req.body;
+    const { nome, email, senha, documento, telefone, tipo } = req.body;
 
     const updatedUsuario = await UsuarioService.updateUsuario(
       id,
@@ -59,6 +60,7 @@ const controller = {
       email,
       senha,
       documento,
+      telefone,
       tipo
     );
 

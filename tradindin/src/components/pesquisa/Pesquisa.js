@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom';
 
-import { getMoedas } from "../../oferta/apiMoeda"
+import { getMoedas } from "../../pages/oferta/apiMoeda"
 
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-import { registerLocale, setDefaultLocale } from "react-datepicker";
+import { registerLocale } from "react-datepicker";
 import pt_br from "date-fns/locale/pt-BR";
 
 
@@ -58,27 +58,14 @@ function Pesquisa() {
                     <div className="pesquisa_moldura">
                     <div className="elementos0">
                         <div className="elementos1">
-                        <div>
-                            <span>FAÇA UMA BUSCA AGORA MESMO!</span>
-                        </div>
-                        {/* <div className="radio_elemento_1">
-                            <input
-                            type="radio"
-                            name="acao"
-                            id="comprar"
-                            value="comprar"
-                            checked
-                            />
-                            <label for="comprar">COMPRAR</label>
-                            <input type="radio" name="acao" id="vender" value="vender" />
-                            <label for="vender">VENDER</label>
-                        </div> */}
+                            <div>
+                                <span>FAÇA UMA BUSCA AGORA MESMO!</span>
+                            </div>
                         </div>
 
                         <div className="elementos2">
                         <div className="local_partida">
                             <img src={local} alt="Local" />
-                            {/* <p> */}
                             <span>LOCAL DE RETIRADA</span>
                             <input className="input-endereco"
                                 type="text"
@@ -88,16 +75,10 @@ function Pesquisa() {
                                 value={endereco}
                                 onChange={(e) => setEndereco(e.target.value)}
                             />
-                            {/* <textarea>
-                                Insira o local que pretende retirar o dinheiro.
-                            </textarea> */}
-                            {/* </p> */}
                         </div>
-
                         <div className="local_data">
                             <img src={calendario} alt="Calendário" />
                             <p>
-                            {/* <span>DATA</span> */}
                             <DatePicker
                                 locale="ptBR" 
                                 selected={startDate} 
@@ -105,12 +86,8 @@ function Pesquisa() {
                                 setStartDate(date)} 
                                 dateFormat="dd/MM/yyyy"
                             />
-                            {/* <textarea>
-                                Insira a data que pretende retirar o dinheiro.
-                            </textarea> */}
                             </p>
                         </div>
-
                         <div className="local_moeda">
                             <p>MOEDA</p>
 
@@ -124,16 +101,7 @@ function Pesquisa() {
                                     </option>
                                     ))}
                             </select>
-
-                            {/* <select name="moeda" id="moeda">
-                            <option value="SELECIONAR">SELECIONAR</option>
-                            <option value="saab">Real</option>
-                            <option value="opel">Euro</option>
-                            <option value="audi">Dólar Americano</option>
-                            <option value="audi">Peso Argentino</option>
-                            </select> */}
                         </div>
-
                         <div className="local_buscar">
                             <button type="submit" onClick={onClickBuscar}>
                             BUSCAR

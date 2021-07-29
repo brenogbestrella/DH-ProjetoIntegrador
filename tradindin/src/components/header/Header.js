@@ -13,8 +13,8 @@ function Header() {
   
                   <nav id="menu-header-base">
                   <ul>
-                      <li><Link to= "/">Home</Link></li>
-                      <li><Link to= "/contato">Contato</Link></li>
+                      <li><Link to="/">Home</Link></li>
+                      <li><Link to="/contato">Contato</Link></li>
                       <li><Link to="/login">Login</Link></li>
                   </ul>
                   </nav>
@@ -22,6 +22,7 @@ function Header() {
           </header>
           </div>
     )}
-          export default Header;
+
+export default Header;
 
         
