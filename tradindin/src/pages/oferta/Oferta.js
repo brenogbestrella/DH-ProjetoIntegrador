@@ -21,7 +21,6 @@ function Oferta2() {
     const [startDate, setStartDate ] = useState(new Date());
     const [ quantidade, setQuantidade ] = useState("");
     const [ endereco, setEndereco ] = useState("");
-    const [ data, setData ] = useState("");
     const [ moeda, setMoeda ] = useState("");
     const [ listaMoedas, setListaMoedas] = useState([]);
     const history = useHistory();
@@ -39,12 +38,12 @@ function Oferta2() {
     async function handleOnClick (e) {
         e.preventDefault();
 
-        if(!moeda || !quantidade || !data || !endereco) return;
+        if(!moeda || !quantidade || !startDate || !endereco) return;
 
         await api.post("/ofertas", {
             fk_idMoeda: moeda,
             quantidade: quantidade,    
-            data: data,
+            data: startDate,
             endereco: endereco,
         })
 
@@ -56,7 +55,6 @@ function Oferta2() {
     return (
         <body>
         <div className="Oferta2">
-            <Header2 />
           
                 <div className="cla-oferta">
     

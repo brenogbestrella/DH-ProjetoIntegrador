@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import api from "../../Services/api";
 
 import "./App.css";
-import image_01 from "../../images/image_01.png";
+// import image_01 from "../../images/image_01.png";
 import Header2 from "../../components/header2/Header2";
 import Pesquisa from "../../components/pesquisa/Pesquisa";
 import Card01 from "../../components/card01/Card01";
@@ -14,7 +14,7 @@ import Footer2 from "../../components/footer2/Footer2";
 function App() {
 
   const [endereco, setEndereco] = useState("");
-  const [data, setData ] = useState("");
+  const [startDate, setStartDate ] = useState("");
   const [moeda, setMoeda] = useState("");
   const [listaOfertas, setListaOfertas] = useState([]);
 
@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {    
     setEndereco(history.location.state?.endereco);
-    setData(history.location.state?.data);
+    setStartDate(history.location.state?.data);
     setMoeda(history.location.state?.moeda);         
 
     async function loadOfertas() {
@@ -50,16 +50,22 @@ function App() {
                     <div className="app-coluna">    
                         <div className="app-coluna2"> 
 
-                            <div className="app-pesquisa"> < Pesquisa/></div>
-                            <div className="texto1"><p>Confira as ofertas mais recentes!</p></div>
+                            <div className="app-pesquisa"> 
+                                <Pesquisa /> 
+                            </div>
+                            <div className="texto1">
+                                <p>
+                                    Confira as ofertas mais recentes!
+                                </p>
+                            </div>
 
                             <div className="app-diferenciais">
                             
                             {listaOfertas.map(oferta =>
                             (
-                                < Card01 oferta={oferta} />
+                                <Card01 oferta={oferta} />
                             ))}
-                        <div className="app-dife_01">
+                        {/* <div className="app-dife_01">
                                 <div className="app-div-01">
                                     <img className="app-icone" src={image_01} alt="Ícone" />
                                 </div>
@@ -139,7 +145,7 @@ function App() {
                             <div className="app-div-03">
                                 <Link className="app-botao-div2">FAZER OFERTA!</Link>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

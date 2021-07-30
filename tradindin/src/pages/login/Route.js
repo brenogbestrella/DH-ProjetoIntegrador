@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import api from "../../Services/api"
 
-// import AuthLayout from '../components/header/Header';
-// import DefaultLayout from '../components/header2/Header2';
+import Header2 from '../../components/header2/Header2';
+import Header from '../../components/header/Header';
 
 export default function RouteWrapper({
   component: Component,
@@ -18,29 +18,17 @@ export default function RouteWrapper({
   }
 
 
-  // const Layout = login ? DefaultLayout : AuthLayout;
-
-  // return (
-  //   <Route
-  //     {...rest}
-  //     render={props => (
-  //       <Layout>
-  //         <Component {...props} /> 
-  //       </Layout> 
-        
-  //     )}
-     
-  //   />
-  // );
-
-
-
+  const Layout = login ? Header2 : Header;
   return (
     <Route
       {...rest}
-      render={props => (
+      render={props => ( 
+        <div style={{height: "100%"}}>
+          <Layout />
           <Component {...props} />
+        </div>
       )}
+     
     />
   );
 }

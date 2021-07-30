@@ -15,8 +15,6 @@ import Footer2 from "../../components/footer2/Footer2";
 function Home() {
   return (
     <div className="Home">
- <Header />
-        <body>
 
         {/* BANNER */}
         <main className="banner_principal">
@@ -160,7 +158,6 @@ function Home() {
         </main>
 
         <Footer2 />
-        </body>
   </div>
   );
 };

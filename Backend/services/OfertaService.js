@@ -22,7 +22,26 @@ const OfertaService = {
     return newOferta;
   },
   getOfertaList: async () => {
-    const resultados = await database.Oferta.findAll();
+    const resultados = await database.Oferta.findAll({
+      include: [
+        {
+          model: database.Usuario,
+          as: "usuario",
+          attributes: [
+            "nome",
+            "telefone"
+          ]
+        },
+        {
+          model: database.Moeda,
+          as: "moeda",
+          attributes: [
+            "nome",
+            "simbolo"
+          ]
+        }
+      ]
+    });
     return resultados;
   },
   updateOferta: async (fk_idMoeda, quantidade, data, endereco) => {

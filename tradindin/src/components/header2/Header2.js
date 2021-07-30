@@ -39,6 +39,7 @@ function Header2() {
           </header>
           </div>
     )}
-          export default Header2;
+
+export default Header2;
 
         

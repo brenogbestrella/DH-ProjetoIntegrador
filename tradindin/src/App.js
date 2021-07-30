@@ -23,57 +23,31 @@ function Paginas() {
     <BrowserRouter>
       <Switch>
         
-        <Route path="/login">
-          <Login />
-        </Route>
+        <Route path="/login" component={Login} />
 
-        <Route path="/cadastro">
-          <Cadastro />
-        </Route>
+        <Route path="/cadastro" component={Cadastro} />
 
-        <Route path="/senha">
-          <Senha />
-        </Route>
+        <Route path="/senha" component={Senha} />
 
-        <Route path="/app" isPrivate>
-          <App />
-        </Route>
+        <Route path="/app" isPrivate component={App} />
 
-        <Route path="/user" isPrivate>
-          <User />
-        </Route>
+        <Route path="/user" isPrivate component={User} />
 
-        <Route path="/oferta" isPrivate>
-          <Oferta />
-        </Route>
+        <Route path="/oferta" isPrivate component={Oferta} />
 
-        <Route path="/reserva" isPrivate>
-          <Reserva />
-        </Route>
+        <Route path="/reserva" isPrivate component={Reserva} />
 
-        <Route path="/termos">
-          <Termos />
-        </Route>
+        <Route path="/termos" component={Termos} />
 
-        <Route path="/ajuda">
-          <Ajuda />
-        </Route>
+        <Route path="/ajuda" component={Ajuda} />
 
-        <Route path="/perfil" isPrivate>
-          <Perfil />
-        </Route>
+        <Route path="/perfil" isPrivate component={Perfil} />
 
-        <Route path="/privacidade">
-          <Privacidade />
-        </Route>
+        <Route path="/privacidade" component={Privacidade} />
 
-        <Route path="/ordem" isPrivate>
-          <Reserva />
-        </Route> 
+        <Route path="/ordem" isPrivate component={Reserva} />
 
-        <Route exact path="/">
-          <Home />
-        </Route>
+        <Route exact path="/" component={Home} />
 
       </Switch>
     </BrowserRouter>
