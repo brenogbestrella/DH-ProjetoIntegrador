@@ -9,22 +9,22 @@
 
 .logo_menu-base2{
     margin-top: 1.5%;
-    width: 15%;
-    height: 20%;
+    width: 100%;
+}
+
+.logo_menu-base2lik{
+    margin-top: 1.5%;
+    width: 17%;
 }
 
 
 #menu-header-base2{
     padding-top: 2%;
-    width: 85%;
+    width: 100%;
+    margin-left: 2%;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    z-index: 1;
-} 
+
 
 header  ul li { 
     display: inline;

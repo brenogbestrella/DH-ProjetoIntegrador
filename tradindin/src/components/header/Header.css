@@ -11,23 +11,84 @@ header{
     padding:0px;
     margin:0px;
     position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     z-index: 1;
+}
+
+.tabela-menu{
+    display: flex;
+    width: 100%;
+    flex-direction:row;
+    justify-content: space-between;
+    
+}
+
+.div-a-logo{
+    position: relative;
+    margin-left: 10rem;
+    margin-top: 2%;
+    width: 20%;
+}
+
+.logo_menu-base1{
+    position: relative;
+    margin-left: 10rem;
+    margin-top: 2%;
     width: 100%;
 }
 
-.separa-menu-base{
+
+.menu-header-base1{
+    position: relative;
     display: flex;
-    flex-direction:row;
-    justify-content: space-between;
+    width: 100%;
 }
-
-.logo_menu-base{
-    margin-left: 10rem;
-    width: 20%;
-    height: 20%;
-}
-
 
 #menu-header-base{
-    padding-top: 1.3%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 4%;
+}
+
+.ul-header-base1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    
+}
+
+.Header-base1{
+    width: 100%;
+}
+
+.botao-login-trade{
+    font-size: 14px;
+  	border-radius: 28px;
+    color: #FFF;
+	background-color:rgba(15, 146, 85, 100);
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 800;
+    text-decoration:none;
+    letter-spacing: 2px;
+    padding: 1% 2%;
+    background-color: #bc539a;;
+    margin-left: 2%;
+
+}
+
+.botao-login-trade:hover{
+    background-color:rgb(105, 12, 180);
+    color: white;
+    transition: 0.5s;
+    border: 0px solid #ffffff;
+    text-decoration: none;
 }

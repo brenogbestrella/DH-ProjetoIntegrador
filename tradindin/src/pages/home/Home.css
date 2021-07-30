@@ -382,10 +382,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding: 2% 0% 2%;
-
-    
     opacity: 1;
     text-align: center;
     background-color: #32363f;
@@ -430,7 +427,7 @@ main{
 
 .perguntas-frequentes > p{
     text-align: center;
-    width: 35%;
+    width: 40%;
     color: #999A9B;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;  

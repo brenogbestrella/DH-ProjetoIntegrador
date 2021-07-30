@@ -67,7 +67,8 @@ function Pesquisa() {
                         <div className="local_partida">
                             <img src={local} alt="Local" />
                             <span>LOCAL DE RETIRADA</span>
-                            <input className="input-endereco"
+                            <input 
+                                className="input-endereco"
                                 type="text"
                                 name="endereco-retirada"
                                 id="endereco-retirada"

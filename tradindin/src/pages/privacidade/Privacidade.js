@@ -9,7 +9,6 @@ function Privacidade() {
   return (
     <div>
 
-<Header2 />
 
 <body> 
 <div className="chamada_privacidade">

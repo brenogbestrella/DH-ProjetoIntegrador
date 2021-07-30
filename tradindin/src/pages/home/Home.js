@@ -1,7 +1,11 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import "./Home.css";
-import logo_dh from "../../images/logo_dh.png"
+import logo_1 from "../../images/logo_dh.png"
+import logo_2 from "../../images/logo_2.png"
+import logo_3 from "../../images/logo_3.png"
+import logo_4 from "../../images/logo_4.png"
+import logo_5 from "../../images/logo_5.png"
 import banner_principal3 from "../../images/banner_principal3.png"
 import graph from "../../images/graph.png";
 import icone_01 from "../../images/icone_01.png";
@@ -41,32 +45,29 @@ function Home() {
             uma casa de câmbio.
         </h3>
 
-        <p className="chamada1">Chamada Para Usuários</p>
+        <p className="chamada1">Saiba tudo sobre o Tradindin</p>
 
         <div className="diferenciais">
             <div className="dife_01">
             <img className="icone_dif" src={icone_01} alt="Ícone" />
             <p>Comprar dinheiro</p>
             <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
+                Compre dinheiros de outros usuários, em qualquer moeda, quando e onde quiser!
             </span>
             
             </div>
             <div className="dife_01">
             <img className="icone_dif" src={icone_02} alt="Ícone" />
-            <p>Comprar dinheiro</p>
+            <p>Ofertar dinheiro</p>
             <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
+                Crie uma oferta sobre o valor que você deseja vender!
             </span>
             </div>
             <div className="dife_01">
             <img className="icone_dif" src={icone_03} alt="Ícone" />
-            <p>Comprar dinheiro</p>
+            <p>Saia do convêncional</p>
             <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt.
+            A forma mais tradicional é trocar dinheiro e trocando o real pela moeda desejada em uma casa de câmbio. Trazemos uma nova opção para você!
             </span>
             </div>
         </div>
@@ -102,19 +103,18 @@ function Home() {
         <div className="solucoes">
             <h2>Empresas que usam nossa solução</h2>
             <div className="logo-empresas">
-            <img src={logo_dh} alt="logo-dh" />
-            <img src={logo_dh} alt="logo-dh" />
-            <img src={logo_dh} alt="logo-dh" />
-            <img src={logo_dh} alt="logo-dh" />
-            <img src={logo_dh} alt="logo-dh" />
+            <img src={logo_1} alt="logo-dh" />
+            <img src={logo_2} alt="logo-dh" />
+            <img src={logo_3} alt="logo-dh" />
+            <img src={logo_4} alt="logo-dh" />
+            <img src={logo_5} alt="logo-dh" />
             </div>
         </div>
 
         <div className="perguntas-frequentes">
             <h1>Perguntas frequentes</h1>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Olá Trader! Sabemos que entender o conceito de um serviço ou site pode ser uma tarefa que leva alguns minutos. Por este motivo selecionamos as perguntas mais recêntes para sanar suas possíveis dúvidas! 
             </p>
         </div>
         <div className="perguntas-box">

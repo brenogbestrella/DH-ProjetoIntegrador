@@ -10,8 +10,6 @@ function Ajuda() {
   return (
     <div>
 
-<Header2 />
-
 <body> 
 <div className="chamada_ajuda">
       <div className="chamada_seguranca_ajuda">

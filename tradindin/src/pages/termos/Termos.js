@@ -9,8 +9,6 @@ function Termos() {
   return (
     <div>
 
-<Header2 />
-
 <body> 
 <div className="chamada_termos">
       <div className="chamada_seguranca_termos">

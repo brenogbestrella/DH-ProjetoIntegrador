@@ -17,11 +17,10 @@ function Header2() {
       <div className="Header-base">
           <header>
               <div className="separa-menu-base2">
-                  <img className="logo_menu-base2" src={logo_trad1} alt="TraDinDin" />
+              <Link className="logo_menu-base2lik" to="/">  <img className="logo_menu-base2" src={logo_trad1} alt="TraDinDin"/> </Link>
   
                   <nav id="menu-header-base2">
                   <ul>
-                        <li><Link to="/">HOME</Link></li>
                         <li><Link to="/oferta">CADASTRAR OFERTA</Link></li>
                         <li><Link to="/ordem">ORDENS DE COMPRA</Link></li>
                         <li><Link to="/perfil">PERFIL</Link></li>
