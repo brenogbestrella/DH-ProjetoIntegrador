@@ -16,21 +16,21 @@ function Header2() {
     return (
       <div className="Header-base">
           <header>
-              <div className="separa-menu-base">
-                  <img className="logo_menu-base" src={logo_trad1} alt="TraDinDin" />
+              <div className="separa-menu-base2">
+                  <img className="logo_menu-base2" src={logo_trad1} alt="TraDinDin" />
   
-                  <nav id="menu-header-base">
+                  <nav id="menu-header-base2">
                   <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/oferta">Cadastrar Oferta</Link></li>
-                        <li><Link to="/ordem">Ordens de Compra</Link></li>
-                        <li><Link to="/ajuda">Ajuda</Link></li>
-                        <li><Link to="/contato">Contato</Link></li>
+                        <li><Link to="/">HOME</Link></li>
+                        <li><Link to="/oferta">CADASTRAR OFERTA</Link></li>
+                        <li><Link to="/ordem">ORDENS DE COMPRA</Link></li>
+                        <li><Link to="/perfil">PERFIL</Link></li>
+                        <li><Link className="botao-logout-trade" to="/app">TRADE</Link></li>
                         <li><button 
                                 type="button" 
-                                className="botao-logout" 
+                                className="botao-logout-header" 
                                 onClick={handleLogout}>
-                                Sair
+                                SAIR
                             </button>
                         </li>
                   </ul>
