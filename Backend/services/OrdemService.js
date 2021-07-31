@@ -11,22 +11,40 @@ const OrdemService = {
 
     return ordem;
   },
-  createOrdem: async (quantidade, data, endereco) => {
+  createOrdem: async (fk_idUsuario, fk_idOferta, quantidade, data, endereco) => {
     const newOrdem = await database.Ordem.create({
+      fk_idUsuario,
+      fk_idOferta,
       quantidade,
       data,
       endereco,
     });
     return newOrdem;
   },
-  getOrdemList: async () => {
+  getOrdemList: async (userId) => {
     const resultados = await database.Ordem.findAll({
       where: {
-        data,
+        fk_idUsuario: userId
       },
-      limit: 10,
-      offset: 5,
-    });
+      include: [
+        {
+          model: database.Usuario,
+          as: "usuario",
+          attributes: [
+            "nome",
+            "telefone"
+          ]
+        },
+        {
+          model: database.Oferta,
+          as: "oferta",
+          include: {
+            model: database.Moeda,
+            as: "moeda",
+          }
+        }
+      ]
+    });;
     return resultados;
   },
   updateOrdem: async (quantidade, data, endereco) => {
@@ -38,7 +56,7 @@ const OrdemService = {
       },
       {
         where: {
-          id,
+          id_ordem,
         },
       }
     );

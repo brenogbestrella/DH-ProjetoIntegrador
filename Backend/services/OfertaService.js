@@ -51,20 +51,12 @@ const OfertaService = {
     });
     return resultados;
   },
-  getOfertaListByUser: async () => {
+  getOfertaListByUser: async (userId) => {
     const resultados = await database.Oferta.findAll({
       where: {
-        fk_idUsuario: req.userId
+        fk_idUsuario: userId
       },
       include: [
-        {
-          model: database.Usuario,
-          as: "usuario",
-          attributes: [
-            "nome",
-            "telefone"
-          ]
-        },
         {
           model: database.Moeda,
           as: "moeda",
@@ -94,7 +86,7 @@ const OfertaService = {
 
     return updatedOferta;
   },
-  destroyOferta: async (id) => {
+  destroyOferta: async (id_oferta) => {
     const destroyedOferta = await database.Oferta.destroy({
       where: {
         id_oferta,

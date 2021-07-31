@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
 import { useHistory  } from 'react-router-dom';
 import api from "../../Services/api";
 import image_01 from "../../images/image_01.png";
@@ -13,7 +13,15 @@ function Card01(props) {
     const [ oferta, setOferta ] = useState("");
     const history = useHistory();
 
-    async function handleOnClick (e) {
+    useEffect(() => {
+        setData(props.oferta.data);
+        setEndereco(props.oferta.endereco);
+        setQuantidade(props.oferta.quantidade)
+        setOferta(props.oferta.id_oferta)
+
+      },[props.oferta.data, props.oferta.endereco, props.oferta.quantidade, props.oferta.id_oferta]);
+
+    async function handleCriarOrdem (e) {
         e.preventDefault();
 
         await api.post("/ordens", {
@@ -39,7 +47,7 @@ function Card01(props) {
             <p className="app-oferta">{props.oferta.moeda?.simbolo} {props.oferta?.quantidade}</p>
         </div>
         <div className="app-div-03">
-        <button className="botao-editar-oferta3" onClick={handleOnClick}> RESERVE AGORA! </button>
+        <button className="botao-editar-oferta3" onClick={handleCriarOrdem}> RESERVE AGORA! </button>
         </div>
     </div>
     )}

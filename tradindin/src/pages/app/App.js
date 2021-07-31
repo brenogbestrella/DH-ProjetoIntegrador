@@ -58,9 +58,9 @@ function App() {
                             <div className="texto5">                    
                                     Confira as ofertas mais recentes!  
                             </div>
-                            {listaOfertas.map(oferta =>
+                            {listaOfertas.map((oferta, i) =>
                             (
-                                <Card01 oferta={oferta} />
+                                <Card01 oferta={oferta} key={i} />
                             ))}
                     </div>
 

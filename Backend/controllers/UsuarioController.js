@@ -2,6 +2,12 @@ const UsuarioService = require("../services/UsuarioService");
 const bcrypt = require("bcryptjs");
 
 const controller = {
+  index: async (req, res) => {
+    const id  = req.userId;
+    const usuario = await UsuarioService.getById(id)
+
+    return res.json(usuario);
+  },
   indexById: async (req, res) => {
     const { id } = req.params;
     const usuario = await UsuarioService.getById(id);
@@ -51,11 +57,10 @@ const controller = {
     return res.json({nome: usuario.nome, email: usuario.email, documento: usuario.email, telefone: usuario.telefone, tipo: usuario.tipo});
   },
   update: async (req, res) => {
-    const { id } = req.params;
     const { nome, email, senha, documento, telefone, tipo } = req.body;
 
     const updatedUsuario = await UsuarioService.updateUsuario(
-      id,
+      req.userId,
       nome,
       email,
       senha,
@@ -67,9 +72,7 @@ const controller = {
     return res.json(updatedUsuario);
   },
   destroy: async (req, res) => {
-    const { id } = req.params;
-
-    const destroyedUsuario = await UsuarioService.destroyUsuario(id);
+    const destroyedUsuario = await UsuarioService.destroyUsuario(req.userId);
 
     return res.json(destroyedUsuario);
   },

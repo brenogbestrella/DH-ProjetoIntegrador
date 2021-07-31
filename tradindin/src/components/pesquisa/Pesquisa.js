@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from 'react-router-dom';
 
 import { getMoedas } from "../../pages/oferta/apiMoeda"
-
-// import DatePicker from "react-datepicker";
-
-// import "react-datepicker/dist/react-datepicker.css";
-
-// import { registerLocale } from "react-datepicker";
-// import pt_br from "date-fns/locale/pt-BR";
 
 
 import local from "../../images/local.svg"
@@ -19,14 +11,11 @@ import "./Pesquisa.css";
 
 function Pesquisa(props) {
 
-    // registerLocale("ptBR", pt_br);
 
     const [endereco, setEndereco] = useState("");
     const [data, setData ] = useState("");
     const [moeda, setMoeda] = useState("");
     const [listaMoedas, setListaMoedas] = useState([]);
-
-    const history = useHistory();
 
     
     
@@ -75,17 +64,9 @@ function Pesquisa(props) {
                                 type="date"
                                 name="data-retirada"
                                 id="data retirada"
-                                placeholder="xx/xx/xxxx"
+                                placeholder="DD/MM/AAAA"
                                 value={data}
                                 onChange={(e) => setData(e.target.value)} />
-                            {/* <DatePicker
-                                locale="ptBR" 
-                                selected={startDate} 
-                                onChange={(date) => 
-                                setStartDate(date)} 
-                                dateFormat="dd/MM/yyyy"
-                            /> */}
-
                         </div>
                         <div className="local_moeda">
                             <p>MOEDA</p>

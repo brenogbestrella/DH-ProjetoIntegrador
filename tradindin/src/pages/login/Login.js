@@ -80,7 +80,7 @@ function Login() {
 
                     <Link to ="/" className="voltar-login">Voltar a tela inicial</Link>
 
-                    <Link to ="/senha" className="esqueceu-login">Esqueceu sua senha?</Link>
+                    {/* <Link to ="/senha" className="esqueceu-login">Esqueceu sua senha?</Link> */}
                     
                     <div className="conta-login">
                         <span>

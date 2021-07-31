@@ -28,7 +28,7 @@ const controller = {
   },
   indexAllByUser: async (req, res) => {
     const { endereco, data, moeda } = req.query; 
-    const list = await OfertaService.getOfertaListByUser(endereco, data, moeda);
+    const list = await OfertaService.getOfertaListByUser(req.userId);
     return res.json(list);
   },
   create: async (req, res) => {

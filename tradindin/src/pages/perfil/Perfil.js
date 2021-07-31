@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useHistory  } from 'react-router-dom'
 import api from "../../Services/api";
 import "./Perfil.css";
@@ -12,13 +12,10 @@ function Perfil() {
     const [ senha, setSenha ] = useState("");
     const [ documento, setDocumento ] = useState("");
     const [ telefone, setTelefone ] = useState("");
-    const [ tipo, setTipo ] = useState("");
+
 
     const history = useHistory();
 
-    function handleEditar (e) {
-        e.preventDefault();
-    }
     
     async function handleUpdate (e) {
         e.preventDefault();
@@ -29,7 +26,6 @@ function Perfil() {
             senha: senha,
             documento: documento,
             telefone: telefone,
-            tipo: tipo
         })
 
         history.push("/perfil") 
@@ -38,10 +34,27 @@ function Perfil() {
     async function handleDelete (e) {
         e.preventDefault();
 
-        await api.delete("/usuarios")
+        await api.delete("/usuarios");
 
-        history.push("/app") 
+        localStorage.clear();
+
+        history.push("/"); 
     }
+
+    useEffect(() => {  
+        async function loadUsuario() {
+            const { data } = await api.get('/usuarios/meuperfil');
+        
+            setNome(data.nome);
+            setEmail(data.email);
+            setDocumento(data.documento);
+            setTelefone(data.telefone);
+            
+          }
+    
+
+        loadUsuario();
+      }, []);
 
 
   return (
@@ -50,7 +63,7 @@ function Perfil() {
             <div className="cla-perfil">
 
                 <div className="moldura-perfil">
-                    <spam className="user-titulo-moldura">EDITAR PERFIL</spam>
+                    <span className="user-titulo-moldura">EDITAR PERFIL</span>
                     <h2 className="user-sub-titulo-moldura">ID #784815</h2>
 
 
@@ -59,16 +72,14 @@ function Perfil() {
                             <div className="user-sub-titulo-b">
                             <div className="user-sub-titulo-2"> <img class="app-icone-perfil" src={image_01} alt="Ícone"></img> </div>
                             <div className="user-sub-titulo-c"> Sua imagem </div>
-                            <div className="user-botao"><button className="botao-editar-img" onclick={handleEditar}> EDITAR </button></div>
+
                             </div>
                     </div>
 
                         <div className="perfil-nome-user">
-                           <div className="user-titulo"> <h1>Nome</h1> </div>
-                            
+                            <div className="user-titulo"> <h1>Nome</h1> </div>
                             <div className="user-sub-titulo-b">
-                            <div className="user-sub-titulo"> Ivens Junior </div>
-                            <div className="user-botao"><button className="botao-editar" onclick={handleEditar}> EDITAR </button></div>
+                                <div className="user-titulo"><input type="text" value={nome} onChange={(e) => setNome(e.target.value)}></input></div>
                             </div>
                         </div>
 
@@ -76,8 +87,8 @@ function Perfil() {
                            <div className="user-titulo"> <h1>E-mail</h1> </div>
                             
                             <div className="user-sub-titulo-b">
-                            <div className="user-sub-titulo">ivenjunior@gmail.com</div>
-                            <div className="user-botao"><button className="botao-editar" onclick={handleEditar}> EDITAR </button></div>
+                            <div className="user-sub-titulo"><input type="text" value={email} onChange={(e) => setEmail(e.target.value)}></input></div>
+                            
                             </div>
                         </div>
 
@@ -85,8 +96,8 @@ function Perfil() {
                            <div className="user-titulo"> <h1>Documento</h1> </div>
                             
                             <div className="user-sub-titulo-b">
-                            <div className="user-sub-titulo">666.666.666-66</div>
-                            <div className="user-botao"><button className="botao-editar" onclick={handleEditar}> EDITAR </button></div>
+                            <div className="user-sub-titulo"><input type="text" value={documento} onChange={(e) => setDocumento(e.target.value)}></input></div>
+                            
                             </div>
                         </div>
 
@@ -94,8 +105,8 @@ function Perfil() {
                            <div className="user-titulo"> <h1>Telefone</h1> </div>
                             
                             <div className="user-sub-titulo-b">
-                            <div className="user-sub-titulo">+55 11 97566 8558</div>
-                            <div className="user-botao"><button className="botao-editar" onclick={handleEditar}> EDITAR </button></div>
+                            <div className="user-sub-titulo"><input type="text" value={telefone} onChange={(e) => setTelefone(e.target.value)}></input></div>
+                            
                             </div>
                         </div>
 
@@ -103,14 +114,14 @@ function Perfil() {
                            <div className="user-titulo"> <h1>Senha</h1> </div>
                             
                             <div className="user-sub-titulo-b">
-                            <div className="user-sub-titulo">********</div>
-                            <div className="user-botao"><button className="botao-editar" onclick={handleEditar}> EDITAR </button></div>
+                            <div className="user-sub-titulo"><input type="text" value={senha} onChange={(e) => setSenha(e.target.value)}></input></div>
+                            
                             </div>
                         </div>
 
                         <div className="user-submi">
-                            <div className="user-sub1"><button className="botao-editar2" onclick={handleDelete}> EXCLUIR CONTA </button></div>
-                            <div className="user-sub1"><button className="botao-editar3" onclick={handleUpdate}> ATUALIZAR DADOS </button></div>
+                            <div className="user-sub1"><button className="botao-editar2" onClick={handleDelete}> EXCLUIR CONTA </button></div>
+                            <div className="user-sub1"><button className="botao-editar3" onClick={handleUpdate}> ATUALIZAR DADOS </button></div>
                         </div>
                         </div>
 

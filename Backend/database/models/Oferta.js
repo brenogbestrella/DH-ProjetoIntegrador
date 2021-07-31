@@ -41,11 +41,11 @@ module.exports = (sequelize, DataTypes) => {
       as: "moeda",
     });
 
-    Oferta.hasMany(listaDeModelos.Ordem, {
-      foreignKey: "id_oferta",
-      as: "ordem",
+    // Oferta.belongsTo(listaDeModelos.Ordem, {
+    //   foreignKey: "fk_idOrdem",
+    //   as: "ordem",
 
-    });
+    // });
   };
 
   return Oferta;

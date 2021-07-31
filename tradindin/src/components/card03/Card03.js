@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from 'react-router-dom';
 import image_01 from "../../images/image_01.png";
 
 import "./Card03.css";
@@ -11,7 +10,7 @@ function Card03(props) {
                 <img className="app-icone" src={image_01} alt="Ícone" />
             </div>
         <div className="app-div-02">
-            <p className="card3-app-nome">#{props.oferta?.id_oferta}</p>
+            <p className="card3-app-nome">#{props.oferta.id_oferta}</p>
             <p className="app-lugar">{props.oferta?.endereco}</p>
             <p className="app-data">{props.oferta?.data}</p>
             <p className="app-moeda">{props.oferta.moeda?.nome}</p>
@@ -19,7 +18,7 @@ function Card03(props) {
 
         </div>
         <div className="app-div-03">
-        <Link to={{ pathname: `https://api.whatsapp.com/send?phone=${props.oferta.usuario.telefone}` }} target="_blank" className="app-botao-div2">ENTRAR EM CONTATO!</Link>
+        {/* <Link to={{ pathname: `https://api.whatsapp.com/send?phone=${props.oferta.usuario.telefone}` }} target="_blank" className="app-botao-div2">ENTRAR EM CONTATO!</Link> */}
         </div>
     </div>
     )}

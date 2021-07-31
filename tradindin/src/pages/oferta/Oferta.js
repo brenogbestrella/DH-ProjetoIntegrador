@@ -124,16 +124,9 @@ function Oferta2() {
                                 type="date"
                                 name="data-retirada"
                                 id="data retirada"
-                                placeholder="xx/xx/xxxx"
+                                placeholder="DD/MM/AAAA"
                                 value={data}
                                 onChange={(e) => setData(e.target.value)} />
-                                    {/* <DatePicker
-                                        locale="ptBR" 
-                                        selected={startDate} 
-                                        onChange={(date) => 
-                                        setStartDate(date)} 
-                                        dateFormat="dd/MM/yyyy"
-                                    /> */}
                                 </div>
                             </div>
     

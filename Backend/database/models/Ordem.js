@@ -7,14 +7,17 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true,
         primaryKey: true,
       },
+      fk_idUsuario: {
+        type: DataTypes.INTEGER,
+      },
       fk_idOferta: {
         type: DataTypes.INTEGER,
       },
       quantidade: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
       },
       data: {
-        type: DataTypes.DATE,
+        type: DataTypes.DATEONLY,
       },
       endereco: {
         type: DataTypes.STRING,
@@ -28,14 +31,14 @@ module.exports = (sequelize, DataTypes) => {
 
   Ordem.associate = (listaDeModelos) => {
     Ordem.belongsTo(listaDeModelos.Oferta, {
-      foreignKey: "id_oferta",
+      foreignKey: "fk_idOferta",
       as: "oferta",
     });
 
-    // Ordem.belongsTo(listaDeModelos.Usuario, {
-    //   foreignKey: "id_usuario",
-    //   as: "usuario",
-    // });
+    Ordem.belongsTo(listaDeModelos.Usuario, {
+      foreignKey: "fk_idUsuario",
+      as: "usuario",
+    });
   };
 
   //inserir id_usuario

@@ -138,7 +138,6 @@ function Cadastro() {
                 <button type="submit" className="cadastro-botao-submit" onClick={handleOnClick}>Cadastrar</button>
 
                 <Link to ="/" className="voltar-cadastro">Voltar a tela inicial</Link>
-                {/* <button className="voltar">Voltar a tela inicial</button> */}
                 </form>
             </div>
             <Footer2 />
