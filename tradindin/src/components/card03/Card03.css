@@ -1,0 +1,62 @@
+
+/* CRIA A BORDA DO CARTÃO E ALINHA ELEMENTOS */
+
+.card3-app-dife_01{
+    display: flex;
+    display: -webkit-flex; /* Garante compatibilidade com navegador Safari. */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-left: 9%;
+    background-color: #2b2e36;
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 3px 16px -7px #20232A; 
+    box-shadow: 5px 3px 16px -7px #20232A;
+    margin-bottom: 3%;
+    padding: 2% 0%;
+}
+/* DEIXA O AVATAR MENOR E ALINHA NO CARTÃO */
+.card3-app-div-01{
+    width: 24%;
+    margin-left: 5%;
+}
+
+@media screen and (max-width: 959px)  {
+    .card3-app-dife_01{
+        width: calc(90% / 2);  
+    }
+    
+}
+
+
+@media screen and (max-width: 559px)  {
+    .card3-app-dife_01{
+        width: 100%;  
+    }
+    
+}
+
+.card3-app-nome {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 2%;
+}
+
+.card3-app-recebeu {
+    color: #c5945d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+.card3-app-enviou {
+    color: #ffffff;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-bottom: 2%;
+}

@@ -1,7 +1,6 @@
 import "./Senha.css";
 import o_email from "../../images/o_email.svg"
 import LogoAqui_2 from "../../images/LogoAqui_2.png";
-import Header from "../../components/header/Header"
 import Footer2 from "../../components/footer2/Footer2"
 
 function Senha() {
@@ -9,7 +8,6 @@ function Senha() {
     <div className="Senha">
 
         <body>
-        <Header />
             <main className="pagina-recuperar-senha">
                 <div className="card-recuperar-senha">
                     <form className="form">

@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom';
 import "./Privacidade.css";
-import Header2 from "../../components/header2/Header2";
 import help from "../../images/helpimg.png";
 import Footer2 from '../../components/footer2/Footer2';
 
@@ -8,7 +7,6 @@ import Footer2 from '../../components/footer2/Footer2';
 function Privacidade() {
   return (
     <div>
-
 
 <body> 
 <div className="chamada_privacidade">

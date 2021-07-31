@@ -6,7 +6,6 @@ import "./Login.css";
 import LogoAqui_2 from "../../images/LogoAqui_2.png";
 import user from "../../images/user.svg";
 import cadeado from "../../images/cadeado.svg";
-import Header from "../../components/header/Header"
 import Footer2 from "../../components/footer2/Footer2"
 
 
@@ -27,11 +26,6 @@ function Login() {
             email: email,
             senha: senha,
         }, 
-        // {
-        //     headers: {
-        //         authorization: `bearer ${localStorage.getItem("token")}`
-        //     }
-        // }
         )
 
         localStorage.setItem("token", data.token);
@@ -44,7 +38,6 @@ function Login() {
   return (
 
     <body>
-          <Header />
     <div className="Login">
        
      

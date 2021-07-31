@@ -22,12 +22,17 @@ const controller = {
     return res.json(oferta);
   },
   indexAll: async (req, res) => {
-    const list = await OfertaService.getOfertaList();
+    const { endereco, data, moeda } = req.query; 
+    const list = await OfertaService.getOfertaList(endereco, data, moeda);
+    return res.json(list);
+  },
+  indexAllByUser: async (req, res) => {
+    const { endereco, data, moeda } = req.query; 
+    const list = await OfertaService.getOfertaListByUser(endereco, data, moeda);
     return res.json(list);
   },
   create: async (req, res) => {
     const { fk_idMoeda, quantidade, data, endereco } = req.body; 
-    console.log(req.body)
     const oferta = await OfertaService.createOferta(req.userId, fk_idMoeda, quantidade, data, endereco);
 
     return res.json(oferta);

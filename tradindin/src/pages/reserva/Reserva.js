@@ -1,15 +1,32 @@
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from "react"
+import { Link, useHistory } from 'react-router-dom';
+import api from "../../Services/api";
 import "./Reserva.css";
-import Header2 from "../../components/header2/Header2";
 import Card02 from "../../components/card02/Card02";
 import oferta from "../../images/oferta.png";
 
 
 function Reserva() {
+
+  const [listaOrdens, setListaOrdens] = useState([]);
+
+  const history = useHistory();
+
+
+  // async function loadOrdens() {
+  //   const { data } = await api.get('/ordens', {
+  //     params: {
+  //       endereco: endereco,
+  //       data: dataOferta,
+  //       moeda: moeda,
+  //     }
+  //   });
+
+  //   setListaOrdens(data);
+  // } 
+
   return (
     <div className="Reserva">
-
-<Header2 />
 
 <body> 
 <div className="chamada_reserva">
@@ -44,11 +61,12 @@ function Reserva() {
 
         </div>
         <p className="transacoes-texto">  SUAS ÚLTIMAS TRANSAÇÕES!</p>
-        <Card02 />
-        <Card02 />
-        <Card02 />
-        <Card02 />
-        <Card02 />
+
+        {listaOrdens.map(ordem =>
+          (
+            <Card02 ordem={ordem} />
+        ))}
+
     </div>
 
 </div>

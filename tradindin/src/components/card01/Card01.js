@@ -1,10 +1,31 @@
-import React from "react";
-import {Link} from 'react-router-dom';
+import React, { useState } from "react";
+import { useHistory  } from 'react-router-dom';
+import api from "../../Services/api";
 import image_01 from "../../images/image_01.png";
 
 import "./Card01.css";
 
 function Card01(props) {
+
+    const [ data, setData] = useState("");
+    const [ quantidade, setQuantidade ] = useState("");
+    const [ endereco, setEndereco ] = useState("");
+    const [ oferta, setOferta ] = useState("");
+    const history = useHistory();
+
+    async function handleOnClick (e) {
+        e.preventDefault();
+
+        await api.post("/ordens", {
+            fk_idOferta: oferta,
+            quantidade: quantidade,    
+            data: data,
+            endereco: endereco,
+        })
+        
+        history.push("/reserva")
+    }
+
     return (
         <div className="app-dife_01">
             <div className="app-div-01">
@@ -18,7 +39,7 @@ function Card01(props) {
             <p className="app-oferta">{props.oferta.moeda?.simbolo} {props.oferta?.quantidade}</p>
         </div>
         <div className="app-div-03">
-        <Link to={{ pathname: `https://api.whatsapp.com/send?phone=${props.oferta.usuario?.telefone}` }} target="_blank" className="app-botao-div2">FAZER OFERTA!</Link>
+        <button className="botao-editar-oferta3" onClick={handleOnClick}> RESERVE AGORA! </button>
         </div>
     </div>
     )}

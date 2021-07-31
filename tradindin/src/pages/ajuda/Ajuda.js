@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom';
 import "./Ajuda.css";
-import Header2 from "../../components/header2/Header2";
 import ajuda from "../../images/ajuda.png";
 import Footer2 from '../../components/footer2/Footer2';
 import Faq from '../../components/faq/Faq';

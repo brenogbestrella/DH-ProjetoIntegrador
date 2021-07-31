@@ -4,21 +4,14 @@ import { useHistory  } from 'react-router-dom'
 import api from "../../Services/api";
 import { getMoedas } from "./apiMoeda"
 import Footer2 from "../../components/footer2/Footer2";
-import Header2 from "../../components/header2/Header2";
 
-import DatePicker from "react-datepicker";
 
-import "react-datepicker/dist/react-datepicker.css";
-
-import { registerLocale } from "react-datepicker";
-import pt_br from "date-fns/locale/pt-BR";
 
 
 
 function Oferta2() {
-    registerLocale("ptBR", pt_br);
 
-    const [startDate, setStartDate ] = useState(new Date());
+    const [ data, setData] = useState("");
     const [ quantidade, setQuantidade ] = useState("");
     const [ endereco, setEndereco ] = useState("");
     const [ moeda, setMoeda ] = useState("");
@@ -38,15 +31,15 @@ function Oferta2() {
     async function handleOnClick (e) {
         e.preventDefault();
 
-        if(!moeda || !quantidade || !startDate || !endereco) return;
+        if(!moeda || !quantidade || !data || !endereco) return;
 
         await api.post("/ofertas", {
             fk_idMoeda: moeda,
             quantidade: quantidade,    
-            data: startDate,
+            data: data,
             endereco: endereco,
         })
-
+        
         history.push("/app")
        
     }
@@ -126,18 +119,26 @@ function Oferta2() {
                                     <div className="user-sub-titulo-oferta">DATA</div>
 
                                     <label htmlFor="data"></label>
-                                    <DatePicker
+                                    <input 
+                                className="input-endereco"
+                                type="date"
+                                name="data-retirada"
+                                id="data retirada"
+                                placeholder="xx/xx/xxxx"
+                                value={data}
+                                onChange={(e) => setData(e.target.value)} />
+                                    {/* <DatePicker
                                         locale="ptBR" 
                                         selected={startDate} 
                                         onChange={(date) => 
                                         setStartDate(date)} 
                                         dateFormat="dd/MM/yyyy"
-                                    />
+                                    /> */}
                                 </div>
                             </div>
     
                             <div className="user-submi-oferta">
-                                <div className="user-sub1-oferta"><button className="botao-editar-oferta3" onclick={handleOnClick}> CADASTRAR OFERTA </button></div>
+                                <div className="user-sub1-oferta"><button className="botao-editar-oferta3" onClick={handleOnClick}> CADASTRAR OFERTA </button></div>
                             </div>
                             </div>
     

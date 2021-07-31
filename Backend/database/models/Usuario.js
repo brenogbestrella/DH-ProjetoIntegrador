@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
       as: "oferta",
     });
     Usuario.hasMany(listaDeModelos.Ordem, {
-      foreignKey: "id_oferta",
+      foreignKey: "id_ordem",
       as: "ordem",
     });
   };

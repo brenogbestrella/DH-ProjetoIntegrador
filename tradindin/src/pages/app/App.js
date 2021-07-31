@@ -3,8 +3,7 @@ import { useHistory } from 'react-router-dom'
 import api from "../../Services/api";
 
 import "./App.css";
-// import image_01 from "../../images/image_01.png";
-import Header2 from "../../components/header2/Header2";
+
 import Pesquisa from "../../components/pesquisa/Pesquisa";
 import Card01 from "../../components/card01/Card01";
 import Footer2 from "../../components/footer2/Footer2";
@@ -13,38 +12,37 @@ import Footer2 from "../../components/footer2/Footer2";
 
 function App() {
 
-  const [endereco, setEndereco] = useState("");
-  const [startDate, setStartDate ] = useState("");
-  const [moeda, setMoeda] = useState("");
   const [listaOfertas, setListaOfertas] = useState([]);
 
   const history = useHistory();
 
-  useEffect(() => {    
-    setEndereco(history.location.state?.endereco);
-    setStartDate(history.location.state?.data);
-    setMoeda(history.location.state?.moeda);         
+  useEffect(() => {  
 
-    async function loadOfertas() {
-      const { data } = await api.get('/ofertas', {
-        params: {
-          endereco: history.location.state?.endereco,
-          data: history.location.state?.data,
-          moeda: history.location.state?.moeda,
-        }
-      });
+    
 
-      setListaOfertas(data);
-    }
-
-    loadOfertas();
+    loadOfertas(history.location.state?.endereco, history.location.state?.data, history.location.state?.moeda);
   }, [history]);
+
+  async function loadOfertas(endereco, dataOferta, moeda) {
+    const { data } = await api.get('/ofertas', {
+      params: {
+        endereco: endereco,
+        data: dataOferta,
+        moeda: moeda,
+      }
+    });
+
+    setListaOfertas(data);
+  } 
+
+  async function onClickBuscar(endereco, data, moeda) {
+    loadOfertas(endereco, data, moeda)
+  }
 
 
   return (
     <body> 
         <div className="Home">
-            <Header2 />
                 <div className="onda"><spam className="onda-imagem" src="null" alt="Ícone"></spam> </div>
                
                           
@@ -53,7 +51,7 @@ function App() {
                         <div className="app-coluna2"> 
 
                             <div className="app-pesquisa"> 
-                                <Pesquisa /> 
+                                <Pesquisa onClickBuscar={onClickBuscar}/> 
                             </div>
                             
                     <div className="app-diferenciais">

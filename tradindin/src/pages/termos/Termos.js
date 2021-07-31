@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom';
 import "./Termos.css";
-import Header2 from "../../components/header2/Header2";
 import seguranca from "../../images/seguranca.png";
 import Footer2 from '../../components/footer2/Footer2';
 

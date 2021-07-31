@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import "./Home.css";
 import logo_1 from "../../images/logo_dh.png"
 import logo_2 from "../../images/logo_2.png"
@@ -12,11 +12,25 @@ import icone_01 from "../../images/icone_01.png";
 import icone_02 from "../../images/icone_02.png";
 import icone_03 from "../../images/icone_03.png";
 import celular from "../../images/celular.png"
-import Header from "../../components/header/Header";
 import Pesquisa from "../../components/pesquisa/Pesquisa";
 import Footer2 from "../../components/footer2/Footer2";
 
 function Home() {
+
+    const history = useHistory();
+
+
+    async function onClickBuscar(endereco, data, moeda){
+
+        if(!endereco || !data || !moeda) return;
+
+        history.push("/app", {
+            endereco,
+            data, 
+            moeda
+        })
+    }
+
   return (
     <div className="Home">
 
@@ -32,7 +46,7 @@ function Home() {
             <p><span className="rosa"> seu dinheiro</span> está aqui</p>
         </h1>
         <h2>Plataforma ideal para quem quer comprar ou vender dinheiro.</h2>
-        <Pesquisa />
+        <Pesquisa onClickBuscar={onClickBuscar}/>
         </main>
         <div className="linha_divisao">
         <img src={graph} alt="Linha divisória" />

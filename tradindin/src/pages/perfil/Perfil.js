@@ -3,7 +3,6 @@ import { useHistory  } from 'react-router-dom'
 import api from "../../Services/api";
 import "./Perfil.css";
 import image_01 from "../../images/image_01.png";
-import Header2 from "../../components/header2/Header2";
 import Footer2 from "../../components/footer2/Footer2";
 
 function Perfil() {
@@ -48,8 +47,6 @@ function Perfil() {
   return (
     <body>
     <div className="Perfil">
-        <Header2 />
-      
             <div className="cla-perfil">
 
                 <div className="moldura-perfil">

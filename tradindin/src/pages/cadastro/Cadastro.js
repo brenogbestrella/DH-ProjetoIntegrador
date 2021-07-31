@@ -8,7 +8,6 @@ import cadeado from "../../images/cadeado.svg";
 import o_email from "../../images/o_email.svg";
 import identidade from "../../images/identidade.png";
 import phone from "../../images/telefone.png";
-import Header from "../../components/header/Header"
 import Footer2 from "../../components/footer2/Footer2"
 
 
@@ -42,7 +41,6 @@ function Cadastro() {
 
   return (
     <div className="Cadastro">
- <Header />
         <body>
             <main className="pagina-cadastro">
             <div className="card-cadastro">

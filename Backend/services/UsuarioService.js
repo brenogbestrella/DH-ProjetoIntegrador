@@ -13,7 +13,32 @@ const UsuarioService = {
     return newUsuario;
   },
   getUsuarioList: async () => {
-    const resultados = await database.Usuario.findAll();
+    const resultados = await database.Usuario.findAll({
+      include: [
+        {
+          model: database.Oferta,
+          as: "oferta",
+          attributes: [
+            "id_oferta",
+            "fk_idMoeda",
+            "quantidade",
+            "endereco",
+            "data"
+          ]
+        },
+        {
+          model: database.Ordem,
+          as: "ordem",
+          attributes: [
+            "id_ordem",
+            "fk_idOferta",
+            "quantidade",
+            "data",
+            "endereco"
+          ]
+        }
+      ]
+    });
     return resultados;
   },
   getUsuarioPessoaFisica: async () => {

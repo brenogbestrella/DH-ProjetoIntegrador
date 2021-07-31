@@ -21,8 +21,15 @@ const OfertaService = {
     });
     return newOferta;
   },
-  getOfertaList: async () => {
+  getOfertaList: async (endereco, data, moeda) => {
     const resultados = await database.Oferta.findAll({
+      where: {
+        data: data || new Date(),
+        fk_idMoeda: moeda || 0,
+        endereco: {
+          [database.Sequelize.Op.like]: `%${endereco}%`
+        },
+      },
       include: [
         {
           model: database.Usuario,
@@ -38,7 +45,33 @@ const OfertaService = {
           attributes: [
             "nome",
             "simbolo"
+          ],
+        }
+      ]
+    });
+    return resultados;
+  },
+  getOfertaListByUser: async () => {
+    const resultados = await database.Oferta.findAll({
+      where: {
+        fk_idUsuario: req.userId
+      },
+      include: [
+        {
+          model: database.Usuario,
+          as: "usuario",
+          attributes: [
+            "nome",
+            "telefone"
           ]
+        },
+        {
+          model: database.Moeda,
+          as: "moeda",
+          attributes: [
+            "nome",
+            "simbolo"
+          ],
         }
       ]
     });
