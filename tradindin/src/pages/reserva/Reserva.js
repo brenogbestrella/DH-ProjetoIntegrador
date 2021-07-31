@@ -4,7 +4,7 @@ import api from "../../Services/api";
 import "./Reserva.css";
 import Card02 from "../../components/card02/Card02";
 import oferta from "../../images/oferta.png";
-
+import Footer2 from "../../components/footer2/Footer2"
 
 function Reserva() {
 
@@ -68,7 +68,7 @@ function Reserva() {
         ))}
 
     </div>
-
+    <Footer2 />
 </div>
 
 </body>

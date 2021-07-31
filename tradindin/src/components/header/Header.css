@@ -18,6 +18,11 @@ header{
     z-index: 1;
 }
 
+.item-menu :hover{
+    color: rgb(12, 194, 109);
+}
+
+
 .tabela-menu{
     display: flex;
     width: 100%;
@@ -80,13 +85,13 @@ header{
     text-decoration:none;
     letter-spacing: 2px;
     padding: 1% 2%;
-    background-color: #bc539a;;
+    background-color: #bc539a;
     margin-left: 2%;
 
 }
 
 .botao-login-trade:hover{
-    background-color:rgb(105, 12, 180);
+    background-color: #993078;
     color: white;
     transition: 0.5s;
     border: 0px solid #ffffff;

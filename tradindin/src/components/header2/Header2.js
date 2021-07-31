@@ -21,9 +21,9 @@ function Header2() {
   
                   <nav id="menu-header-base2">
                   <ul>
-                        <li><Link to="/oferta">CADASTRAR OFERTA</Link></li>
-                        <li><Link to="/ordem">ORDENS DE COMPRA</Link></li>
-                        <li><Link to="/perfil">PERFIL</Link></li>
+                        <li className="item-menu2"><Link to="/oferta">CADASTRAR OFERTA</Link></li>
+                        <li className="item-menu2"><Link to="/ordem">ORDENS DE COMPRA</Link></li>
+                        <li className="item-menu2"><Link to="/perfil">PERFIL</Link></li>
                         <li><Link className="botao-logout-trade" to="/app">TRADE</Link></li>
                         <li><button 
                                 type="button" 

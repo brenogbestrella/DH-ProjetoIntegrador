@@ -1,4 +1,5 @@
 .cadastro-botao-submit{
+  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -101,8 +102,8 @@ background: linear-gradient(266deg, rgba(206,39,161,1) 0%, rgba(255,120,203,1) 1
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  height: 100vh;
+  position: relative;
+  height: 1100px;
   width: 100%; 
   background-image: linear-gradient(to right, #d533a7, #be369a, #a8368c, #92367e, #7e3470, #6d356a, #5d3462, #4f3359, #413453, #36334b, #2f3141, #2b2e36);
 }
@@ -114,10 +115,10 @@ background: linear-gradient(266deg, rgba(206,39,161,1) 0%, rgba(255,120,203,1) 1
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 20%;
   background-color: #2b2e36;
   border-radius: 3%;
   padding: 4% 3% 2% 3%;
-  margin-top: 25%;
   margin-bottom: 3%;
   -webkit-box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.38);
   -moz-box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.38);

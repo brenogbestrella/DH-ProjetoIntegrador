@@ -26,28 +26,27 @@ function Footer2() {
     </figure>
     </div>
     <p className="texto-footer">
-    Fullstack Node JS student mais nao sei por onde começar ainda mais hj!
-    Odio ut sem nulla pharetra diam sit amet nisl suscipit.
+    Empresas precisam de sites ou sistemas web. Há preferência no mercado por desenvolvedores Full Stack porque conseguem atuar tanto no Back End quanto no Front End.
     </p>
     <nav className="redes config">
     <ul className="linha-footer-logo">
         <li>
-        <Link>
+        <Link to={{ pathname: `https://www.linkedin.com/school/digital-house-brasil/` }} target="_blank">
             <img src={linkedin} alt="Linkedin" />
         </Link>
         </li>
         <li>
-        <Link>
+        <Link to={{ pathname: `https://github.com/brenogbestrella/DH-ProjetoIntegrador` }} target="_blank">
             <img src={github_big_logo} alt="Github" />
         </Link>
         </li>
         <li>
-        <Link>
+        <Link to={{ pathname: `https://www.instagram.com/digitalhousebrasil/?hl=pt` }} target="_blank">
             <img src={instagram} alt="instagram" />
         </Link>
         </li>
         <li>
-        <Link>
+        <Link to={{ pathname: `https://www.facebook.com/digitalhousebrasil/` }} target="_blank">
             <img src={facebook} alt="Facebook" />
         </Link>
         </li>
@@ -58,7 +57,7 @@ function Footer2() {
 {/* CAIXA DO CENTRO */}
 <div className="item itemcentro">
     <nav className="conteudo">
-    <h4>CONTACT US</h4>
+    <h4>FALE CONOSCO</h4>
     <ul>
         <li>
         <Link>
@@ -67,13 +66,13 @@ function Footer2() {
         </li>
         <li>
         <Link> 
-            (00) 99999-9999
+            (55) 11-99999-9999
         </Link>
         </li>
         <li>
         <Link>
-            330 Franklin Road, São Paulo 135A, Lugar Centro, CEP
-            055-65010
+            330 Franklin Road, São Paulo 135A,<br></br>
+            Lugar Centro, CEP 055-65010
         </Link>
         </li>
     </ul>
@@ -84,39 +83,19 @@ function Footer2() {
     <div className="titulo">
     <h4>LINKS IMPORTANTES</h4>
     </div>
-    <div className="primeiro">
-    <nav className="conteudo">
-        <ul>
-        <li>
-            <Link>Link 1</Link>
-        </li>
-        <li>
-            <Link>Link 2</Link>
-        </li>
-        <li>
-            <Link>Link 3</Link>
-        </li>
-        <li>
-            <Link>Link 4</Link>
-        </li>
-        </ul>
-    </nav>
-    </div>
     <div className="segundo">
     <nav className="conteudo">
         <ul>
         <li>
-            <Link>AJUDA</Link>
+        <Link to="/privacidade">POLÍTICA DE PRIVACIDADE</Link>
         </li>
         <li>
-            <Link>TERMO DE USO</Link>
+             <Link to="/termos">TERMO DE USO</Link>
         </li>
         <li>
-            <Link>POLÍTICA DE PRIVACIDADE</Link>
+        <Link to="/ajuda">AJUDA</Link>
         </li>
-        <li>
-            <Link>ACEITE</Link>
-        </li>
+
         </ul>
     </nav>
     </div>

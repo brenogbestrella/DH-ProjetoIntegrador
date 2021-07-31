@@ -15,6 +15,7 @@ import celular from "../../images/celular.png"
 import Pesquisa from "../../components/pesquisa/Pesquisa";
 import Footer2 from "../../components/footer2/Footer2";
 
+
 function Home() {
 
     const history = useHistory();
@@ -71,47 +72,42 @@ function Home() {
             
             </div>
             <div className="dife_01">
-            <img className="icone_dif" src={icone_02} alt="Ícone" />
-            <p>Ofertar dinheiro</p>
-            <span>
-                Crie uma oferta sobre o valor que você deseja vender!
-            </span>
-            </div>
-            <div className="dife_01">
             <img className="icone_dif" src={icone_03} alt="Ícone" />
             <p>Saia do convêncional</p>
             <span>
             A forma mais tradicional é trocar dinheiro e trocando o real pela moeda desejada em uma casa de câmbio. Trazemos uma nova opção para você!
             </span>
             </div>
+            <div className="dife_01">
+            <img className="icone_dif" src={icone_02} alt="Ícone" />
+            <p>Ofertar dinheiro</p>
+            <span>
+                Crie uma oferta sobre o valor que você deseja vender e receba ofertas de troca de outros usuários! 
+            </span>
+            </div>
+           
         </div>
         <br /><br />
         </div>
 
         <main>
-        <div className="sobre-nos">
+         <div className="sobre-nos">
             <div className="celular">
             <img src={celular} alt="celular-descritivo" />
             </div>
             <div className="sobre-nos-texto">
             <h3>Sobre nós</h3>
-            <h1>Uma chamada descritiva para Plataforma de Cryptocoins</h1>
+            <h1>Inovadora, tecnológica e de rápida resolução!</h1>
             <p>
-                Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius.
-                Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Leite
-                de capivaris, leite de mula manquis sem cabeça. Copo furadis é
-                disculpa de bebadis, arcu quam euismod magna. In elementis mé pra
-                quem é amistosis quis leo.
+            Agora você pode focar na sua rentabilidade com a
+            segurança de operar em uma plataforma completa e
+            com o suporte de um time de analistas altamente capacitado.
             </p>
             <p>
-                Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam
-                vulputate dapibus. Casamentiss faiz malandris se pirulitá. Manduma
-                pindureta quium dia nois paga. Sapien in monti palavris qui num
-                significa nadis i pareci latim.
+            O RLP (Retail Liquidity Provider), que em português significa Provedor de Liquidez para o Varejo, é um serviço desenvolvido pelo mercado, em conjunto com a B3, que permite que as corretoras proporcionem ao cliente maior liquidez nas operações de minicontratos e a garantia de que o preço será sempre melhor ou igual ao book de ofertas.
             </p>
 
-            <Link className="botao-action">Call to Action</Link>
-            {/* <a className="botao-action"> Call to Action</a> */}
+            <Link className="botao-action" to="/termos">TERMOS DE USO</Link>
             </div>
         </div>
         <div className="solucoes">
@@ -133,39 +129,27 @@ function Home() {
         </div>
         <div className="perguntas-box">
             <div className="perguntas">
-            <h2>How Does a Hello World?</h2>
+            <h2>Como ter a visão de Heatmap das minhas listas?</h2>
             <p>
-                Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo
-                pose. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis,
-                aguis e fermentis. Sapien in monti palavris qui num significa nadis
-                i pareci latim. Diuretics paradis num copo é motivis de denguis.
+            O Heatmap te proporciona uma visão consolidada de todas as ações que compõem a lista! Elas são representadas por tons verdes ou vermelhos, que significam a intensidade de alta ou queda do papel, respectivamente. Há também a cor azul, que representa uma variação igual a zero.
             </p>
             </div>
             <div className="perguntas">
-            <h2>How Does a Hello World?</h2>
+            <h2>Como enviar ordens limitadas no Multibroker?</h2>
             <p>
-                Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo
-                pose. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis,
-                aguis e fermentis. Sapien in monti palavris qui num significa nadis
-                i pareci latim. Diuretics paradis num copo é motivis de denguis.
+            Ordem limitada é uma ferramenta que o mercado oferece que tem o intuído de estabelecer o preço de entrada/saída de um ativo. Diferentemente da “ordem à mercado” em que a ordem é executada com o preço vigente do ativo, na ordem limitada a negociação só será executada se o ativo atingir o preço que o investidor pré determinou. 
             </p>
             </div>
             <div className="perguntas">
-            <h2>How Does a Hello World?</h2>
+            <h2>É possível enviar ordem através do site?</h2>
             <p>
-                Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo
-                pose. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis,
-                aguis e fermentis. Sapien in monti palavris qui num significa nadis
-                i pareci latim. Diuretics paradis num copo é motivis de denguis.
+            Você pode enviar ordem de duas formas: Escolhendo o preço deslizando a barra azul(i) ou inserindo manualmente no canto superior esquerdo (ii). Defina a quantidade (iii) e clique no botão comprar(iv). Caso a negociações for venda, clique na seta dupla ao lado (v).            
             </p>
             </div>
             <div className="perguntas">
-            <h2>How Does a Hello World?</h2>
+            <h2>O que é a performance na execução?</h2>
             <p>
-                Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo
-                pose. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis,
-                aguis e fermentis. Sapien in monti palavris qui num significa nadis
-                i pareci latim. Diuretics paradis num copo é motivis de denguiss.
+            Durante toda a variação de preço do ativo na negociação do pregão, daremos atenção a 3 preços: preço de máxima (maior valor alcançado pelo papel no período), preço de mínima (menor valor alcançado pelo papel no período) e valor de fechamento (último valor negociado no pregão).
             </p>
             </div>
         </div>

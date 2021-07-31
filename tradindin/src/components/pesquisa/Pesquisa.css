@@ -38,7 +38,6 @@
 
 
 .elementos1{
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -50,21 +49,20 @@
 
 .elementos1 > div{
 
-    width: 35%;
+    width: 100%;
     padding: 0% 0% 2% 3%;
     color: #bef5a5;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 800;
     text-decoration: none;
     color: #fff;
     font-size: 120%;
     display: flex;
-    justify-content: space-between;
+    justify-content: baseline;
 }
 
 .elementos1 > div > span{
 
-padding-left: 10%;
 color: rgb(255, 255, 255);
 
 }
@@ -197,7 +195,7 @@ color: rgb(255, 255, 255);
 }
 
 .local_partida >input::placeholder{
-    color: red;
+    color: black;
    
 }
 
@@ -239,7 +237,7 @@ color: rgb(255, 255, 255);
 
 .local_data textarea {
     background-color: transparent;
-    color: #e851b7;
+    color: black;
     position: relative;
     width: 90%;
     font-family: 'Roboto',
@@ -274,7 +272,7 @@ color: #FFF;
 position: relative;
 font-family: 'Roboto', sans-serif;
 font-weight: 300;
-right: 40%;
+right: 70%;
 }
 
 .local_moeda > select{
@@ -282,7 +280,7 @@ right: 40%;
     right: 15%;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    color:#b4bdff;
+    color:black;
     }
 
 .linha_divisao > img{
@@ -322,4 +320,10 @@ right: 40%;
 .local_buscar :hover{
     color: rgb(255, 255, 255);
     background:rgb(95, 20, 95);
+}
+
+
+.input-endereco{
+    color: black;
+    padding-right: 10%;
 }

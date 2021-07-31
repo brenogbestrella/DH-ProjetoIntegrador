@@ -45,7 +45,12 @@ header  ul li a {
 
 }
 
-header ul li a:hover {
+/* header ul li a:hover {
+    color: rgb(12, 194, 109);
+} */
+
+
+.item-menu2 :hover{
     color: rgb(12, 194, 109);
 }
 
