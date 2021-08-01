@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
 import Route from "../src/pages/login/Route"
+import { ToastContainer} from "react-toastify";
 
 import Home from "../src/pages/home/Home.js";
 import Login from "../src/pages/login/Login.js"
@@ -50,6 +51,7 @@ function Paginas() {
         <Route exact path="/" component={Home} />
 
       </Switch>
+      <ToastContainer />
     </BrowserRouter>
   )
 }

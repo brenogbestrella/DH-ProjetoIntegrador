@@ -42,7 +42,7 @@ function Card01(props) {
         <div className="app-div-02">
             <p className="app-nome">{props.oferta.usuario?.nome}</p>
             <p className="app-lugar">Lugar: {props.oferta?.endereco}</p>
-            <p className="app-data">Data Máxima de Retirada: {props.oferta?.data}</p>
+            <p className="app-data">Data de Retirada: {props.oferta?.data}</p>
             <p className="app-moeda">Moeda: {props.oferta.moeda?.nome}</p>
             <p className="app-oferta">Quantidade Disponível: {props.oferta.moeda?.simbolo} {props.oferta?.quantidade}</p>
         </div>

@@ -55,7 +55,7 @@ function Reserva() {
             <div className="elementos-oferta-img01"><img className="oferta-img" src={oferta} alt="Ícone" /></div>
             <div className="elementos-oferta-img02">
                 <p className="elementos-oferta-img02-texto">TA AFIM DE FAZER UMA NOVA OFERTA?</p>
-                <p><Link className="reserva-botao-div2">PLANEJE SUA NOVA TRANSAÇÃO</Link></p>
+                <p><Link to="/app"className="reserva-botao-div2">PLANEJE SUA NOVA TRANSAÇÃO</Link></p>
             </div>
 
             <div className="elementos-oferta-img03">

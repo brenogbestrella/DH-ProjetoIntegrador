@@ -4,6 +4,8 @@ import api from "../../Services/api";
 import "./Perfil.css";
 import image_01 from "../../images/image_01.png";
 import Footer2 from "../../components/footer2/Footer2";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function Perfil() {
 
@@ -16,7 +18,10 @@ function Perfil() {
 
     const history = useHistory();
 
-    
+    const perfilUpdate = () => toast.success("Dados atualizados com sucesso!");
+    const perfilDelete = () => toast.success("Perfil excluido com sucesso!");
+
+
     async function handleUpdate (e) {
         e.preventDefault();
 
@@ -28,6 +33,8 @@ function Perfil() {
             telefone: telefone,
         })
 
+        perfilUpdate()
+
         history.push("/perfil") 
     }
 
@@ -38,7 +45,8 @@ function Perfil() {
 
         localStorage.clear();
 
-        history.push("/"); 
+        history.push("/");
+        perfilDelete() 
     }
 
     useEffect(() => {  
@@ -105,7 +113,8 @@ function Perfil() {
 
                         <div className="user-submi">
                             <div className="user-sub1"><button className="botao-editar2" onClick={handleDelete}> EXCLUIR CONTA </button></div>
-                            <div className="user-sub1"><button className="botao-editar3" onClick={handleUpdate}> ATUALIZAR DADOS </button></div>
+                            <div className="user-sub1"><button className="botao-editar3" onClick={handleUpdate}> ATUALIZAR DADOS </button>
+                            </div>
                         </div>
                         </div>
 

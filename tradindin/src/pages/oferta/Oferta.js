@@ -1,6 +1,7 @@
 import "./Oferta.css";
 import { useState, useEffect } from "react"
 import { useHistory  } from 'react-router-dom'
+import { toast } from "react-toastify";
 import api from "../../Services/api";
 import { getMoedas } from "./apiMoeda"
 import Footer2 from "../../components/footer2/Footer2";
@@ -17,6 +18,8 @@ function Oferta2() {
     const [ moeda, setMoeda ] = useState("");
     const [ listaMoedas, setListaMoedas] = useState([]);
     const history = useHistory();
+
+    const ofertaCreate = () => toast.success("Oferta criada com sucesso!");
 
 
     useEffect(() => {
@@ -41,6 +44,8 @@ function Oferta2() {
         })
         
         history.push("/app")
+
+        ofertaCreate()
        
     }
 

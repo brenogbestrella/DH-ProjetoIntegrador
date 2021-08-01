@@ -12,10 +12,10 @@ function Card02(props) {
             </div>
         <div className="app-div-02">
             <p className="card2-app-nome">{props.ordem.oferta.usuario.nome}</p>
-            <p className="app-lugar">{props.ordem.endereco}</p>
-            <p className="app-data">{props.ordem.data}</p>
-            <p className="app-moeda">{props.ordem.oferta.moeda?.nome}</p>
-            <p className="app-oferta">{props.ordem.oferta.moeda?.simbolo} {props.ordem.quantidade}</p>
+            <p className="app-lugar">Lugar: {props.ordem.endereco}</p>
+            <p className="app-data">Data de Retirada: {props.ordem.oferta.data}</p>
+            <p className="app-moeda">Moeda:{props.ordem.oferta.moeda?.nome}</p>
+            <p className="app-oferta">Quantidade Disponível: {props.ordem.oferta.moeda?.simbolo} {props.ordem.quantidade}</p>
 
         </div>
         <div className="app-div-03">
