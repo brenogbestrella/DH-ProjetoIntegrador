@@ -193,7 +193,6 @@
     text-align: center;
 	padding: 8% 8%;
 	text-decoration:none;
-
 }
 .app-botao-div2:hover {
 	background-color:#5e185e;
@@ -246,3 +245,15 @@
 }
 
 
+
+.fim-pesquisa {
+
+	color:#dd72b4;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+	font-size:16px;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+}

@@ -146,3 +146,19 @@
     font-weight: 600;
     font-size: 20px;
 }
+
+.lado-esquerdo{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.lado-direito{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+}

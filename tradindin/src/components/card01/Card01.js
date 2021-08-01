@@ -41,13 +41,13 @@ function Card01(props) {
             </div>
         <div className="app-div-02">
             <p className="app-nome">{props.oferta.usuario?.nome}</p>
-            <p className="app-lugar">{props.oferta?.endereco}</p>
-            <p className="app-data">{props.oferta?.data}</p>
-            <p className="app-moeda">{props.oferta.moeda?.nome}</p>
-            <p className="app-oferta">{props.oferta.moeda?.simbolo} {props.oferta?.quantidade}</p>
+            <p className="app-lugar">Lugar: {props.oferta?.endereco}</p>
+            <p className="app-data">Data Máxima de Retirada: {props.oferta?.data}</p>
+            <p className="app-moeda">Moeda de Troca: {props.oferta.moeda?.nome}</p>
+            <p className="app-oferta">Oferta: {props.oferta.moeda?.simbolo} {props.oferta?.quantidade}</p>
         </div>
         <div className="app-div-03">
-        <button className="botao-editar-oferta3" onClick={handleCriarOrdem}> RESERVE AGORA! </button>
+        <button className="botao-editar-oferta3" onClick={handleCriarOrdem}>RESERVAR!</button>
         </div>
     </div>
     )}

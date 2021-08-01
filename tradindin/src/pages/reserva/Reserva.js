@@ -6,6 +6,7 @@ import Card02 from "../../components/card02/Card02";
 import Card03 from "../../components/card03/Card03";
 import oferta from "../../images/oferta.png";
 import Footer2 from "../../components/footer2/Footer2"
+import Card04 from "../../components/card04/Card04";
 
 function Reserva() {
 
@@ -67,8 +68,9 @@ function Reserva() {
             </div>
 
         </div>
+        <div>
         <p className="transacoes-texto">  SUAS ÚLTIMAS TRANSAÇÕES!</p>
-
+        <Card04/>    <Card04/>
         {listaOrdens.map((ordem, i) =>
           (
             <Card02 ordem={ordem} key={i} />
@@ -78,6 +80,21 @@ function Reserva() {
           (
             <Card03 oferta={oferta} key={i} />
         ))}
+     </div>
+
+     <div>
+        <p className="transacoes-texto">  SUAS ÚLTIMAS TRANSAÇÕES!</p>
+        <Card04/>    <Card04/>
+        {listaOrdens.map((ordem, i) =>
+          (
+            <Card02 ordem={ordem} key={i} />
+        ))}
+
+        {listaOfertas.map((oferta, i) =>
+          (
+            <Card03 oferta={oferta} key={i} />
+        ))}
+     </div>
     </div>
     <Footer2 />
 </div>
