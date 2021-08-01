@@ -70,25 +70,16 @@ function Reserva() {
         </div>
         <div className="bloco-total">
     
-            <div className="bloco-direita">
+            <div className="bloco-esquerda">
                 <p className="transacoes-texto-reserva">SUAS ÚLTIMAS TRANSAÇÕES!</p>
                 {listaOrdens.map((ordem, i) =>
                   (
                     <Card02 ordem={ordem} key={i} />
                 ))}
-
-                {listaOfertas.map((oferta, i) =>
-                  (
-                    <Card03 oferta={oferta} key={i} />
-                ))}
           </div>
 
-          <div className="bloco-esquerda">
-                <p className="transacoes-texto-reserva">OFERTAS REGISTRADAS!</p>
-                {listaOrdens.map((ordem, i) =>
-                  (
-                    <Card02 ordem={ordem} key={i} />
-                ))}
+          <div className="bloco-direita">
+                <p className="transacoes-texto-oferta">OFERTAS REGISTRADAS!</p>
 
                 {listaOfertas.map((oferta, i) =>
                   (

@@ -147,6 +147,17 @@
     font-size: 20px;
 }
 
+.transacoes-texto-oferta{
+    display: flex;
+    align-content: center;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    color: #c5945d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
 .bloco-total{
     display: flex;
     flex-direction: row;
@@ -159,7 +170,6 @@
     display: flex;
     flex-direction:column;
     align-content: center;
-    justify-content: center;
     width: 50%;
 }
 
@@ -167,6 +177,5 @@
     display: flex;
     flex-direction:column;
     align-content: center;
-    justify-content: center;
     width: 50%;
 }

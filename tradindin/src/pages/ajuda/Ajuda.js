@@ -29,14 +29,7 @@ function Ajuda() {
             <div className="elementos-seguranca-img01"><img className="seguranca-img" src={ajuda} alt="Ícone" /></div>
             <div className="elementos-seguranca-img02">
                 <p className="elementos-seguranca-img02-texto">Já viu nosso Termo de Uso?</p>
-                <p><Link className="ajuda-botao-div2">CONHEÇA O TERMO AQUI!</Link></p>
-            </div>
-
-            <div className="elementos-seguranca-img03">
-              <p className="ajuda-botao-div-mensagem">
-                Hey você! Ta precisando de uma ajuda? O nosso site tem uma sessão específica apenas para te ajudar nas dúvidas mais comuns de nossos usuários. Quer conferir? 
-                <strong> Clique aqui para te ajudarmos!</strong>
-              </p>
+                <p><Link to="/termos" className="privacidade-botao-div2">CONHEÇA O TERMO AQUI!</Link></p>
             </div>
 
         </div>

@@ -69,9 +69,15 @@
 }
 
 .botao-editar-oferta:hover {
-	background-color:#c69559;
+	background-color:#c04f95;
     color: white;
 }
+
+.botao-editar-oferta::placeholder {
+	background-color:#c04f95;
+    color: white;
+}
+
 
 .botao-editar-oferta:active {
 	position:relative;
@@ -94,7 +100,7 @@
 
 
 .botao-editar-oferta-quantidade:hover {
-	background-color:#c69559;
+	background-color:#c04f95;
   color: white;
 }
 

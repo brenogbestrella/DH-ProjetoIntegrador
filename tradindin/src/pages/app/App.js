@@ -70,8 +70,8 @@ function App() {
                                       <p className="app-nome">Felipe Marcelino</p>
                                       <p className="app-lugar">Lugar: Rodovia dos Bandeirantes, km 72, Vinhedo/Sp - Brasil</p>
                                       <p className="app-data">Data Máxima de Retirada: 25/09/2021</p>
-                                      <p className="app-moeda">Moedas de Troca: $</p>
-                                      <p className="app-oferta">Oferta: R$ 5.000,00</p>
+                                      <p className="app-moeda">Moeda: Dólar</p>
+                                      <p className="app-oferta">Quantidade Disponível: $ 5.000,00</p>
                                   </div>
                                   <div className="app-div-03">
                                       <Link to={{ pathname: `https://api.whatsapp.com/send?phone=5511999026616` }} target="_blank" className="app-botao-div2">RESERVAR!</Link>
@@ -86,8 +86,8 @@ function App() {
                                       <p className="app-nome">Ivens Junior</p>
                                       <p className="app-lugar">Lugar: Rua Inácio Francisco de Souza, 1597 - Penha/sc - Brasil</p>
                                       <p className="app-data">Data Máxima de Retirada: 28 /09/2021</p>
-                                      <p className="app-moeda">Moedas de Troca: R$</p>
-                                      <p className="app-oferta">Oferta: R$ 10.000,00</p>
+                                      <p className="app-moeda">Moeda: Real</p>
+                                      <p className="app-oferta">Quantidade Disponível: 10.000,00</p>
                                   </div>
                                   <div className="app-div-03">
                                       <Link to={{ pathname: `https://api.whatsapp.com/send?phone=5511999026616` }} target="_blank" className="app-botao-div2">RESERVAR!</Link>
@@ -102,8 +102,8 @@ function App() {
                                       <p className="app-nome">Breno Estrella</p>
                                       <p className="app-lugar">Lugar: Av. Pedro Álvares Cabral - Vila Mariana, São Paulo - SP – Brasil</p>
                                       <p className="app-data">Data Máxima de Retirada: 18/10/2021</p>
-                                      <p className="app-moeda">Moedas de Troca: €</p>
-                                      <p className="app-oferta">Oferta: R$ 2.500,00</p>
+                                      <p className="app-moeda">Moeda: Euro</p>
+                                      <p className="app-oferta">Quantidade Disponível: 2.500,00</p>
                                   </div>
                                   <div className="app-div-03">
                                       <Link to={{ pathname: `https://api.whatsapp.com/send?phone=5511999026616` }} target="_blank" className="app-botao-div2">RESERVAR!</Link>

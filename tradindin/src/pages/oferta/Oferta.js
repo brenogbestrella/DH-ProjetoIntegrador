@@ -120,7 +120,7 @@ function Oferta2() {
 
                                     <label htmlFor="data"></label>
                                     <input 
-                                className="input-endereco"
+                                className="botao-editar-oferta-quantidade"
                                 type="date"
                                 name="data-retirada"
                                 id="data retirada"

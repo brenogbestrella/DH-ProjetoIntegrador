@@ -28,13 +28,13 @@ function Termos() {
             <div className="elementos-seguranca-termos-img01"><img className="seguranca-img-termos" src={seguranca} alt="Ícone" /></div>
             <div className="elementos-seguranca-termos-img02">
                 <p className="elementos-seguranca-termos-img02-texto">SUA SEGURANÇA É GARANTIDA!</p>
-                <p><Link className="termos-botao-div2">CONFIRA NOSSA POLITICA DE PRIVACIDADE</Link></p>
+                <p><Link to="/privacidade" className="privacidade-botao-div2">CONFIRA NOSSA POLITICA DE PRIVACIDADE</Link></p>
             </div>
 
             <div className="elementos-seguranca-termos-img03">
               <p className="termos-botao-div-mensagem">
                 Hey você! Ta precisando de uma ajuda? O nosso site tem uma sessão específica apenas para te ajudar nas dúvidas mais comuns de nossos usuários. Quer conferir? 
-                <strong> Clique aqui para te ajudarmos!</strong>
+                <strong><Link className="text-text" to="/ajuda"> Clique aqui para te ajudarmos!</Link></strong>
               </p>
             </div>
 

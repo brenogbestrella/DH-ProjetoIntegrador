@@ -28,13 +28,13 @@ function Privacidade() {
             <div className="elementos-seguranca-privacidade-img01"><img className="seguranca-img-privacidade" src={help} alt="Ícone" /></div>
             <div className="elementos-seguranca-privacidade-img02">
                 <p className="elementos-seguranca-privacidade-img02-texto">Opa! Ta precisando de uma ajuda?</p>
-                <p><Link className="privacidade-botao-div2">CONHEÇA NOSSA PÁGINA FEITA PARA ISTO!</Link></p>
+                <p><Link to="/ajuda" className="privacidade-botao-div2">CONHEÇA NOSSA PÁGINA FEITA PARA ISTO!</Link></p>
             </div>
 
             <div className="elementos-seguranca-privacidade-img03">
               <p className="privacidade-botao-div-mensagem">
                 Hey você! Ta precisando de uma ajuda? O nosso site tem uma sessão específica apenas para te ajudar nas dúvidas mais comuns de nossos usuários. Quer conferir? 
-                <strong> Clique aqui para te ajudarmos!</strong>
+                <strong><Link className="text-text" to="/ajuda"> Clique aqui para te ajudarmos!</Link></strong>
               </p>
             </div>
 

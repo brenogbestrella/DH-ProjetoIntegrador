@@ -78,45 +78,30 @@ function Perfil() {
 
                         <div className="perfil-nome-user">
                             <div className="user-titulo"> <h1>Nome</h1> </div>
-                            <div className="user-sub-titulo-b">
-                                <div className="user-titulo"><input type="text" value={nome} onChange={(e) => setNome(e.target.value)}></input></div>
-                            </div>
+                            <div className="botao-editar10"><input type="text" value={nome} onChange={(e) => setNome(e.target.value)}></input></div>
+                    
                         </div>
 
                         <div className="perfil-nome-user">
-                           <div className="user-titulo"> <h1>E-mail</h1> </div>
-                            
-                            <div className="user-sub-titulo-b">
-                            <div className="user-sub-titulo"><input type="text" value={email} onChange={(e) => setEmail(e.target.value)}></input></div>
-                            
-                            </div>
+                           <div className="user-titulo"> <h1>E-mail</h1> </div>                    
+                            <div className="botao-editar10"><input type="text" value={email} onChange={(e) => setEmail(e.target.value)}></input></div>
+
                         </div>
 
                         <div className="perfil-nome-user">
                            <div className="user-titulo"> <h1>Documento</h1> </div>
-                            
-                            <div className="user-sub-titulo-b">
-                            <div className="user-sub-titulo"><input type="text" value={documento} onChange={(e) => setDocumento(e.target.value)}></input></div>
-                            
-                            </div>
+                            <div className="botao-editar10"><input type="text" value={documento} onChange={(e) => setDocumento(e.target.value)}></input></div>
                         </div>
 
                         <div className="perfil-nome-user">
                            <div className="user-titulo"> <h1>Telefone</h1> </div>
-                            
-                            <div className="user-sub-titulo-b">
-                            <div className="user-sub-titulo"><input type="text" value={telefone} onChange={(e) => setTelefone(e.target.value)}></input></div>
-                            
-                            </div>
+                            <div className="botao-editar10"><input type="text" value={telefone} onChange={(e) => setTelefone(e.target.value)}></input></div>
+
                         </div>
 
                         <div className="perfil-nome-user">
                            <div className="user-titulo"> <h1>Senha</h1> </div>
-                            
-                            <div className="user-sub-titulo-b">
-                            <div className="user-sub-titulo"><input type="text" value={senha} onChange={(e) => setSenha(e.target.value)}></input></div>
-                            
-                            </div>
+                            <div className="botao-editar10"><input type="text" placeholder="***********" value={senha} onChange={(e) => setSenha(e.target.value)}></input></div>
                         </div>
 
                         <div className="user-submi">
