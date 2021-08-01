@@ -68,33 +68,35 @@ function Reserva() {
             </div>
 
         </div>
-        <div>
-        <p className="transacoes-texto">  SUAS ÚLTIMAS TRANSAÇÕES!</p>
-        <Card04/>    <Card04/>
-        {listaOrdens.map((ordem, i) =>
-          (
-            <Card02 ordem={ordem} key={i} />
-        ))}
+        <div className="bloco-total">
+    
+            <div className="bloco-direita">
+                <p className="transacoes-texto-reserva">SUAS ÚLTIMAS TRANSAÇÕES!</p>
+                {listaOrdens.map((ordem, i) =>
+                  (
+                    <Card02 ordem={ordem} key={i} />
+                ))}
 
-        {listaOfertas.map((oferta, i) =>
-          (
-            <Card03 oferta={oferta} key={i} />
-        ))}
-     </div>
+                {listaOfertas.map((oferta, i) =>
+                  (
+                    <Card03 oferta={oferta} key={i} />
+                ))}
+          </div>
 
-     <div>
-        <p className="transacoes-texto">  SUAS ÚLTIMAS TRANSAÇÕES!</p>
-        <Card04/>    <Card04/>
-        {listaOrdens.map((ordem, i) =>
-          (
-            <Card02 ordem={ordem} key={i} />
-        ))}
+          <div className="bloco-esquerda">
+                <p className="transacoes-texto-reserva">OFERTAS REGISTRADAS!</p>
+                {listaOrdens.map((ordem, i) =>
+                  (
+                    <Card02 ordem={ordem} key={i} />
+                ))}
 
-        {listaOfertas.map((oferta, i) =>
-          (
-            <Card03 oferta={oferta} key={i} />
-        ))}
-     </div>
+                {listaOfertas.map((oferta, i) =>
+                  (
+                    <Card03 oferta={oferta} key={i} />
+                ))}
+          </div>
+
+       </div>
     </div>
     <Footer2 />
 </div>

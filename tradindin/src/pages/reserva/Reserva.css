@@ -136,10 +136,10 @@
     width: 80%;
 }
 
-.transacoes-texto{
+.transacoes-texto-reserva{
     display: flex;
     align-content: center;
-    margin-left: 9.5%;
+    margin-left: 20%;
     margin-bottom: 2%;
     color: #c5945d;
     font-family: 'Roboto', sans-serif;
@@ -147,17 +147,25 @@
     font-size: 20px;
 }
 
-.lado-esquerdo{
+.bloco-total{
     display: flex;
     flex-direction: row;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+}
+
+.bloco-esquerda{
+    display: flex;
+    flex-direction:column;
     align-content: center;
     justify-content: center;
     width: 50%;
 }
 
-.lado-direito{
+.bloco-direita{
     display: flex;
-    flex-direction: row;
+    flex-direction:column;
     align-content: center;
     justify-content: center;
     width: 50%;
