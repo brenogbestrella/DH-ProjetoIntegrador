@@ -6,7 +6,6 @@ import Card02 from "../../components/card02/Card02";
 import Card03 from "../../components/card03/Card03";
 import oferta from "../../images/oferta.png";
 import Footer2 from "../../components/footer2/Footer2"
-import Card04 from "../../components/card04/Card04";
 
 function Reserva() {
 
@@ -63,7 +62,7 @@ function Reserva() {
               <p className="reserva-botao-div-mensagem">
                  A facilidade e a comodidade de fazer negócio, com apenas alguns cliques.
                  Pesquisar preços e encontrar a troca perfeita para você ficou mais fácil.
-                 Você já leu sobre nossa política de privacidade? <strong>Clique aqui!</strong>
+                 Você já leu sobre nossa política de privacidade? <strong><Link className="text-text-reserva" to="/privacidade"> Clique aqui!</Link></strong>
               </p>
             </div>
 

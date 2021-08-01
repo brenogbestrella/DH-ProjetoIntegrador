@@ -26,7 +26,8 @@ function Footer2() {
     </figure>
     </div>
     <p className="texto-footer">
-    Empresas precisam de sites ou sistemas web. Há preferência no mercado por desenvolvedores Full Stack porque conseguem atuar tanto no Back End quanto no Front End.
+    A maior plataforma para troca de moedas na América Latina. 
+    
     </p>
     <nav className="redes config">
     <ul className="linha-footer-logo">
@@ -66,7 +67,7 @@ function Footer2() {
         </li>
         <li>
         <Link> 
-            (55) 11-99999-9999
+            +55 11 3500-9839
         </Link>
         </li>
         <li>

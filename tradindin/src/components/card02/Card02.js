@@ -11,7 +11,7 @@ function Card02(props) {
                 <img className="app-icone" src={image_01} alt="Ícone" />
             </div>
         <div className="app-div-02">
-            <p className="card2-app-nome">{props.ordem.usuario.nome}</p>
+            <p className="card2-app-nome">{props.ordem.oferta.usuario.nome}</p>
             <p className="app-lugar">{props.ordem.endereco}</p>
             <p className="app-data">{props.ordem.data}</p>
             <p className="app-moeda">{props.ordem.oferta.moeda?.nome}</p>

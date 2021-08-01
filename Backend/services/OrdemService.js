@@ -38,10 +38,16 @@ const OrdemService = {
         {
           model: database.Oferta,
           as: "oferta",
-          include: {
-            model: database.Moeda,
-            as: "moeda",
-          }
+          include: [
+            {
+              model: database.Moeda,
+              as: "moeda",
+            },
+            {
+              model: database.Usuario,
+              as: "usuario",
+            }
+          ]
         }
       ]
     });;

@@ -44,7 +44,7 @@ function Perfil() {
     useEffect(() => {  
         async function loadUsuario() {
             const { data } = await api.get('/usuarios/meuperfil');
-        
+            
             setNome(data.nome);
             setEmail(data.email);
             setDocumento(data.documento);
@@ -63,9 +63,8 @@ function Perfil() {
             <div className="cla-perfil">
 
                 <div className="moldura-perfil">
-                    <span className="user-titulo-moldura">EDITAR PERFIL</span>
-                    <h2 className="user-sub-titulo-moldura">ID #784815</h2>
-
+                    <span className="user-titulo-moldura">PERFIL DE USUÁRIO</span>
+                    <h2 className="user-sub-titulo-moldura"></h2>
 
                     <div className="perfil-nome-user">
                             
